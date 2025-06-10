@@ -1,0 +1,37 @@
+Games are built from discrete state updates. At the lowest level, an engine advances through a loop — each iteration is a tick. During every tick, global subsystems execute in fixed order: input handling, physics, AI, rendering, then audio synthesis. All state is evaluated and refreshed on this schedule. Nothing unfolds continuously. Animation is a succession of frame states. Decisions resolve at tick boundaries. The entire structure is a real‑time evaluator driven by deterministic code execution.
+
+This tick-based determinism remains hidden from players but defines the technical substrate of gameplay. In \emph{Myst} (1993), the illusion of spatial movement arose from a sequence of pre-rendered 640×480 bitmaps. Each screen contained invisible rectangles mapped to transition functions. Clicking did not move the player; it queued a dissolve to a different image. The world’s interactivity consisted entirely of discrete state changes.
+
+To preserve determinism, modular design is essential. Subsystems must not stall each other or induce race conditions. Entity behaviors cannot block physics updates. Audio routines must leave rendering states untouched. These boundaries are not aesthetic — they reflect a computational constraint. Each module must operate within its tick window and leave shared memory in a consistent state.
+
+Entities — characters, particles, projectiles — are structured records in memory. Each contains fields: position, velocity, animation frame, hit points, and a behavior pointer. This pointer links the object to an update routine called every tick. The object does not “think.” It executes a class-bound procedure on its own fields. When deleted, its memory is reclaimed and removed from the active list.
+
+These routines often implement finite state machines. An entity cycles through states such as \emph{idle}, \emph{pursue}, \emph{attack}, and \emph{retreat}. Each tick, local predicates test conditions for transitions. If the player lies within five units, switch to \emph{pursue}. If line of sight fails, return to \emph{idle}. The evaluations are constant-based. Distinct enemies differ only in thresholds — yet appear behaviorally distinct. In \emph{Pac‑Man}, each ghost uses the same movement logic. Only the goal tile varies. Blinky targets the player, Pinky aims four tiles ahead, Inky computes a reflection, and Clyde acts based on distance. Their variety emerges from configuration.
+
+\emph{Doom} extended this principle across all enemies. Every monster derived from a common actor class compiled on John Carmack’s NeXT workstation. Health, projectile type, attack delay, and AI range were exposed as fields. The illusion of difference arose from parameterization, not algorithmic diversity. Every behavior was a reuse of the same control structure.
+
+Visual effects also obeyed this logic. The Sega Genesis lacked native parallax scrolling. In \emph{Sonic the Hedgehog}, programmers faked depth by assigning background layers to different pixel speeds and rewriting the vertical scroll register mid-scanline. The illusion of depth arose from mid-frame timing hacks, not rendering capacity.
+
+These constants — speed, radius, cooldown — define an enemy’s tactical profile. A pursuit radius of six versus three alters perceived aggression. A projectile with 20 damage instead of 10 changes time-to-defeat. Rendering, audio, and death behavior are handled by shared systems. Enemy “type” reduces to a field set passed to standard logic.
+
+Such design demands robustness. When a value is malformed, the game continues. A negative speed reverses direction. A missing texture renders as blank. An invalid state reverts to idle. The system does not halt. It proceeds. This fail-soft design was essential even in asset construction. In \emph{Prince of Persia}, Jordan Mechner filmed his brother running, then traced frames onto graph paper, scanned them, and inserted the pixel outlines as animation frames. Engine modularity allowed this analog-to-digital process without runtime breakage.
+
+Robustness enables iteration. Developers test by cloning entities and altering fields. A fireball can become a healing pulse by flipping its sign. A flying mob becomes stationary by zeroing its velocity. In \emph{Elite}, eight galaxies of 256 planets were generated from 22 KB of pseudo-random math. No planet data was stored. Each was reconstructed deterministically at runtime. This design tolerated malformed inputs because structure emerged from rules, not data storage.
+
+\emph{Pokémon Red and Blue} similarly built game spaces from recombined primitives. Each town map fit into a single 20×18 tile sheet. A bench was a door half plus two fence posts. Visual variety arose not from asset count but from recombinatorial reuse. The world was stored as tile indices, not images.
+
+Dialogue systems followed the same logic. In \emph{The Secret of Monkey Island}, insult swordfighting reused a dialogue template from an earlier game. The mechanic resolved through string matching. The shift in content — from trivia to rhymed insult — did not alter the logic tree. Behavior changed through text, not code.
+
+Minecraft inherits this lineage of modular, fail-soft, recombinatory structure. Its world is a 3D integer lattice of cubic blocks. Simulation proceeds by ticks. Water flows locally. Sand falls if unsupported. Light diffuses outward with diminishing strength. There is no story engine, no cutscene handler, no global narrative thread — only local rules applied uniformly.
+
+Mobs in Minecraft instantiate a superclass providing physics, navigation, and interaction hooks. Behavior arises from composable tasks: wander, pursue, flee, attack. Parameters such as speed, health, and aggression range complete the entity definition. There is no dedicated “cow AI” or “skeleton logic.” Difference is a matter of assembly and tuning.
+
+Because subsystems are decoupled, the engine tolerates malformed entities. A stretched model renders awkwardly. A missing animation freezes a character. A wrong collision box permits clipping. The game continues. This tolerance made the emergence of the Creeper possible.
+
+In 2009, Markus Persson attempted to model a pig. He entered height and length in the wrong order. The result was a vertical, narrow creature with no animal precedent. It inherited the pig’s behavior: it turned to face the player. He left the model in the game. The body was mapped with a leaf-block texture. A sad mouth was added. It moved silently.
+
+Then Persson assigned an explosive behavior routine. The logic reused Minecraft’s block destruction method. If $r < 2.5$, the entity entered a “swell” state. After 1.5 seconds, it detonated. If $r > 6$, the process reset. All thresholds were constants. The resulting entity did not chase or roar — it approached, paused, and erased.
+
+There was no design document, no concept art, no gameplay plan. The Creeper emerged from malformed geometry, reused logic, and permissive systems. It persisted because the code did not crash. The engine treated it as valid.
+
+Minecraft’s most iconic enemy was a byproduct of parameter confusion. But in a rule-based system that decouples model from logic, geometry from behavior, sound from state — a misconfiguration can become a design element. The Creeper endures not because it was authored, but because it was allowed to exist.

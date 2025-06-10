@@ -1,0 +1,73 @@
+\begin{technical}
+{\Large\textbf{Perturbative Stability and Exponential Sensitivity in Deterministic Systems}}\\[0.7em]
+
+\textbf{Introduction}\\[0.5em]
+Classical mechanics is deterministic: given initial conditions and governing forces, the trajectory of a system is uniquely determined. However, predictability depends on the evolution of perturbations. In chaotic systems, infinitesimal deviations grow exponentially, whereas in many complex but dissipative systems, fluctuations are suppressed or averaged out, leading to reliable large-scale predictions.
+
+\textbf{1. Lyapunov Exponents and Sensitivity}\\[0.5em]
+The sensitivity of a system to initial conditions is quantified by the maximal Lyapunov exponent $\lambda$. For two trajectories initially separated by an infinitesimal displacement $\delta_0$, the separation at time $t$ satisfies
+\[
+\delta(t) \approx \delta_0 e^{\lambda t}.
+\]
+Formally, the maximal Lyapunov exponent is defined as
+\[
+\lambda = \lim_{t \to \infty} \lim_{\delta_0 \to 0} \frac{1}{t} \ln \left( \frac{\delta(t)}{\delta_0} \right).
+\]
+A positive $\lambda$ implies exponential divergence and practical unpredictability, even though the evolution is deterministic. A negative $\lambda$ corresponds to exponential convergence of nearby trajectories, typical of strongly dissipative systems. Systems with $\lambda = 0$ are marginally stable; their perturbations grow at most polynomially.
+
+\textbf{2. Chaotic Dynamics in a Double Pendulum}\\[0.5em]
+Let $\theta_1(t)$ and $\theta_2(t)$ denote the angular positions of a double pendulum with masses $m_1$, $m_2$ and rod lengths $l_1$, $l_2$. The Lagrangian formulation yields the coupled equations of motion:
+\begin{align*}
+(m_1 + m_2) l_1 \ddot{\theta}_1 
++ m_2 l_2 \ddot{\theta}_2 \cos(\theta_1 - \theta_2) 
+=&\\ -m_2 l_2 \dot{\theta}_2^2 \sin(\theta_1 - \theta_2) 
+- (m_1 + m_2) g \sin\theta_1, \\[0.5em]
+m_2 l_2 \ddot{\theta}_2 
++ m_2 l_1 \ddot{\theta}_1 \cos(\theta_1 - \theta_2) 
+=&\\ m_2 l_1 \dot{\theta}_1^2 \sin(\theta_1 - \theta_2) 
+- m_2 g \sin\theta_2.
+\end{align*}
+These are second-order nonlinear differential equations with explicit coupling between the degrees of freedom. For many energy regimes, this system exhibits positive Lyapunov exponents: infinitesimally close initial conditions produce trajectories that diverge exponentially in time.
+
+\textbf{3. Stability in Dissipative Systems}\\[0.5em]
+Now consider a falling object subject to linear drag. Assuming the drag force is proportional to velocity, the center-of-mass motion is governed by
+\[
+m \frac{d^2 \mathbf{r}}{dt^2} = m \mathbf{g} - \gamma \frac{d\mathbf{r}}{dt},
+\]
+where $\gamma$ is a damping coefficient. This equation admits an analytic solution. Let $\mathbf{v}(t) = \frac{d\mathbf{r}}{dt}$ denote velocity. Then
+\[
+\mathbf{v}(t) = \mathbf{v}_\infty + (\mathbf{v}_0 - \mathbf{v}_\infty) e^{-\frac{\gamma}{m} t}, \quad \text{with} \quad \mathbf{v}_\infty = \frac{m \mathbf{g}}{\gamma}.
+\]
+Thus,
+\[
+\mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v}_\infty t + \left( \frac{m}{\gamma} \right) (\mathbf{v}_0 - \mathbf{v}_\infty) \left( 1 - e^{-\frac{\gamma}{m} t} \right).
+\]
+Any perturbation in initial velocity or position decays exponentially with time constant $\tau = m/\gamma$. Dissipative systems effectively suppress the amplification of initial differences and tend to fixed asymptotic motion.
+
+\textbf{4. Perturbation Scaling and Averaging}\\[0.5em]
+Let $\mathbf{x}_\epsilon(t) = \mathbf{x}_0(t) + \epsilon \delta \mathbf{x}(t)$ denote a trajectory perturbed by a small parameter $\epsilon$. The behavior of $\|\delta \mathbf{x}(t)\|$ distinguishes two structural regimes:
+\[
+\begin{cases}
+\|\delta \mathbf{x}(t)\| \sim \epsilon e^{\lambda t} & \text{chaotic dynamics,} \\[0.5em]
+\|\delta \mathbf{x}(t)\| \lesssim \epsilon & \text{damped or bounded dynamics.}
+\end{cases}
+\]
+In large systems composed of $N$ microscopic degrees of freedom $\{\mathbf{x}_i(t)\}$, macroscopic observables are typically of the form
+\[
+\mathbf{X}(t) = \frac{1}{N} \sum_{i=1}^N \mathbf{x}_i(t).
+\]
+Assuming weak correlations, the central limit theorem implies
+\[
+\mathrm{Var}(\mathbf{X}) \sim \frac{1}{N} \mathrm{Var}(\mathbf{x}_i).
+\]
+Hence, the center-of-mass position $\mathbf{X}(t)$ satisfies
+\[
+\mathbf{X}(t) \approx \langle \mathbf{x}_i(t) \rangle + \mathcal{O}(N^{-1/2}),
+\]
+where the fluctuation scale $\mathcal{O}(N^{-1/2})$ becomes negligible for large $N$. Microscopic uncertainty remains confined; it does not propagate to the macroscopic level.
+
+\vspace{0.5em}
+\textbf{References:}\\
+Poincaré, H. (1890). \emph{Acta Mathematica}, \textbf{13}, 1–270.\\
+Landau, L. D., Lifshitz, E. M. (1976). \emph{Mechanics}. Pergamon Press.
+\end{technical}

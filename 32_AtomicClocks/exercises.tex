@@ -1,0 +1,46 @@
+\fullpageexercises{%
+\textbf{Fusible Numbers: Exercises in Constructive Time} \\[0.5em]
+Fusible numbers are a set of rational numbers constructed using a simple rule based on lighting fuses. Starting from zero, we define a number \( z \) to be fusible if there exist previously constructed fusible numbers \( x \) and \( y \), with \( |x - y| < 1 \), such that $z = (x + y + 1)/2$.
+This operation mimics the act of lighting both ends of a fuse at different times. Each fuse burns in 1 unit of time from one end, or faster when lit at both ends. The resulting set is well-ordered, contains all nonnegative integers, and grows rapidly beyond them. 
+
+\vspace{1em}
+\textbf{1. Timing with Fuses: From Puzzle to Formula} \\
+\textbf{(a)} You are given a single candle that burns for exactly 1 hour, but not at a uniform rate. How can you measure 30 minutes exactly?  
+\textbf{(b)} Now suppose you have two such candles. Describe a method to measure 45 minutes.  
+\textbf{(c)} Generalize the idea: consider a fuse lit at time \(x\) on one end and at time \(y\) on the other. Show that the fuse burns out exactly at $z = (x + y + 1)/2$.
+\textit{Hint:} Treat the fuse as burning in segments: one with a single flame, one with two. Carefully track how fast each section disappears.
+
+\vspace{1em}
+\textbf{2. Generating Fusible Numbers} \\
+List all fusible numbers less than 2. Start from 0 and apply the construction rule iteratively, using valid pairs with distance less than 1.
+
+\vspace{1em}
+\textbf{3. Dyadic Form Proof} \\
+Show that all fusible numbers are dyadic rationals — that is, they can be written as \( a/2^k \) for integers \( a \) and \( k \). \textit{Hint:} Prove closure under the fusible rule.
+
+\vspace{1em}
+\textbf{4. Finding the Smallest Fusible Number Above \(n\)} \\
+Let \( a_n \) be the smallest fusible number strictly greater than \( n \). Prove it has the form
+\[
+n + \frac{1}{2^{k(n)}}
+\]
+and estimate \( k(0) \), \( k(1) \), \( k(2) \) by hand. Why is estimating \( k(n) \) for large \( n \) so difficult?
+
+\textit{Hint:} Investigate how quickly the sequence grows and why Peano arithmetic cannot fully capture this growth.
+
+\vspace{1em}
+\textbf{5. Well-Ordering and Decreasing Sequences} \\
+Can there be an infinite decreasing sequence of fusible numbers?
+
+\textit{Hint:} Use the fact that the fusible numbers form a well-ordered subset of the real numbers.
+
+\vspace{2em}
+\hrule
+\vspace{1em}
+\textbf{Context Notes} \\
+Fusible numbers were first introduced by Jeff Erickson and later expanded upon by Junyan Xu. They form a surprising example of how a simple rule can generate a fast-growing hierarchy of numbers. The smallest fusible numbers above \( 0, 1, \) and \( 2 \) are:
+\[
+\frac{1}{2}, \quad 1 + \frac{1}{8}, \quad 2 + \frac{1}{1024}.
+\]
+The function mapping each integer \( n \) to the smallest fusible number above it — known as the fusible margin function — grows so rapidly that its behavior is unprovable in Peano arithmetic for large inputs. It is connected to large ordinals like \( \varepsilon_0 \), and likely exceeds even massive bounds like Graham’s number for modest \( n \).
+}

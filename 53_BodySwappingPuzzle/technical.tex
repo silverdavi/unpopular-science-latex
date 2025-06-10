@@ -1,0 +1,92 @@
+\begin{technical}
+{\Large\textbf{Permutation Inversion under Irreversible Transpositions}}\\[0.7em]
+
+\noindent\textbf{Setup and Constraint}\\[0.5em]
+Let \( A = \{1, 2, \dots, n\} \) be a finite set. Let \( P \in S_n \) be a permutation composed of distinct transpositions:
+\[
+P = \tau_1 \circ \tau_2 \circ \dots \circ \tau_m, \quad \tau_i = (a_i\, b_i), \quad (a_i\, b_i) \neq (a_j\, b_j) \text{ for } i \neq j.
+\]
+Let \( x, y \notin A \) be two auxiliary elements. Define the augmented set \( A^+ = A \cup \{x, y\} \). The goal is to construct \( \sigma \in S_{n+2} \), composed entirely of transpositions involving either \( x \) or \( y \), such that:
+\[
+\sigma \circ P = \text{id}_{A}, \quad \text{and} \quad \sigma \text{ uses no transposition from } \{\tau_1, \dots, \tau_m\}.
+\]
+
+\noindent\textbf{Cycle Decomposition}\\[0.5em]
+Every permutation \( P \in S_n \) admits a unique decomposition into disjoint cycles:
+\[
+P = C_1 \circ C_2 \circ \dots \circ C_r,
+\]
+where each \( C_i = (a^{(i)}_1\, a^{(i)}_2\, \dots\, a^{(i)}_{k_i}) \) is a \( k_i \)-cycle with \( a^{(i)}_j \in A \), and all elements of \( A \) appear in exactly one cycle.
+
+\noindent\textbf{Cycle Reversal Construction}\\[0.5em]
+To reverse a single cycle \( C = (a_1\, a_2\, \dots\, a_k) \), define a sequence of transpositions involving \( x \) and \( y \) only:
+\begin{align}
+\alpha &= (x\, a_1)(x\, a_2)\dots(x\, a_k), \\
+\beta  &= (y\, a_k)(y\, a_{k-1})\dots(y\, a_2), \\
+\gamma &= (x\, a_1), \\
+\delta &= (y\, a_1),
+\end{align}
+and define
+\begin{align}
+\sigma_C &= \delta \circ \gamma \circ \beta \circ \alpha.
+\end{align}
+
+Applying \( \sigma_C \) to \( C \) yields the identity permutation on \( \{a_1, \dots, a_k\} \), i.e.,
+\[
+\sigma_C \circ C = \text{id}_{\{a_1, \dots, a_k\}}.
+\]
+The effect on \( x \) and \( y \) is a transposition:
+\[
+\sigma_C \circ C = (x\, y) \quad \text{on } \{x, y\}.
+\]
+
+\noindent\textbf{Global Reversal Strategy}\\[0.5em]
+Let \( P = C_1 \circ C_2 \circ \dots \circ C_r \) as above. For each cycle \( C_i \), construct \( \sigma_{C_i} \) using the method above. Define
+\begin{align}
+\sigma &= \sigma_{C_1} \circ \sigma_{C_2} \circ \dots \circ \sigma_{C_r}.
+\end{align}
+Then
+\[
+\sigma \circ P =
+\begin{cases}
+\text{id}_{A \cup \{x, y\}} & \text{if } r \text{ is even}, \\
+(x\, y) & \text{if } r \text{ is odd}.
+\end{cases}
+\]
+If \( r \) is odd, apply a final correction:
+\[
+\sigma' = (x\, y) \circ \sigma.
+\]
+
+\noindent\textbf{Swap Count}\\[0.5em]
+Each \( \sigma_{C_i} \) involves \( 2k_i + 2 \) transpositions, where \( k_i = |C_i| \). The total number of swaps (excluding the final correction if needed) is:
+\begin{align}
+\sum_{i=1}^{r} (2k_i + 2) &= 2 \sum_{i=1}^{r} k_i + 2r = 2n + 2r.
+\end{align}
+If \( r \) is odd, the final correction adds 1, yielding:
+\[
+\text{Total swaps} = 2n + 2r + 1.
+\]
+
+\noindent\textbf{Example: 3-Cycle Inversion}\\[0.5em]
+Let \( C = (1\,2\,3) \). Apply the construction:
+\begin{align*}
+\alpha &= (x\,1)(x\,2)(x\,3), \\
+\beta  &= (y\,3)(y\,2), \\
+\gamma &= (x\,1), \\
+\delta &= (y\,1),
+\end{align*}
+and define
+\[
+\sigma_C = (y\,1)(x\,1)(y\,3)(y\,2)(x\,1)(x\,2)(x\,3).
+\]
+Then
+\begin{align}
+\sigma_C \circ (1\,2\,3) &= \text{id}_{\{1,2,3\}}, \\\quad \text{and } \sigma_C \circ (1\,2\,3) &= (x\, y) \text{ on } \{x, y\}.
+\end{align}
+
+\vspace{0.5em}
+\noindent\textbf{References:}\\
+Keeler, K. (2010). Mind-switching and Permutation Inversion with Constraints.\\
+Evans, R., Huang, H., Nguyen, T. (2016). \textit{Keeler’s Theorem and Products of Distinct Transpositions}. UCSD Mathematics Department.
+\end{technical}

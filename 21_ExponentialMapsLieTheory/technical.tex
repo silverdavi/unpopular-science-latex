@@ -1,0 +1,118 @@
+% Custom semantic coloring
+\newcommand{\A}[1]{\textcolor{purple}{#1}}          % Elements from A
+\newcommand{\B}[1]{\textcolor{orange!80!black}{#1}} % Elements from B
+\newcommand{\F}[1]{\textcolor{blue!60!black}{#1}}   % Scalars from F
+
+\begin{technical}
+{\Large\textbf{Two Equivalences of the Exponential Map}}\\[0.7em]
+
+\noindent\textbf{1. Functional Characterization via Derivation Operator (the other way is much easier!)}\\[0.5em]
+
+Let \( \A{A} \) be an additive group and \( \B{B} \) a unital algebra over a field \( \F{F} \). Let \( \mathrm{Func}(\A{A}, \B{B}) \) denote the algebra of functions from \( \A{A} \) to \( \B{B} \), equipped with pointwise operations inherited from \( \B{B} \). Suppose there exists a linear operator
+\[
+K: \mathrm{Func}(\A{A}, \B{B}) \to \mathrm{Func}(\A{A}, \B{B})
+\]
+satisfying for all \( g, h \in \mathrm{Func}(\A{A}, \B{B}) \), and all \( \F{c} \in \F{F} \):
+
+\begin{itemize}
+  \item[(i)] Linearity: \( K(g + h) = K(g) + K(h), \quad K(\F{c} \cdot g) = \F{c} \cdot K(g) \)
+  \item[(ii)] Product Rule: \( K(g \cdot h) = K(g) \cdot h + g \cdot K(h) \)
+  \item[(iii)] Kills Constants: \( K(c_{\B{b}}) = \B{0} \), where \( c_{\B{b}}(\A{x}) \equiv \B{b} \in \B{B} \)
+\end{itemize}
+
+Let \( f \in \mathrm{Func}(\A{A}, \B{B}) \) satisfy:
+
+\begin{itemize}
+  \item[(iv)] \( K(f) = \F{\lambda} \cdot f \)
+  \item[(v)] \( f(\A{0}) = \B{1} \)
+  \item[(vi)] For all \( \A{y} \in \A{A} \), define \( g_{\A{y}}(\A{x}) := f(\A{x} \A{+} \A{y}) \), and assume \( K(g_{\A{y}}) = \F{\lambda} \cdot g_{\A{y}} \)
+  \item[(vii)] If \( K(g) = \F{\lambda} \cdot g \) and \( g(\A{0}) = \B{0} \), then \( g(\A{x}) = \B{0} \) for all \( \A{x} \)
+\end{itemize}
+
+Define the function:
+\[
+g(\A{x}) := f(\A{x} \A{+} \A{y}) - f(\A{x}) \B{\cdot} f(\A{y}).
+\]
+Then:
+\begin{align*}
+g(\A{0}) 
+&= f(\A{y}) - f(\A{0}) \B{\cdot} f(\A{y}) \\
+&= f(\A{y}) - \B{1} \B{\cdot} f(\A{y}) \\
+&= \B{0}.
+\end{align*}
+
+Now compute \( K(g) \), using linearity and the product rule:
+\begin{align*}
+K(g)(\A{x}) 
+&= K\big(f(\A{x} \A{+} \A{y})\big) 
+   - K\big(f(\A{x}) \B{\cdot} f(\A{y})\big) \\[0.5em]
+&= \F{\lambda} \cdot f(\A{x} \A{+} \A{y}) 
+   \\& - \Big( 
+       K(f(\A{x})) \B{\cdot} f(\A{y}) 
+       + f(\A{x}) \B{\cdot} K(f(\A{y})) 
+     \Big) \\[0.5em]
+&= \F{\lambda} \cdot f(\A{x} \A{+} \A{y}) 
+   \\&- \Big( 
+       \F{\lambda} \cdot f(\A{x}) \B{\cdot} f(\A{y}) 
+       + \F{\lambda} \cdot f(\A{x}) \B{\cdot} f(\A{y}) 
+     \Big) \\[0.5em]
+&= \F{\lambda} \cdot f(\A{x} \A{+} \A{y}) 
+   - 2 \F{\lambda} \cdot f(\A{x}) \B{\cdot} f(\A{y}) \\[0.5em]
+&= \F{\lambda} \cdot \left( 
+       f(\A{x} \A{+} \A{y}) 
+       - f(\A{x}) \B{\cdot} f(\A{y}) 
+   \right) \\[0.5em]
+&= \F{\lambda} \cdot g(\A{x}).
+\end{align*}
+
+So \( K(g) = \F{\lambda} \cdot g \), and since \( g(\A{0}) = \B{0} \), uniqueness (vii) implies \( g(\A{x}) = \B{0} \) for all \( \A{x} \). Hence:
+\[
+f(\A{x} \A{+} \A{y}) = f(\A{x}) \B{\cdot} f(\A{y}).
+\]
+
+This confirms that the exponential law emerges directly from the derivation structure, normalization, and shift invariance — independent of analytic assumptions.
+
+\vspace{1em}
+
+\noindent\textbf{2. Geometric Interpretation in Riemannian Manifolds}\\[0.5em]
+
+Let \( M \) be a Riemannian manifold and \( p \in M \). The exponential map at \( p \) is defined as:
+\[
+\exp_p(v) := \gamma_v(1),
+\]
+where \( \gamma_v \) is the geodesic starting at \( p \) with velocity \( v \), solving:
+\[
+\frac{D}{dt} \dot{\gamma}_v(t) = 0, \quad 
+\gamma_v(0) = p, \quad 
+\dot{\gamma}_v(0) = v.
+\]
+
+In \( \mathbb{R}^n \), geodesics are straight lines:
+\[
+\gamma_v(t) = p + t v, \quad 
+\Rightarrow \quad 
+\exp_p(v) = p + v.
+\]
+
+In a Lie group \( G \subset \mathrm{GL}_n(\mathbb{R}) \), one has:
+\[
+\gamma_X(t) = \exp(tX), \quad 
+\frac{d}{dt} \gamma(t) = X \cdot \gamma(t), \quad 
+\gamma(0) = I.
+\]
+
+This mirrors the scalar equation:
+\[
+x'(t) = a \cdot x(t), \quad 
+x(0) = 1, \quad 
+\Rightarrow \quad 
+x(t) = e^{at}.
+\]
+
+The exponential map lifts linear generators — derivations or tangent vectors — to integrated flows across groups or manifolds, justifying its name in both analytic and geometric settings.
+
+\vspace{0.5em}
+\noindent\textbf{References:}\\
+Lang, S. (2001). \textit{Fundamentals of Differential Geometry}. Springer.\\
+Kobayashi, S., \& Nomizu, K. (1963). \textit{Foundations of Differential Geometry, Vol. I}. Wiley.
+\end{technical}

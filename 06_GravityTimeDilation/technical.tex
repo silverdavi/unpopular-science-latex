@@ -1,0 +1,75 @@
+\begin{technical}
+
+{\Large\textbf{Gravity as Curved Time}}
+
+\textbf{Spacetime Curvature and Geodesics.}  
+In general relativity, the metric tensor \( g_{\mu\nu} \) encodes the geometry of spacetime and determines how distances and time intervals are measured. In the absence of gravity, spacetime is described by the Minkowski metric \( \eta_{\mu\nu} \). In the weak-field, static limit near a spherically symmetric mass, deviations from flatness are captured by small corrections to the metric. Using the \( (-,+,+,+) \) signature, the Schwarzschild solution reduces to:
+\begin{equation}
+g_{00} \approx -\left(1 - {2GM}/{(c^2 r)}\right), \quad g_{rr} \approx 1 + {2GM}/{(c^2 r)}.
+\end{equation}
+Here, \( g_{00} \) governs the time dilation for stationary observers, while \( g_{rr} \) affects spatial distance measurements in the radial direction.
+
+\textbf{Gravitational Time Dilation.}  
+Proper time \( \mathrm{d}\tau \) for a stationary observer at radius \( r \) is related to coordinate time \( \mathrm{d}t \) via:
+\begin{equation}
+\mathrm{d}\tau = \sqrt{-g_{00}}\, \mathrm{d}t \approx \left(1 - \frac{GM}{c^2 r} \right) \mathrm{d}t.
+\end{equation}
+This shows that clocks at lower altitude accumulate less proper time per unit coordinate time.
+
+\textbf{Gravitational Acceleration from \( g_{00} \).}  
+In the Newtonian limit, the acceleration of a stationary particle is governed by the gradient of the time-time component of the metric:
+\begin{equation}
+g = -\frac{c^2}{2} \frac{\mathrm{d} g_{00}}{\mathrm{d} r}.
+\end{equation}
+Substituting \( g_{00} = -\left(1 - \frac{2GM}{c^2 r} \right) \), we compute:
+\begin{align}
+\frac{\mathrm{d} g_{00}}{\mathrm{d} r} &= -\frac{2GM}{c^2 r^2}, \quad \Rightarrow \\\quad g 
+&= -\frac{c^2}{2} \cdot \left(-\frac{2GM}{c^2 r^2}\right) = \frac{GM}{r^2}.
+\end{align}
+The negative signs are consistent with the metric signature \( (-,+,+,+) \), in which \( g_{00} < 0 \). This reproduces Newton’s law of gravitation as the leading-order effect of time curvature in the weak-field limit.
+
+\textbf{Christoffel Symbols and the Effect of \( g_{rr} \).}  
+To compare with spatial curvature, we evaluate the Christoffel symbols:
+\begin{equation}
+\Gamma^r_{00} = \frac{1}{2} g^{rr} \frac{\partial g_{00}}{\partial r}, \quad 
+\Gamma^r_{rr} = \frac{1}{2} g^{rr} \frac{\partial g_{rr}}{\partial r}.
+\end{equation}
+Using the approximations \( g_{rr} \approx 1 + \frac{2GM}{c^2 r} \), hence \( g^{rr} \approx 1 - \frac{2GM}{c^2 r} \), we compute:
+\begin{align}
+\frac{\partial g_{00}}{\partial r} &= \frac{2GM}{c^2 r^2}, \\[0.5em]
+\Gamma^r_{00} &= \frac{1}{2} \left(1 - \frac{2GM}{c^2 r} \right) \cdot \frac{2GM}{c^2 r^2} \notag \\
+&= \frac{GM}{c^2 r^2} \left(1 - \frac{2GM}{c^2 r} \right). \\[0.5em]
+\intertext{Since \( \frac{2GM}{c^2 r} \ll 1 \), we drop the second term:}
+\Gamma^r_{00} &\approx \frac{GM}{c^2 r^2}. \\[0.5em]
+\frac{\partial g_{rr}}{\partial r} &= -\frac{2GM}{c^2 r^2}, \\[0.5em]
+\Gamma^r_{rr} &= \frac{1}{2} \left(1 - \frac{2GM}{c^2 r} \right) \cdot \left(-\frac{2GM}{c^2 r^2} \right) \notag \\
+&= -\frac{GM}{c^2 r^2} \left(1 - \frac{2GM}{c^2 r} \right) \approx -\frac{GM}{c^2 r^2}.
+\end{align}
+The term \( \Gamma^r_{rr} (v^r)^2 \) appears in the geodesic equation due to spatial motion; it vanishes for stationary observers.
+
+
+\textbf{Relative Contribution of \( g_{rr} \).}  
+For a test particle with radial velocity \( v^r \), the spatial contribution to radial acceleration is:
+\begin{equation}
+a_r^{(g_{rr})} = -\Gamma^r_{rr} (v^r)^2.
+\end{equation}
+Estimating \( v^r \approx v_{\text{esc}} = \sqrt{2GM/r} \), we obtain:
+\begin{equation}
+a_r^{(g_{rr})} \approx \frac{GM}{c^2 r^2} \cdot \frac{2GM}{r} = \frac{2 G^2 M^2}{c^2 r^3}.
+\end{equation}
+By contrast, the time curvature contribution is \( a_r^{(g_{00})} \approx \frac{GM}{r^2} \). Taking the ratio:
+\begin{equation}
+\frac{a_r^{(g_{rr})}}{a_r^{(g_{00})}} = \frac{2GM}{c^2 r}.
+\end{equation}
+For Earth, this evaluates to:
+\begin{equation}
+\frac{2GM}{c^2 R} \approx 1.4 \times 10^{-9}.
+\end{equation}
+Thus, the influence of spatial curvature on low-velocity trajectories is nearly a billion times smaller than that of temporal curvature.
+
+\vspace{0.5em}
+\noindent\textbf{References}  
+Carroll, S. (2004). \textit{Spacetime and Geometry: An Introduction to General Relativity}. \\
+Peacock, J. (2021). PHYS11010: General Relativity. \textit{''So gravitational forces in the Newtonian limit are determined entirely by gradients in $g_{00}$.''}\\
+Hobson, M. P., Efstathiou, G., \& Lasenby, A. N. (2006). \textit{General Relativity: An Introduction for Physicists.} Cambridge University Press. Ch. 7.6: \textit{''our description of gravity as spacetime curvature tends to the Newtonian theory if the metric is such that, ..., $g_{00} = 1 + 2\Phi/c^2$.''}
+\end{technical}

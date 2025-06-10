@@ -1,0 +1,79 @@
+You are presented with two identical envelopes. You are told that one envelope contains twice as much money as the other. No other information is given. You select one envelope at random and open it. At this point, you are given the opportunity to switch.
+
+Here is a line of reasoning that seems straightforward. The envelope you opened must contain either the smaller amount or the larger. If it is the smaller, the other envelope contains twice as much; if it is the larger, the other contains half as much. Since these two cases seem equally likely, the average outcome from switching appears to be:
+\[
+\text{Average change} = 0.5 \cdot (+x) + 0.5 \cdot (-0.5x) = +0.25x.
+\]
+This suggests a consistent gain from switching — and since the same logic applies no matter which envelope you hold, it seems that you should switch every time. But this logic also tells you to switch back again, producing an endless preference loop. The contradiction is that each envelope appears preferable to the other.
+
+The error lies in how the symbol \( x \) is used: in one term it refers to the smaller amount, in the other to the larger. This floating reference leads to incompatible baselines for comparison.
+
+To make the model coherent, let \( x \) denote the smaller of the two amounts. Then the envelopes contain \( x \) and \( 2x \), and each is equally likely to be selected. If you hold \( x \), switching yields \( +x \); if you hold \( 2x \), switching yields \( -x \). The outcomes cancel:
+\[
+\text{Average change} = 0.5 \cdot (+x) + 0.5 \cdot (-x) = 0.
+\]
+No advantage arises. The paradox dissolves — not because expectation is flawed, but because the original argument uses it without a consistent model.
+
+This becomes even clearer in a bounded setup. Suppose the smaller amount is chosen uniformly from the set \( \{2^0, 2^1, \dots, 2^{999}\} \). For each \( x = 2^k \), the pair \( (x, 2x) \) is constructed, and one envelope is randomly selected. Suppose you observe amount \( A \).
+
+In most cases, two interpretations are consistent: either \( A = x \) and the other envelope is \( 2A \), or \( A = 2x \) and the other is \( A/2 \). Each is equally likely, and switching seems to yield a gain of \( +0.25A \). However, this ignores the edges: if \( A = 2^0 \), switching cannot halve it; if \( A = 2^{999} \), switching cannot double it. These boundary cases, though rare, are extreme enough to cancel the average gain across the interior. The total expectation returns to zero. 
+
+The interior values dominate: most observed amounts allow two consistent interpretations, and switching yields a local gain of \( +0.25A \). But this pattern breaks at the edges. The smallest amount always leads to a guaranteed gain, while the largest leads to a guaranteed loss. Because the loss at the upper edge is larger in magnitude, it outweighs the gains elsewhere. Averaging over all possible cases yields a net expectation that is slightly negative or zero, depending on the precise boundary treatment.
+
+In the limit as the model becomes unbounded — for example, when \( x \) is drawn from \( \{\dots, 2^{-2}, 2^{-1}, 2^0, 2^1, \dots\} \) — the problem reappears. For any observed amount, switching appears to yield a gain of \( +0.25A \). But this assumes all values are equally probable, which is not possible over an infinite set.
+
+A uniform distribution over an infinite number of values cannot exist: there is no way to assign equal, nonzero probability to infinitely many outcomes and still have the total probability equal to one. Any attempt results in an \emph{improper prior} — a function that resembles a distribution but cannot be normalized.
+
+To reason coherently in such a context, one must use a \emph{probability measure} — a rule that assigns consistent, additive weights to sets of values and sums to one. A measure is \emph{proper} if it satisfies this condition. If it diverges or is undefined, expectations may not exist. Even if each outcome is finite, the global average may be infinite or ill-defined. In that case, expectation ceases to be a meaningful decision tool.
+
+There is, however, one setup where switching yields a gain. Fix a value \( a \), and flip a fair coin. If heads, prepare envelopes with \( a \) and \( 2a \); if tails, use \( a \) and \( a/2 \). Hand the envelope containing \( a \) to the player.
+
+Now \( a \) is fixed. The uncertainty lies only in the second envelope. Switching results in either \( +a \) or \( -0.5a \), each with probability \( 0.5 \). The expected change is:
+\[
+\text{Average change} = 0.5 \cdot (+a) + 0.5 \cdot (-0.5a) = +0.25a.
+\]
+Here, switching is optimal. The model is asymmetric, and expectation is applied properly. No paradox arises.
+
+This version often causes confusion because its surface structure — two envelopes, a chance of doubling or halving — resembles the original. But the asymmetry is decisive. Expectation only makes sense when the direction of conditioning is explicit. In the coin-flip model, it is — and the gain is real. In the paradoxical version, it is not — and the contradiction is structural, not computational.
+
+\clearpage
+
+\begin{commentary}[Reasoning with and around Paradoxes]
+Probability paradoxes often arise from extending otherwise reliable tools — such as symmetry, expectation, or conditional likelihood — beyond the domains where they are mathematically coherent. Once the generative structure is clarified, the contradiction typically disappears.
+
+Analytical resolution involves selecting a valid prior over the smaller amount and computing the conditional expectation given the observed value. But intuition often fails before analysis begins. The paradox feels persuasive because it aligns with a mental shortcut: the imagined gain from doubling exceeds the loss from halving. Moreover, simulations over bounded ranges frequently reproduce this 25\% average gain in the interior of the distribution, while obscuring the boundary corrections that neutralize the effect.
+
+A complementary tool is empirical. By simulating the game with a finite model — such as drawing $x$ from a list of powers of two — one can directly compare switching and staying strategies. Below is a basic simulation in Python:
+
+\begin{verbatim}
+import random
+
+# Set up a bounded distribution over powers of two
+base = [2**i for i in range(30)]
+
+# Switching strategy: if you see x, assume it's the smaller value
+def switch_strategy():
+    x = random.choice(base)
+    amount = random.choice([x, 2*x])
+    return 2 * amount if amount == x else amount / 2
+
+# No-switching strategy: just keep the envelope you’re given
+def no_switch_strategy():
+    x = random.choice(base)
+    amount = random.choice([x, 2*x])
+    return amount
+
+# Run simulation
+n = 10**6
+switch_avg = sum(switch_strategy() for _ in range(n)) / n
+stay_avg   = sum(no_switch_strategy() for _ in range(n)) / n
+
+print("Average value if you always switch: ", switch_avg)
+print("Average value if you never switch:  ", stay_avg)
+\end{verbatim}
+
+In this simulation, switching produces a slightly higher average — but only because it allows transitions outside the original envelope space. For instance, switching from \( 2^{29} \) yields \( 2^{30} \), even though that value was not part of the original distribution. If you enforce strict bounds (e.g., forbid switching beyond the defined range), the advantage disappears. This reflects the formal result: in a symmetric, finite model, switching yields no net gain once edge conditions are treated correctly.
+
+Simulation is not a substitute for proof, but it helps clarify where the paradox gains its force: from structural ambiguity, not arithmetic failure.
+
+\end{commentary}

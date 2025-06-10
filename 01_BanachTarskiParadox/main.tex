@@ -1,0 +1,97 @@
+A mathematical system begins with a specification of its basic elements: which objects exist, which operations are defined on them, and which relations must hold. These specifications are encoded in the system's axioms. An axiom is not a statement to be proved, tested, or discovered. It is a formal assumption that serves as the foundation for the system. Within that system, no statement can be derived unless it is implied by the axioms in conjunction with the rules of logical inference.
+
+Axioms are not assertions of empirical truth. They do not describe observations or measurements. They also do not represent theorems awaiting proof. An axiom is simply a rule: it introduces entities and governs their permitted behavior. Once a set of axioms is fixed, all further reasoning — definitions, proofs, theorems — must proceed within the structure they determine. The consistency and character of the system depend entirely on these initial choices.
+
+Different axiomatic systems describe different mathematical worlds. In one system, every set may have a well-ordering. In another, it may not. In one geometry, parallel lines exist; in another, they do not. These are not contradictions. They are the consequences of working under distinct sets of assumptions. Axioms define what exists and what follows.
+
+The axioms of Peano Arithmetic define the system of the natural numbers, denoted $\mathbb{N}$. This set includes $0$, $1$, $2$, $3$, and so on without end. It is not treated as a completed totality but built from a starting element and a rule for generating new ones. The system introduces a constant symbol $0$ and a unary function $S$, called the \emph{successor function}, which assigns to each number the number that comes immediately after it.
+
+The axioms are as follows:
+
+\begin{itemize}
+  \item $0$ is a natural number.
+  
+  \item The successor of any natural number is also a natural number.
+
+  \item If two numbers have the same successor, then they are equal. 
+
+  \item Zero is not the successor of any number.
+
+  \item (\textbf{Induction}) If a property holds for $0$, and if it holds for $S(n)$ whenever it holds for $n$, then it holds for all natural numbers.
+\end{itemize}
+
+These axioms define which elements are in the domain, how the successor function behaves, and how general properties of all the natural numbers are reasoned. Together, the axioms define $\mathbb{N}$.
+
+Peano Arithmetic can itself be formulated within a more general framework: axiomatic set theory. In that setting, the natural numbers are modeled as specific sets, and their properties follow from axioms governing set formation, membership, and equality. The objects of arithmetic — numbers, functions, sequences — are all encoded as sets, and reasoning about them is carried out using the axioms of the underlying set theory.
+
+While Peano Arithmetic describes a single kind of object with a single operation, set theory can define and relate entire collections of structures. New axioms allow statements not just about numbers, but about functions between functions, collections of collections, and hierarchies of infinities. As the domain expands, the complexity of the axioms changes: some describe combinatorial structure, others assert the existence of objects that cannot be explicitly constructed.
+
+The Axiom of Choice is one such axiom. It asserts that for any collection of non-empty sets, there exists a function that selects exactly one element from each set. In finite cases, such a selection can usually be written down explicitly or proved to exist by simple arguments. In infinite settings, this is not always possible. For example, consider an infinite collection of drawers, each containing a left and right shoe. A rule such as “choose the right shoe” provides a valid selection and does not require the Axiom of Choice. But if each drawer contains a pair of identical socks with no distinguishing features, then no explicit rule can be formulated. The existence of a function that selects one sock from each drawer in this case depends on accepting the Axiom of Choice.
+
+Let us now move down the ladder of abstraction — from axioms to the notion of size.
+
+Measure theory formalizes how size is assigned to sets. A \emph{measure} $\mu$ is a function that maps certain subsets of a space to non-negative numbers, subject to structural requirements. Chief among these is \textbf{countable additivity}: if a set is decomposed into countably many disjoint measurable parts $\{A_i\}_{i=1}^\infty$, then $\mu\left( \bigcup_{i=1}^\infty A_i \right) = \sum_{i=1}^\infty \mu(A_i)$.
+
+In words: the measure of the union of non-overlapping parts equals the sum of their individual measures. If two disjoint objects are combined, the total size is the size of the first plus the size of the second. This ensures that $\mu$ accumulates size coherently across disjoint components.
+
+Another requirement is \textbf{predictable behavior under set operations}. The domain of a measure is not the power set but a \emph{$\sigma$-algebra}, closed under countable unions, intersections, and complements. If $A$ and $B$ are measurable, then so are $A \cup B$, $A \cap B$, and $A^c$, with consistent outcomes. Structural properties include monotonicity ($A \subseteq B$ implies $\mu(A) \leq \mu(B)$) and subadditivity ($\mu(A \cup B) \leq \mu(A) + \mu(B)$) even when sets overlap.
+
+In familiar cases, the standard measure corresponds to area in $\mathbb{R}^2$ and volume in $\mathbb{R}^3$. However, not all subsets qualify. A set is \emph{measurable} only if its inclusion preserves countable additivity, predictable behavior under unions, intersections, and complements, and compatibility with the structure of the space.
+
+A further structural expectation is \textbf{invariance under rigid motions}: translating or rotating a measurable set leaves its measure $\mu$ unchanged. Rigid motions include only translations and rotations — operations that preserve distances, angles, and overall shape. This reflects the principle that volume is intrinsic to the object and independent of its position or orientation.
+
+However, the Axiom of Choice implies the existence of subsets for which these conditions fail. These are \emph{non-measurable sets}: subsets of space to which no consistent volume can be assigned while preserving both countable additivity and invariance under rigid motions. Any function that assigns volume to all subsets must sacrifice at least one of these properties if non-measurable sets are to be included. In particular, for some subsets of $\mathbb{R}^3$, no volume can be defined that remains unchanged under movement.
+
+This possibility plays a central role in the Banach-Tarski paradox. Slicing an object into several disjoint pieces and rearranging them to form two complete copies of equal size is impossible under standard physical expectations. Yet mathematically, under the assumptions just described, such an outcome is realizable. A three-dimensional sphere can be partitioned into finitely many disjoint non-measurable subsets, which can then be recombined — using only rigid motions — into two sets each congruent to the original.
+
+This result reflects the failure of volume to be preserved when applied to non-measurable sets. In physical systems such as a stone, a fluid body, or any measurable material, each component contributes additively to the whole. The Banach–Tarski construction defines a setting where that principle does not apply. Once measurability fails, volume is no longer additive, and classical constraints on rearrangement no longer hold.
+
+A useful analogy is Hilbert’s Hotel: a conceptual structure with infinitely many rooms, each indexed by a natural number, all occupied, yet still capable of accommodating additional guests. In a finite hotel with $n$ rooms, no new guest can be added without eviction if all rooms are full. In an infinite hotel with the same size as $\mathbb{N}$ — the set of positive integers — this restriction does not hold.
+
+To admit one additional guest, reassign each occupant from room $n$ to room $n+1$. This function is injective, and room 1 becomes available. Every guest is reassigned to a unique room, and no guest is removed.
+
+To admit infinitely many new guests, reassign each occupant from room $n$ to room $2n$, thereby vacating all odd-numbered rooms. This mapping is injective and covers the even-numbered indices, while the odd-numbered rooms (those labeled $2k-1$) are made available for the incoming set.
+
+Here, the term \emph{countable} refers to an infinite set that can be placed in one-to-one correspondence with the natural numbers. A countably infinite set has the same \emph{cardinality} — that is, the same "size of infinity" — as $\mathbb{N}$. Despite being infinite, such a set can still be indexed sequentially, with each element labeled by a natural number.
+
+The total number of rooms remains the same size as $\mathbb{N}$. Although the internal indexing has changed, the hotel still contains exactly one room for each natural number. No new rooms have been created. The structure has been reorganized, not enlarged.
+
+This example illustrates a central feature of infinite systems: total size, or cardinality, does not restrict how components may be reorganized. In Hilbert’s Hotel, a countably infinite collection of rooms can be reindexed to make space for new entries without adding or removing any elements. The structure is rearranged, not enlarged.
+
+In the Banach–Tarski construction, the indexing of points is based on group actions. The sphere is acted upon by a subgroup of the rotation group $\mathrm{SO}(3)$ — the group of all rotations about the origin in three-dimensional Euclidean space. Each element of $\mathrm{SO}(3)$ corresponds to a rigid rotation around some axis through the origin, and the group operation is composition of rotations. This group is non-abelian (orders of rotations matter), compact, and uncountable, with rich subgroup structure.
+
+Among its subgroups are countable groups generated by a small number of fixed rotations. One such subgroup is constructed by choosing two particular rotations $A$ and $B$, around distinct axes and by specifically chosen angles, such that no nontrivial combination of $A$, $B$, and their inverses ever returns a point to its original position unless the combination reduces to the identity. This generates a subgroup of $\mathrm{SO}(3)$ isomorphic to the free group on two generators, denoted $F_2 = \langle a, b \rangle$.
+
+The group $F_2$ consists of all finite sequences formed from the symbols $a$, $b$, $a^{-1}$, and $b^{-1}$, with no reductions allowed except immediate cancellation of an element with its inverse. This means, for example, that $ab^{-1}a$ and $baba^{-1}$ are valid group elements, while $aa^{-1}$ or $bab^{-1}$ reduce to shorter expressions. The group contains no nontrivial relations, and each element corresponds to a unique sequence. This structure provides the combinatorial freedom required for the decomposition used in the Banach–Tarski construction.
+
+Each point in the sphere is associated with a group element according to its orbit under the group action. The orbits encode how a point is moved by successive applications of group elements. These orbits can be shifted using left multiplication by a fixed element of the group. This operation reindexes the entire set of orbits without overlap or loss, preserving the group structure while rearranging the partition.
+
+The key step is indeed that these shifts do not overlap. Each such transformation reindexes the entire structure injectively. As a result, one can partition the sphere into finitely many disjoint subsets and then reassemble those subsets — by applying rotations from the group — to form two distinct sets, each congruent to the original. There is no scaling, duplication, or splitting. The process uses only rigid motions and group structure.
+
+This outcome depends on the ability to define these non-measurable sets (the collections of points for which no volume assignment is possible that satisfies both countable additivity and invariance under movement). The existence of such sets requires the Axiom of Choice. Without it, the decomposition cannot be carried out. With it, the construction proceeds formally and without contradiction.
+
+When the Axiom of Choice was previously described as “a central axiom in the modern theory of sets,” this referred to its role within the standard framework known as Zermelo–Fraenkel set theory with Choice, abbreviated ZFC. The Axiom of Choice is not derivable from the other axioms of this system. It is independent of the base theory ZF: both ZFC and ZF without Choice are consistent, provided that ZF itself is consistent. This independence was established by constructing models of set theory in which the Axiom of Choice either holds or fails. 
+
+Despite its independence, the Axiom of Choice is almost universally accepted. Many classical theorems in algebra, topology, analysis, and logic depend on it. Under ZF, statements such as “every vector space has a basis,” “the product of compact spaces is compact,” and “every set can be well-ordered” are all equivalent to accepting the Axiom of Choice.
+
+The version needed for the Banach–Tarski paradox does not require the full strength of Choice applied to arbitrary collections. It is enough to allow choices from certain well-structured families of non-empty sets. This weaker form still goes beyond what can be derived in constructive frameworks, but it is logically weaker than the full axiom.
+
+\begin{commentary}[Commentary]
+This chapter forces a precise distinction between mathematical and physical reasoning. The Banach–Tarski construction is not notable for contradiction or physical impossibility, but for its transparent dependence on foundational axioms. It isolates the consequences of adopting the Axiom of Choice, revealing that intuitive notions like volume are not preserved across all logically valid set decompositions.
+
+The result is clean and formally sound, yet incompatible with empirical modeling. That gap — between internally consistent mathematics and physically grounded expectation — illustrates the epistemic boundaries explored throughout this book. As with other chapters that emphasize when simplifications fail (relativity in gold, curvature in gravity, topology in voting), this example shows that what appears insane may instead be a well-posed feature of a chosen formal system.
+
+\end{commentary}
+
+\begin{SideNotePage}{
+  \textbf{Hilbert Hotel Encoding:} \par
+  The top section encodes a one-to-one mapping from all passengers on all infinite buses into the natural numbers using prime powers. Each bus is labeled by its index $m$, each seat by $n$, and each $n$ corresponds to the $n^\text{th}$ prime $p_n$. The room assigned to passenger $n$ on bus $m$ is $(p_n)^m$. The figure arranges these values in a grid: primes increase left to right, exponents bottom to top. For example, passenger 2 on bus 3 is sent to room $3^3 = 27$. The mapping is injective due to the uniqueness of prime factorization.
+
+  \vspace{0.5em}
+  This construction generalizes the common Hilbert’s hotel situation. Instead of just accommodating a countable infinity of new guests in a fully occupied hotel, it handles an infinite number of infinite buses — still without overlapping room assignments. Yet despite this flood of occupants, the set of used rooms remains extremely sparse. The image of the map consists only of prime powers, which have natural density zero in $\mathbb{N}$.
+  
+  \vspace{1.5em}
+  \textbf{Bottom (Banach–Tarski Paradox):} \par
+  The bottom diagram depicts the Banach–Tarski paradox. A purple sphere is split into two point clouds — red and blue — using a decomposition into non-measurable sets. Each set is then rotated independently. Without adding or scaling anything, the two parts are reassembled into two full spheres, each identical in size to the original. The arrows represent rigid motions. This outcome is permitted by the axiom of choice and illustrates how measure theory collapses when dealing with non-measurable subsets in three dimensions. The construction is mathematically sound but cannot be realized physically or computationally.
+}{01_BanachTarskiParadox/UNPOP SCI - INFINITE - v2.pdf}
+\end{SideNotePage}

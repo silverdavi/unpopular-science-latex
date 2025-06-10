@@ -1,0 +1,151 @@
+Statistical association measures how two variables vary together across observations. This association can be quantified numerically to assess whether changes in one variable systematically relate to changes in another. The direction, strength, and type of relationship can vary substantially depending on the method of analysis and the structure of the data.
+
+The Pearson correlation coefficient quantifies the extent to which two variables vary together, relative to how much they vary individually. Suppose we have two sequences of real numbers $(x_1, \dots, x_n)$ and $(y_1, \dots, y_n)$, each centered so that
+\[
+\frac{1}{n} \sum_{i=1}^n x_i = 0, \quad \frac{1}{n} \sum_{i=1}^n y_i = 0.
+\]
+The product $x_i y_i$ is positive when both $x_i$ and $y_i$ lie on the same side of their respective means, and negative when they lie on opposite sides. The average of these products,
+\[
+\mathrm{Cov}(X,Y) = \frac{1}{n} \sum_{i=1}^n x_i y_i,
+\]
+measures how often and how strongly the variables deviate in the same or opposite directions. To express this in a unitless form that is comparable across datasets, we normalize by the standard deviations,
+\[
+\sigma_X = \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}, \quad \sigma_Y = \sqrt{\frac{1}{n} \sum_{i=1}^n y_i^2},
+\]
+yielding the correlation coefficient:
+\[
+\rho_{X,Y} = \frac{\mathrm{Cov}(X,Y)}{\sigma_X \sigma_Y} = \frac{\frac{1}{n} \sum x_i y_i}{\sqrt{\frac{1}{n} \sum x_i^2} \cdot \sqrt{\frac{1}{n} \sum y_i^2}}.
+\]
+This quantity lies between $-1$ and $+1$. A value near $+1$ indicates strong alignment in direction, a value near $-1$ indicates consistent opposition, and a value near $0$ indicates that deviations in one variable do not predict deviations in the other. The formula measures average directional agreement per pair, adjusted for the typical variability of each sequence.
+
+However, correlation is silent on causality. A high correlation may reflect direct influence, common causation, selection effects, or coincidence. It can also be unstable under reclassification of subgroups, introduction of controls, or reweighting.
+
+Hypothesis testing supplements these measures by estimating the likelihood that an observed association arises from random variation. A p-value is the probability, under a null hypothesis of no association, that the sample statistic would be at least as extreme as the one observed. This calculation depends on assumptions of randomness, independence, and fixed data-generating processes.
+
+If the p-value is low, the null hypothesis is rejected. However, statistical significance depends on both the effect size and the sample size. In large samples, even tiny effects can yield small p-values, while in small samples, meaningful effects may remain undetectable. The interpretation must consider both magnitude and uncertainty.
+
+These considerations become essential when evaluating phenomena like Simpson’s paradox. Simpson’s paradox occurs when trends that appear within multiple subgroups reverse or vanish when the data are combined. The shift is not a mistake in arithmetic but a reflection of the influence of group-level distributions on marginal comparisons.
+
+Consider a clinical trial comparing two treatments — Treatment A and Treatment B — across two populations: Group 1 (low-risk) and Group 2 (high-risk). The outcomes are:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+ & Success Rate & Sample Size & Successful Cases \\
+\midrule
+Treatment A, Group 1 & 93\% & 30 & 28 \\
+Treatment B, Group 1 & 87\% & 200 & 174 \\
+Treatment A, Group 2 & 73\% & 70 & 51 \\
+Treatment B, Group 2 & 69\% & 20 & 14 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In both subgroups, Treatment A performs better. Yet the aggregate outcomes reverse:
+
+\[
+\text{Treatment A: } \frac{28 + 51}{30 + 70} = 79\%, \quad
+\text{Treatment B: } \frac{174 + 14}{200 + 20} = \frac{188}{220} \approx 85.5\%.
+\]
+
+Treatment B appears more effective overall. This discrepancy arises because Treatment A was mostly used on high-risk patients, while Treatment B was used on low-risk ones. Aggregation masks the subgroup effects by overrepresenting more favorable baseline cases in one treatment arm.
+
+The 1973 graduate admissions data from UC Berkeley shows the same pattern. The overall acceptance rate was lower for women than men. But when disaggregated by department, most departments admitted women at higher or equal rates. The aggregate bias was caused by application patterns: women applied more to highly competitive departments with lower overall acceptance rates.
+
+In baseball, Derek Jeter had a higher overall batting average than David Justice across the 1995–1996 seasons, despite Justice having a better average in each year. Justice had more at-bats in 1995, when averages were low overall, while Jeter had more at-bats in 1996, a better season. The weight of those distributions produced a reversal in the aggregated statistic.
+
+A modern commercial case involves an online advertising campaign comparing user engagement across mobile platforms. The campaign reached 188,000 Android users (49.5\% clicked) and 101,000 iOS users (56.5\% clicked). iOS initially appears better. However, further breakdown reveals:
+
+\[
+\text{Android Phone Users: } 172,000 \times 46\% = 79,000, \quad \text{Android Tablet Users: } 16,000 \times 87.5\% = 14,000,
+\]
+\[
+\text{iOS iPhone Users: } 62,000 \times 42\% = 26,000, \quad \text{iOS iPad Users: } 39,000 \times 79.5\% = 31,000,
+\]
+
+Android outperforms iOS in both device subgroups. The overall impression was skewed by platform usage distribution — more iOS users accessed via iPads, where engagement is generally higher. The reversal came from differences in internal composition.
+
+All of these cases involve two necessary conditions: subgroup means differ, and group sizes are distributed unequally across treatment or category. These two features distort the marginal effect. Aggregation over the confounding variable produces a weighted average that no longer aligns with any of the conditional means.
+
+Simpson’s paradox arises when conditioning and aggregation yield inconsistent associations. The association between two variables — such as treatment and outcome — can differ depending on whether a third variable is held fixed or averaged over. When this third variable affects both treatment assignment and outcome distribution, it acts as a confounder. Ignoring it produces distorted marginal statistics.
+
+The inconsistency results from the non-commutativity of expectation and marginalization:
+\[
+\mathbb{E}[\text{Outcome}|\text{Treatment}] \neq \sum_{\text{Group}} \mathbb{E}[\text{Outcome}|\text{Treatment}, \text{Group}] \cdot P(\text{Group}|\text{Treatment}).
+\]
+The left-hand side reflects marginal expectations. The right-hand side aggregates conditional expectations using treatment-specific group weights. When the group distribution differs by treatment, the two sides diverge.
+
+Whether to rely on marginal or conditional analysis depends on the inferential target. If subgroup membership is observed and relevant to decision making, conditional rates provide actionable information. If only the treatment label is known, marginal rates are more predictive at the population level.
+
+Detection methods include regression with interaction terms, stratified cross-tabulation, and partitioning trees. In large datasets, reversals can be found algorithmically, but their interpretation requires assessment of causal structure and subgroup validity.
+
+Reversals are not sufficient to establish a paradox. Some reflect small-sample noise, inappropriate stratification, or model instability. A valid instance requires that both the subgroup and aggregate views correspond to coherent, interpretable comparisons.
+
+Simpson’s paradox demonstrates that observed associations depend on how data are partitioned and combined. Aggregation over variables that influence both exposure and outcome can alter the sign or magnitude of effects. Statistical inference is sensitive to the structure of the joint distribution and the availability of relevant covariates.
+
+The paradox flags conditions under which marginal summaries misrepresent conditional behavior. It highlights the necessity of preserving subgroup information when heterogeneity in outcome mechanisms is expected. In causal contexts, it emphasizes the distinction between unadjusted associations and adjusted effects.
+
+
+\vspace*{\fill}
+
+\clearpage
+
+
+
+\begin{center}
+{\Large \textbf{More Statistical Paradoxes and Interpretation Failures}}
+
+\end{center}
+
+\vspace{1em}
+
+\begin{tcolorbox}[
+  colback=gray!2,
+  colframe=gray!60,
+  boxrule=0.4pt,
+  width=\textwidth,
+  arc=1pt,
+  left=8pt,
+  right=8pt,
+  top=6pt,
+  bottom=6pt,
+  shadow={0mm}{-0.5mm}{0mm}{gray!30}
+]
+\setstretch{1}
+
+\textbf{1. Berkson’s Paradox}  
+\emph{Conditioning on a common effect induces spurious negative correlation.}  
+If two independent variables both affect a selection criterion, then restricting attention to cases that satisfy that criterion creates an artificial negative correlation. This occurs in hospital datasets, where independent risk factors may appear inversely related when conditioned on admission. The association is real in the conditional data but does not reflect a relationship in the population.
+
+\vspace{1em}
+
+\textbf{2. Ecological Fallacy}  
+\emph{Group-level associations are wrongly projected onto individuals.}  
+When a statistical association holds across aggregated units — such as regions or schools — it does not necessarily hold within them. For example, a country with higher average education may have higher average income, but this does not imply that more educated individuals earn more within each region. Unlike Simpson’s paradox, ecological fallacy involves misapplying group-level trends to individual inference without requiring any reversal. The error lies in cross-level extrapolation, not confounding.
+
+\vspace{1em}
+
+\textbf{3. Will Rogers Phenomenon}  
+\emph{Reclassification improves group averages without improving any member.}  
+If individuals from the low end of one group are reclassified into another group with even lower average, both groups may show improved mean outcomes. This occurs in cancer staging and school performance tracking, and reflects the fact that averages are sensitive to how groups are defined — even when no unit changes.
+
+\vspace{1em}
+
+\textbf{4. Modifiable Areal Unit Problem (MAUP)}  
+\emph{Statistical results depend on the choice of spatial or administrative boundaries.}  
+In spatial analysis, correlations and rates can shift significantly depending on how geographic regions are aggregated. A pattern observed at the county level may not hold at the district level or when boundaries are redrawn.
+
+\vspace{1em}
+
+\textbf{5. Low Birth-Weight Paradox}  
+\emph{Conditioning on an intermediate variable reverses risk comparisons.}  
+Infants born to smoking mothers have higher rates of low birth weight, and low birth weight is associated with higher mortality. But among low birth-weight babies, those born to smokers may show lower mortality than those of non-smokers. The paradox emerges because birth weight is both an effect of smoking and a predictor of mortality. Conditioning on it introduces collider bias, obscuring causal direction.
+
+\vspace{1em}
+
+\textbf{6. Prosecutor’s Fallacy}  
+\emph{Confusing the likelihood of evidence with the probability of guilt.}  
+In forensic contexts, the probability of observing the evidence assuming innocence is often mistaken for the probability of innocence given the evidence. For example, a DNA match with a false positive rate of $1/1000$ is incorrectly interpreted as implying a $0.1\%$ chance of innocence, ignoring base rates. The fallacy reflects improper inversion of conditional probability.
+
+\end{tcolorbox}
+

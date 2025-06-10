@@ -1,0 +1,56 @@
+\begin{technical}
+{\Large\textbf{The Mechanics of Shoelace Knot Stability}}\\[0.7em]
+
+\textbf{Symmetry and Load Distribution}\\[0.5em]
+A shoelace knot consists of two successive trefoil crossings. If these crossings have opposite handedness, the structure forms a square (reef) knot. If both share the same handedness, the result is a granny knot. Though visually similar, these configurations differ in how they respond to load.
+
+In the square knot, mirrored crossings lie flat, and tension distributes evenly across the structure. In the granny knot, the crossings reinforce each other’s twist, producing a rotational offset. The knot tilts under tension, concentrating force asymmetrically. This geometric difference alters the force balance at each crossing.
+
+Let $T$ denote the applied tension and $\theta$ the local crossing angle. The normal force at a single crossing is
+$$
+N = T \sin(\theta).
+$$
+In an asymmetric knot, the two crossings may experience unequal loads. For example,
+$$
+N_1 \approx 2T \sin(\theta), \quad N_2 \approx 0,
+$$
+leaving one side prone to slippage. In a symmetric configuration,
+$$
+N_1 \approx N_2 \approx T \sin(\theta),
+$$
+yielding balanced contact forces and consistent frictional resistance.
+
+Friction opposes slip and scales with $\mu N$. Across a curved segment, tension amplifies exponentially according to the Euler–Eytelwein relation:
+$$
+T_{\text{out}} = T_{\text{in}} e^{\mu \phi},
+$$
+where $\phi$ is the contact angle. Symmetric knots preserve wrap angle and maximize this effect. Asymmetric knots reduce effective contact, degrading the exponential gain in tension retention.
+
+\textbf{Cyclic Forcing and Inertial Drag}\\[0.5em]
+During walking, each stride delivers two primary mechanical events: heel impact and forward swing. Impact compresses the knot center vertically. Swing introduces inertial tension on the free ends. Let $L$ be the lace length, $m$ the mass, and $\omega$ the angular velocity during swing. The inertial force is approximated by
+$$
+F_{\text{inertia}} = m L \omega^2.
+$$
+This force acts outward from the knot center, pulling on the free end. If the knot momentarily deforms during impact, frictional resistance drops, and the lace may slip.
+
+Let $m_f$ and $m_l$ denote the effective masses of the free end and loop, respectively. Slip initiates when the net inertial force exceeds the frictional limit:
+$$
+(m_f - m_l) a > \mu N.
+$$
+Once motion begins, geometry evolves. The free end lengthens; the loop contracts. This increases $m_f$ and decreases $m_l$, amplifying the inertial differential. The result is a feedback loop. If $\Delta x_n$ is the slip per step, then
+$$
+\Delta x_{n+1} > \Delta x_n.
+$$
+Runaway failure occurs when this inequality compounds across successive strides.
+
+\textbf{Geometric Control of Instability}\\[0.5em]
+Experiments confirm that square knots resist this failure mode more effectively than granny knots. Opposing crossings stabilize the center and maintain contact area. Identical-handed crossings twist the core, reduce symmetry, and allow differential loading across the structure.
+
+Under cyclic loading, these geometric differences dominate. The symmetric knot remains dynamically stable. The asymmetric knot, though visually indistinguishable, initiates slip under the same conditions. Stability depends not on appearance or tightness, but on internal configuration under load.
+
+\vspace{0.5em}
+\textbf{References:}\\
+Daily-Diamond, C. A., Gregg, C. E., O'Reilly, O. M. (2017). The roles of impact and inertia in the failure of a shoelace knot. \textit{Proc. R. Soc. A}, 473(2200):20160770.\\
+Jawed, M. K., Dieleman, P., Audoly, B., Reis, P. M. (2015). Untangling the mechanics and topology in the frictional response of long overhand elastic knots. \textit{Phys. Rev. Lett.}, 115(11):118302.\\
+Fieggen, I. (2023). \textit{Ian's Shoelace Site}. https://www.fieggen.com/shoelace/tying.htm
+\end{technical}

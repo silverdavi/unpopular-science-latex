@@ -1,0 +1,56 @@
+\begin{technical}
+{\Large\textbf{Membrane Forces and Competing Models of Osmotic Flow}}\\[0.7em]
+
+\noindent\textbf{Introduction}\\[0.5em]
+Several models describe osmotic transport. Classical thermodynamics treats it as a bulk equilibrium condition, diffusion models emphasize concentration gradients, and mechanical approaches focus on interfacial forces. While all yield van ’t Hoff’s law at equilibrium, they differ in physical interpretation and predictive scope under flow. This section presents and evaluates each model, emphasizing the pressure-based framework that incorporates membrane–solute interactions.
+
+\noindent\textbf{1. Classical Thermodynamic View}\\[0.5em]
+Thermodynamic treatments derive osmotic pressure from entropy maximization or chemical potential equilibration. In dilute solutions, osmotic equilibrium occurs when:
+\begin{equation}
+\Delta P = R\,T\,\Delta c_s,
+\end{equation}
+where $\Delta P$ is the applied hydrostatic pressure difference, $\Delta c_s$ the solute concentration difference, $R$ the gas constant, and $T$ the absolute temperature. While accurate for equilibrium states, this formulation offers no expression for $\Phi_V$, the water flux rate. It does not specify the spatial origin of the driving force, and is silent on permeability ratios ($P_f / P_d$).
+
+\noindent\textbf{2. Diffusion-Based Interpretation}\\[0.5em]
+In a molecular diffusion model, water molecules move down a concentration gradient. Fick’s law for water flux $\Phi_D$ is:
+\begin{equation}
+\Phi_D = -D_w \,\nabla c_w,
+\end{equation}
+where $D_w$ is the diffusion coefficient and $c_w$ is the water concentration. This predicts osmotic permeability $P_f = P_d$, which contradicts experimental data in many systems:
+\[
+\frac{P_f}{P_d} \gg 1.
+\]
+The diffusion model fails to explain high flux rates, single-file channel transport, or solvent drag effects seen in semipermeable membranes.
+
+\noindent\textbf{3. Mechanical Pressure Drop Model (Debye–Vegard)}\\[0.5em]
+This model attributes osmotic flow to pressure gradients created by solute–membrane exclusion. Debye’s 1923 treatment, refined by Manning and Kay (2023), expresses water volume flux $\Phi_V$ as:
+\begin{equation}
+\Phi_V = -L_p\,(\Delta P - R\,T\,\Delta c_s),
+\end{equation}
+where $L_p$ is the hydraulic permeability. At equilibrium ($\Phi_V = 0$), van ’t Hoff’s law is recovered. Under nonequilibrium, local solute–membrane collisions generate a pressure deficit near the membrane:
+\begin{equation}
+\frac{dP}{dx} = c_s F, \quad\text{with} \quad F = \text{repulsive force density}.
+\end{equation}
+Integrating this yields the Vegard pressure drop:
+\begin{equation}
+\Delta P_\text{mem} = R\,T\,c_s.
+\end{equation}
+
+\noindent\textbf{4. Consequences for Permeability and Flow}\\[0.5em]
+The pressure drop across the membrane explains high $P_f / P_d$ ratios and unifies osmotic and pressure-driven flow:
+\begin{equation}
+\Phi_V = -L_p\,\frac{dP}{dx}, \quad \text{(Darcy-like flow)}.
+\end{equation}
+This model correctly predicts convective water transport in porous membranes and aquaporin-containing systems. In pure lipid bilayers lacking such channels, solute exclusion is absent and $P_f / P_d = 1$.
+
+\noindent\textbf{5. Comparative Summary}\\[0.5em]
+The thermodynamic model correctly predicts equilibrium but provides no mechanism or dynamics. The diffusion model offers dynamics but fails to match the magnitude and direction of flow in most membranes. The Debye–Vegard model provides dynamics, a clear mechanism, and explains the observed $P_f / P_d$. The mechanical pressure model distinguishes itself by explicitly identifying the origin of osmotic force and unifying the formalism with standard fluid mechanics.
+
+\vspace{0.5em}
+\noindent\textbf{References:}\\
+Debye, P. (1923). \textit{Phys. Z.}, 24:334--338.\\
+Manning, G.S., \& Kay, A.R. (2023). The physical basis of osmosis. \textit{J. Gen. Physiol.}, 155: e202313332.\\
+Vegard, L. (1908). \textit{Proc. Camb. Phil. Soc.}, 15:13--23.\\
+Weiss, T.F. (1996). \textit{Cellular Biophysics: Transport}. MIT Press.\\
+Finkelstein, A. (1987). \textit{Water Movement Through Lipid Bilayers, Pores, and Plasma Membranes}. Wiley.
+\end{technical}

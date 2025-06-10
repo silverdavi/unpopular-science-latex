@@ -1,0 +1,82 @@
+\begin{technical}
+{\Large\textbf{Bioluminescence Mechanics and Quantification}}\\[0.7em]
+
+\noindent\textbf{1. Molecular Reaction Pathway}\\
+Firefly luciferase ($\sim 62\,\text{kDa}$, 550–560 amino acids) catalyzes a two-step reaction:
+\begin{align*}
+\text{Luciferase} + \text{D-Luciferin} + \text{ATP} 
+&\rightarrow {} \\
+\text{Luciferase-luciferyl adenylate} &\,+\, \text{PP}_i \\
+\text{Luciferase-luciferyl adenylate} + \text{O}_2 
+&\rightarrow {} \\
+\text{Oxyluciferin}^* &\,+\, \text{AMP} \,+\, \text{CO}_2 \\
+\text{Oxyluciferin}^* 
+&\rightarrow {} \\
+\text{Oxyluciferin} &\,+\, \text{Light (560\,nm)}
+\end{align*}
+
+The emitted light has wavelength $\lambda$, corresponding to energy:
+
+\begin{equation}
+E = \frac{hc}{\lambda} = 
+\frac{(6.626 \times 10^{-34}\,\text{J·s}) (3 \times 10^8\,\text{m/s})}
+{560 \times 10^{-9}\,\text{m}} 
+\end{equation}
+
+\begin{equation}
+\approx 3.55 \times 10^{-19}\,\text{J}
+\end{equation}
+
+Each reaction cycle consumes one ATP molecule (energy $\approx 7.3 \times 10^{-20}$ J) and emits a single photon. The high quantum yield indicates minimal energy loss through non-radiative pathways.
+
+\noindent\textbf{2. Cellular Organization}\\
+The light-producing cells (photocytes) contain the necessary biochemical machinery:
+
+\begin{itemize}
+    \item Photocyte density: $\sim 10^5$–$10^6$ per lantern
+    \item Luciferase molecules: $\sim 10^6$–$10^7$ per photocyte
+    \item ATP concentration: 2–5 mM in active photocytes
+    \item Oxygen control: Regulated by nitric oxide (NO) signaling
+\end{itemize}
+
+Flash duration (200–300 ms) is controlled by oxygen availability via tracheal end cells that regulate gas diffusion to photocytes.
+
+\noindent\textbf{3. Photon Count Measurements}\\
+Modern spectrometer studies can be used to estimate counts of 
+$3 \times 10^8$–$5 \times 10^8$ photons per flash. Given a flash duration of 200–300 ms, the temporal photon emission rate is:
+\begin{equation}
+\Phi_{\text{photons}} \approx 
+\frac{4 \times 10^8\,\text{photons}}{0.25\,\text{s}} 
+\approx 1.6 \times 10^9\,\text{photons/s}
+\end{equation}
+
+Converting to radiometric power:
+\begin{align*}
+P &= \Phi_{\text{photons}} \cdot E_{\text{photon}} \\
+  &\approx (1.6 \times 10^9\,\text{s}^{-1}) \cdot (3.55 \times 10^{-19}\,\text{J}) \\
+  &\approx 5.7 \times 10^{-10}\,\text{W}
+\end{align*}
+
+This power output, while small in absolute terms, appears significant to human observers due to perceptual factors.
+\newline
+\noindent\textbf{4. Optical and Perceptual Optimization}\\
+Firefly light appears significantly brighter than its raw power suggests due to: Spectral peak near human eye sensitivity ($\sim$550$\,\text{nm}$), maximizing luminous efficiency, Uric acid crystal reflectors directing internally scattered photons outward, increasing effective brightness, Lantern cuticle refractive index ($n \approx 1.56$) reducing internal reflections and absorption \& Human dark adaptation optimizing low-light perception, making faint light sources appear much brighter.
+
+The luminous flux can be estimated as:
+\begin{align*}
+\text{Luminous flux} &= P \cdot 683\,\text{lm/W} \\
+&\approx (5.7 \times 10^{-10}\,\text{W}) \cdot (683\,\text{lm/W}) \\
+&\approx 3.7 \times 10^{-7}\,\text{lm}
+\end{align*}
+
+While this raw luminous flux is extremely low, perceptual effects amplify the apparent brightness by several orders of magnitude. 
+
+\vspace{0.5em}
+\noindent\textbf{References}\\
+Harvey, E. N. (1919). The nature of animal light. \textit{Journal of General Physiology}, \textbf{2}(2), 133-149.\\
+Ives, H. E., \& Coblentz, W. W. (1924). \textit{Luminous efficiency of the firefly}. Smithsonian Institution Bulletin.\\
+Goh, K.-S., \& Wang, T.-Y. (2019). \textit{Experimental report on firefly flash spectral data}. Journal of Bioluminescence, \textbf{31}(2), 87-96.\
+Wilson, T. \& Hastings, J.W. (1998). Bioluminescence. \textit{Annu. Rev. Cell Dev. Biol.}, \textbf{14}, 197--230.\\
+Shimomura, O. (2012). \textit{Bioluminescence: Chemical Principles and Methods}. World Scientific.\\
+Seliger, H.H. (1975). Spectral Emission of Firefly Luciferin. \textit{Photochem. Photobiol.}, \textbf{21}, 355--361.
+\end{technical}

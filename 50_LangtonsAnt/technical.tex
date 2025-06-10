@@ -1,0 +1,80 @@
+\begin{technical}
+{\Large\textbf{Formal Structure and Dynamics of Langton's Ant}}\\[0.7em]
+
+\textbf{Introduction}\\[0.5em]
+Langton's Ant is defined as a deterministic, discrete-time dynamical system operating on an infinite two-dimensional lattice. Its evolution is governed by local transition rules involving cell states and agent orientation. This section formalizes the system's structure, its state space, its update rules, and the reversibility property inherent in its dynamics.
+
+\textbf{State Space Definition}\\[0.5em]
+The configuration of Langton's Ant at any time $t$ is fully specified by the triplet $(G_t, (x_t, y_t), d_t)$, where:
+\begin{itemize}
+\item $G_t : \mathbb{Z}^2 \to \{0,1\}$ is the grid state function, mapping each cell $(i,j) \in \mathbb{Z}^2$ to a color: $0$ (white) or $1$ (black),
+\item $(x_t, y_t) \in \mathbb{Z}^2$ is the position of the ant at time $t$,
+\item $d_t \in \{0,1,2,3\}$ encodes the ant’s orientation: $0$ = North, $1$ = East, $2$ = South, $3$ = West.
+\end{itemize}
+
+The total state space is thus the Cartesian product of the set of grid colorings, positions, and orientations.
+
+\textbf{Update Rules}\\[0.5em]
+At each discrete time step, the following operations are performed:
+\begin{enumerate}
+\item \textbf{Turning Rule:}  
+  \[
+  d_{t+1} =
+  \begin{cases}
+    (d_t + 1) \mod 4 & \text{if } G_t(x_t, y_t) = 0 \quad (\text{white})\\
+    (d_t + 3) \mod 4 & \text{if } G_t(x_t, y_t) = 1 \quad (\text{black})
+  \end{cases}
+  \]
+Here, addition modulo $4$ ensures that the orientation cycles correctly among the four cardinal directions.
+
+\item \textbf{Color Flip Rule:}  
+  \[
+  G_{t+1}(x_t, y_t) = 1 - G_t(x_t, y_t)
+  \]
+The color of the current square is flipped: white becomes black, black becomes white.
+
+\item \textbf{Movement Rule:}  
+After turning, the ant moves forward one cell according to its new orientation $d_{t+1}$:
+\[
+(x_{t+1}, y_{t+1}) =
+\begin{cases}
+(x_t, y_t+1) & \text{if } d_{t+1} = 0 \quad (\text{North})\\
+(x_t+1, y_t) & \text{if } d_{t+1} = 1 \quad (\text{East})\\
+(x_t, y_t-1) & \text{if } d_{t+1} = 2 \quad (\text{South})\\
+(x_t-1, y_t) & \text{if } d_{t+1} = 3 \quad (\text{West})
+\end{cases}
+\]
+\end{enumerate}
+
+The three operations—turning, flipping, and moving—are applied sequentially at each time step.
+
+\textbf{Reversibility}\\[0.5em]
+Langton's Ant dynamics are time-reversible. Given the complete state at time $t+1$, the state at time $t$ can be reconstructed uniquely by the following inverted operations:
+\begin{enumerate}
+\item \textbf{Inverse Movement:}  
+Determine the previous position $(x_t, y_t)$ based on the direction $d_{t+1}$ by moving one cell in the direction opposite to $d_{t+1}$.
+
+\item \textbf{Inverse Color Flip:}  
+At position $(x_t, y_t)$, set:
+\[
+G_t(x_t, y_t) = 1 - G_{t+1}(x_t, y_t)
+\]
+
+\item \textbf{Inverse Turning Rule:}  
+Reconstruct the previous orientation $d_t$:
+\[
+d_t =
+\begin{cases}
+(d_{t+1} + 3) \mod 4 & \text{if } G_t(x_t, y_t) = 0 \quad (\text{white before flip})\\
+(d_{t+1} + 1) \mod 4 & \text{if } G_t(x_t, y_t) = 1 \quad (\text{black before flip})
+\end{cases}
+\]
+\end{enumerate}
+
+Thus, Langton’s Ant defines a bijective map from states at time $t$ to states at time $t+1$, and vice versa.
+
+\vspace{0.5em}
+\textbf{References:}\\[0.5em]
+Langton, C. G. (1986). \textit{Studying Artificial Life with Cellular Automata}. Physica D: Nonlinear Phenomena, 22(1-3), 120–149.\\
+Gajardo, A., Moreira, A., Goles, E. (2002). \textit{Complexity of Langton’s Ant}. Theoretical Computer Science, 259(1-2), 33–45.
+\end{technical}

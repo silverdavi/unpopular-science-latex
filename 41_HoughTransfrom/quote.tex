@@ -1,0 +1,31 @@
+\begin{flushright}
+\emph{"With four parameters I can fit an elephant, and with five I can make him wiggle his trunk."}\\
+— John von Neumann, circa 1953
+\end{flushright}
+
+\vspace{1.5em}
+
+
+\begin{tikzpicture}[x=0.01cm,y=0.01cm]  
+  \draw[smooth, domain=0:360, variable=\t, samples=400]
+    plot
+      ({-60*cos(\t) + 30*sin(\t) - 8*sin(2*\t) + 10*sin(3*\t)},
+       { 50*sin(\t) + 18*sin(2*\t) - 12*cos(3*\t) + 14*cos(5*\t)});
+\end{tikzpicture}
+\vspace{1.5em}
+
+\begin{flushright}
+\emph{The curve found in 2010 is parameterized by:}\\[1ex]
+$\left\lbrace
+\begin{array}{rl}
+x(t) = & -60 \cos(t) + 30 \sin(t) - 8 \sin(2t) + 10 \sin(3t) \\
+y(t) = & \phantom{-}50 \sin(t) + 18 \sin(2t) - 12 \cos(3t) + 14 \cos(5t)
+\end{array}
+\right.$
+\\[1ex]
+\emph{The four complex parameters are:}\\
+$z_1 = 50 - 30i,\quad z_2 = 18 + 8i,\quad z_3 = 12 - 10i,\quad z_4 = -14 - 60i$\\
+\emph{A fifth point, } $z_5 = 40 + 20i$ \emph{, is added to form the elephant's eye and allows the trunk to move.}
+\\
+— Jürgen Mayer, Khaled Khairy, Jonathon Howard, 2010
+\end{flushright}

@@ -1,0 +1,59 @@
+
+% Technical Analysis
+\begin{technical}
+    {\Large\textbf{Quantum Gravity: Core Conflicts and Open Questions}}\\[0.7em]
+
+    \noindent\textbf{1. Mathematical Structure Mismatch}\\[0.5em]
+    \textit{GR's Smooth Manifold vs. QFT's Field Operators.}
+    In general relativity, spacetime is modeled by a 4D manifold $M$ with a metric tensor $g_{\mu\nu}(x)$ satisfying Einstein’s equations,
+    \begin{equation}
+        R_{\mu\nu} - \tfrac{1}{2}R\,g_{\mu\nu} + \Lambda\,g_{\mu\nu} \;=\; \frac{8\pi G}{c^4}\,T_{\mu\nu},
+    \end{equation}
+    where $R_{\mu\nu}$ is the Ricci curvature, $R = g^{\mu\nu}R_{\mu\nu}$ the scalar curvature, $\Lambda$ the cosmological constant, and $T_{\mu\nu}$ the stress-energy tensor. 
+
+    In quantum field theory, particle states arise from excitations of quantum fields $\hat{\phi}(x)$ or $\hat{\psi}(x)$, typically defined on a fixed Minkowski or curved background. Canonical commutation relations,
+    \begin{equation}
+        [\hat{\phi}(t,\mathbf{x}),\,\hat{\pi}(t,\mathbf{y})] = i\,\delta^3(\mathbf{x}-\mathbf{y}),
+    \end{equation}
+    quantify field quanta. Allowing the spacetime metric itself to be a dynamic quantum operator complicates these commutation relations, as the notion of a fixed background reference frame breaks down.
+
+    \noindent\textbf{2. Vacuum Energy and the Cosmological Constant}\\[0.5em]
+    \textit{QFT's Enormous Zero-Point Energy vs. Observed Small $\Lambda$.}
+    Zero-point fluctuations of quantum fields give a vacuum energy density,
+    \begin{equation}
+        \rho_{\rm vac} \;=\; \frac{1}{2}\sum_{\mathbf{k}}\hbar\omega_{\mathbf{k}},
+    \end{equation}
+    which naively diverges or is cut off at some high-energy scale. Even conservative cutoffs overshoot the observed $\rho_{\rm vac}$ by up to $10^{120}$, creating the so-called cosmological constant problem. GR requires consistency between vacuum energy and curvature (through $\Lambda$), leading to an immense discrepancy:
+    \[
+        \Lambda_{\rm QFT} \gg \Lambda_{\rm obs}.
+    \]
+
+    \noindent\textbf{3. Non-Renormalizability of Gravity}\\[0.5em]
+    \textit{Perturbation Theory Fails for Graviton Loops.}
+    Treating the graviton (the hypothetical quantum of the metric field) in perturbation series yields loop integrals with divergences that cannot be systematically canceled by renormalization. A dimensionful coupling $G$ implies higher-order terms require infinitely many counterterms. Unlike quantum electrodynamics or QCD, gravity does not fit the renormalizable pattern:
+    \[
+        \mathcal{L}_\text{eff} = \sqrt{-g}\Bigl(\frac{R}{16\pi G} + \alpha_1 R^2 + \alpha_2 R_{\mu\nu}R^{\mu\nu} + \dots\Bigr),
+    \]
+    with each $\alpha_n$ an unknown parameter.
+
+    \noindent\textbf{4. Black Hole Information and Unitarity}\\[0.5em]
+    \textit{Information Loss vs. Quantum Conservation.}
+    Hawking’s calculation of black hole evaporation suggests complete evaporation might erase quantum information. Quantum mechanics requires unitary evolution, i.e., no net loss of information. GR, on the other hand, accommodates singularities where classical definitions of time end. The clash between these viewpoints forms the black hole information paradox, a major driver for quantum gravity research.
+
+    \noindent\textbf{5. Spacetime Superposition}\\[0.5em]
+    \textit{Can the Metric Exist in a Quantum Superposition?}
+    Standard QFT can superpose field states, but GR demands a specific geometric framework for defining intervals, causal structure, and even time. A superposition of metrics
+    \[
+        \left|\psi\right> = \alpha \left|g_{\mu\nu}^{(1)}\right> + \beta \left|g_{\mu\nu}^{(2)}\right>
+    \]
+    poses conceptual and technical challenges in defining distance and time, essential for any measurement theory in quantum mechanics.
+
+    \noindent\textbf{Conclusion}\\[0.5em]
+    The tension between GR and QFT stems from fundamental differences in how they describe nature. Attempts to quantize gravity face the cosmological constant puzzle, non-renormalizable infinities, and conceptual conundrums like black hole information loss. Whether through string theory, loop quantum gravity, asymptotically safe gravity, or other avenues, finding a consistent quantum theory of spacetime remains one of the foremost challenges in theoretical physics.
+
+    \vspace{0.5em}
+    \noindent\textbf{References:}
+    Weinberg, S. (1979). \textit{Ultraviolet divergences in quantum theories of gravitation}
+    Kiefer, C. (2012). \textit{Quantum Gravity}. Oxford University Press.
+
+\end{technical}

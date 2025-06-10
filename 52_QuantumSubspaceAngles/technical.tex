@@ -1,0 +1,47 @@
+\begin{technical}
+{\Large\textbf{Angles Between Subspaces for Quantum Efficiency}}\\[0.7em]
+
+\noindent\textbf{1. Principal Angles and Subspace Geometry}\\[0.5em]
+In quantum information, states and operations reside in high-dimensional Hilbert spaces. When comparing two subspaces \(U\) and \(V\), it is often useful to measure their overlap or “distance.” The \emph{principal angles} \(\{\theta_i\}\) between \(U\) and \(V\) arise from the singular values of
+\[
+M = \begin{bmatrix}
+\mathbf{u}_1 & \dots & \mathbf{u}_m
+\end{bmatrix}^{\dagger}
+\begin{bmatrix}
+\mathbf{v}_1 & \dots & \mathbf{v}_n
+\end{bmatrix},
+\]
+where \(\{\mathbf{u}_i\}\) and \(\{\mathbf{v}_j\}\) are orthonormal bases for \(U\) and \(V\), respectively, and \(\dagger\) denotes the Hermitian transpose. In particular:
+\[
+\cos(\theta_i) = \sigma_i(M),
+\]
+where \(\sigma_i(M)\) are the singular values in non-increasing order. Smaller \(\theta_i\) indicate larger subspace overlap, implying stronger correlations and higher fidelity for quantum tasks.
+
+\vspace{0.5em}
+\noindent\textbf{2. Entanglement and Subspace Codes}\\[0.5em]
+\textit{Entanglement Detection:} In a bipartite system \(\mathcal{H}_A \otimes \mathcal{H}_B\), one can compare a presumed entangled subspace to a product subspace \(U \otimes V\). If the principal angles between them are small, the subspaces are closely aligned, suggesting more robust entanglement.
+
+\noindent\textit{Quantum Error-Correcting Codes:} Subspace codes that protect quantum information against noise rely on well-chosen \(U\). Angles between different code subspaces can quantify how distinct logical encodings remain under error processes.
+
+\vspace{0.5em}
+\noindent\textbf{3. Algorithmic Efficiency}\\[0.5em]
+Many quantum algorithms involve rotating between specific subspaces (e.g., the starting and target states in Grover’s search). Large angles can facilitate clearer state discrimination, while small angles may demand more iterations or additional subroutines to achieve reliable measurements. Analyzing these angles helps optimize gate sequences and reduce computational depth.
+
+\vspace{0.5em}
+\noindent\textbf{4. Numerical Methods}\\[0.5em]
+For high-dimensional subspaces, computing principal angles directly can be costly. Rank-revealing factorizations or partial singular value decomposition (SVD) provide efficient ways to extract dominant overlaps:
+\[
+\mathbf{y} \approx M \,\mathbf{w}, \quad\text{iterating to estimate } \sigma_i(M).
+\]
+Randomized linear algebra can further lower computational loads, enabling faster approximation of angles in large-scale quantum simulations. 
+
+\vspace{0.5em}
+\noindent\textbf{5. Summary}\\[0.5em]
+Principal angles offer a powerful geometric lens on quantum systems, from detecting entanglement to designing efficient algorithms. By revealing how subspaces intersect or diverge, they underscore the interplay between linear algebra and quantum mechanics, shedding light on robustness of codes, fidelity of protocols, and optimization of computational pathways.
+
+\vspace{0.5em}
+\noindent\textbf{References}\\
+Nielsen, M. A., Chuang, I. L. (2000). \emph{Quantum Computation and Quantum Information}. Cambridge Univ. Press.\\
+Horn, R. A., Johnson, C. R. (2013). \emph{Matrix Analysis}. Cambridge Univ. Press.\\
+Gross, D., Liu, Y.-K. (2011). Recovering low-rank matrices from few coefficients in any basis. \emph{IEEE Trans. Inf. Theory}, \textbf{57}, 1548--1566.
+\end{technical}

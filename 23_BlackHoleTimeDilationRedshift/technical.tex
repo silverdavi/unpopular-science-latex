@@ -1,0 +1,79 @@
+\begin{technical}
+{\Large\textbf{Coordinate Reversal and Causal Geometry}}\\[0.7em]
+
+\noindent\textbf{Schwarzschild Metric and the Horizon}\\[0.5em]
+The Schwarzschild metric describes spacetime outside a static mass \(M\). In spherical coordinates \((t, r, \theta, \phi)\), it takes the form:
+\begin{align}
+\mathrm{d}s^2 =\ 
+& -\left(1 - \frac{2GM}{rc^2}\right)c^2\,\mathrm{d}t^2 \nonumber \\
+& + \left(1 - \frac{2GM}{rc^2}\right)^{-1}\mathrm{d}r^2 \nonumber \\
+& + r^2\,\mathrm{d}\theta^2 + r^2\sin^2\theta\,\mathrm{d}\phi^2.
+\end{align}
+
+The Schwarzschild radius is defined as:
+\[
+r_s = \frac{2GM}{c^2}.
+\]
+At \(r = r_s\), \(g_{tt} = 0\), \(g_{rr} \to \infty\). This signals a breakdown in coordinates, not in geometry.
+
+\vspace{0.7em}
+\noindent\textbf{Time Dilation and Gravitational Redshift}\\[0.5em]
+A static observer at fixed radius \(r > r_s\) experiences proper time:
+\begin{equation}
+\mathrm{d}\tau = \sqrt{1 - \frac{2GM}{rc^2}}\,\mathrm{d}t.
+\end{equation}
+As \(r \to r_s\), \(\mathrm{d}\tau/\mathrm{d}t \to 0\). Distant clocks appear to tick normally, but local clocks slow near the horizon.
+
+Photons emitted at \(r_{\text{em}}\) and received at \(r_{\text{obs}} \to \infty\) undergo redshift:
+\begin{equation}
+1 + z = \left(1 - \frac{2GM}{r_{\text{em}}c^2}\right)^{-1/2}.
+\end{equation}
+As \(r_{\text{em}} \to r_s\), \(z \to \infty\). Light from near the horizon becomes infinitely stretched and fades from view.
+
+\vspace{0.7em}
+\noindent\textbf{Finite Infall and Apparent Freezing}\\[0.5em]
+A freely falling observer from rest at infinity reaches radius \(r\) in proper time:
+\begin{equation}
+\tau(r) = \frac{2}{3}\frac{r^{3/2}}{\sqrt{2GM}}.
+\end{equation}
+The total proper time to reach the horizon is finite. The infaller feels no discontinuity; the horizon is not a physical surface.
+
+However, to a distant observer, the infaller appears to freeze at \(r = r_s\), due to the divergence of coordinate time:
+\[
+t(r) \to \infty \quad \text{as} \quad r \to r_s.
+\]
+
+\vspace{0.7em}
+\noindent\textbf{Coordinate Inversion Below the Horizon}\\[0.5em]
+Inside the horizon (\(r < r_s\)), the signs of metric components reverse:
+\[
+g_{tt} > 0, \qquad g_{rr} < 0.
+\]
+This means \(r\) is now a timelike coordinate, and \(t\) becomes spacelike.
+
+The physical implication is that movement in \(r\) becomes mandatory. All future-directed timelike paths lead to smaller \(r\), ending at the singularity \(r = 0\). The singularity is not “a place inside” but a moment in the infaller’s proper future.
+
+This inversion is not a coordinate trick—it reflects the actual causal structure of the geometry. Any attempt to "hover" or remain at constant \(r\) is no longer physically possible once inside the horizon.
+
+\vspace{0.7em}
+\noindent\textbf{Light Cones and Irreversibility}\\[0.5em]
+At the horizon, outgoing light rays remain on the surface:
+\[
+\frac{\mathrm{d}r}{\mathrm{d}t} = 0 \quad \text{for outgoing null rays at } r = r_s.
+\]
+Below the horizon, all light cones tip inward. Future lightlike and timelike paths are directed toward decreasing \(r\). There is no direction within the cone that leads to increasing radius.
+
+This defines the event horizon as a one-way temporal boundary: a surface from which causal influence cannot escape outward.
+
+\vspace{0.7em}
+\noindent\textbf{Summary: Time as Radius}\\[0.5em]
+Outside the horizon, \(r\) measures spatial distance, and \(t\) is global time. Inside, the reverse is true: \(r\) becomes a clock, and all worldlines evolve toward smaller \(r\) as they progress into the future.
+
+This behavior illustrates why the singularity is not a location, but an inevitable moment. The black hole interior is not a region to explore, but a domain of future-directed inevitability in curved spacetime.
+
+\vspace{0.7em}
+\noindent\textbf{References}\\
+Misner, C. W., Thorne, K. S., Wheeler, J. A. (1973). \textit{Gravitation}.\\
+Carroll, S. M. (2004). \textit{Spacetime and Geometry}.\\
+Wald, R. M. (1984). \textit{General Relativity}.
+\end{technical}

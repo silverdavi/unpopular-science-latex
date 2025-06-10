@@ -1,0 +1,52 @@
+\fullpageexercises{%
+\textbf{1. Wine/Water Paradox} \\[0.5em]
+A mixture contains wine and water in a ratio \( x = \frac{\text{wine}}{\text{water}} \), with \( x \in [\tfrac{1}{3}, 3] \). Assuming \( x \) is uniformly distributed, compute the probability that the mixture has \( x \leq 2 \). Now let \( y = \frac{1}{x} \), representing the water-to-wine ratio, and assume \( y \) is uniformly distributed instead. What is the probability that \( y \geq \tfrac{1}{2} \)? Why are the two results inconsistent?
+
+\textit{Hint:} Use
+\[
+P(x \leq x_t) = \frac{x_t - x_{\min}}{x_{\max} - x_{\min}}, \qquad
+P(y \geq y_t) = \frac{x_{\max}(1 - x_{\min} y_t)}{x_{\max} - x_{\min}}.
+\]
+Evaluate both at \( x_t = 2 \), \( y_t = \tfrac{1}{2} \). What contradiction arises?
+
+\vspace{1em}
+\textbf{2. Monty Hall Problem} \\[0.5em]
+A game show presents three closed doors. Behind one is a car; behind the other two, goats. You choose one door (say, Door 1). The host, who knows what is behind each door, opens a different door (say, Door 3), revealing a goat. He then offers you the option to switch your choice to the remaining unopened door (Door 2). Should you switch?
+
+\textit{Hint:} The host never opens the door you chose, and never reveals the car. Compute:
+\[
+P(\text{Car behind Door 1} \mid \text{Host opens Door 3}) \quad \text{vs.} \quad
+P(\text{Car behind Door 2} \mid \text{Host opens Door 3}).
+\]
+Use Bayes' theorem. The host’s choice depends on your initial pick and the hidden car placement.
+
+\vspace{1em}
+\textbf{3. Tuesday Boy Problem} \\[0.5em]
+A family has two children. You are told that one of them is a boy born on a Tuesday. What is the probability that both are boys?
+
+\textit{Hint:} Let \( \varepsilon = \tfrac{1}{7} \). Then:
+\[
+P(\text{BB} \mid B_T) = {2 - \varepsilon}/{4 - \varepsilon}.
+\]
+
+\vspace{1em}
+\textbf{4. Two-Black-Sides Card Problem} \\[0.5em]
+You randomly select a card from a box containing: one black-black card, one white-white card, and one black-white card. You see a black face. What is the probability the other side is black?
+
+\vspace{1em}
+\textbf{5. Sleeping Beauty Problem} \\[0.5em]
+Sleeping Beauty is put to sleep. A fair coin is tossed. If heads, she is woken Monday only. If tails, she is woken Monday and Tuesday (but forgets Monday). Upon waking, what is her credence that the coin landed heads?
+
+\textit{Hint:} Model the wake-up events: \( \{\text{H-M}, \text{T-M}, \text{T-T}\} \). Normalize using the condition: "I am awake now."
+
+
+\vspace{1em}
+\textbf{6. St. Petersburg Paradox} \\[0.5em]
+You win \( 2^n \) dollars where \( n \) is the number of coin flips until the first heads. What is the expected value of the game?
+
+\textit{Hint:} Compute:
+\[
+\mathbb{E} = \sum_{n=1}^\infty 2^n \cdot \left(\tfrac{1}{2}\right)^n.
+\]
+What does this say about rational betting behavior?
+}

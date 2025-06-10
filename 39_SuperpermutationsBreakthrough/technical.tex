@@ -1,0 +1,59 @@
+\begin{technical}
+{\Large\textbf{Lower and Upper Bounds via Overlap Graphs}}\\[0.7em]
+
+\noindent\textbf{Introduction}\\[0.5em]
+A superpermutation on \(n\) symbols is a string that contains all \(n!\) permutations of those symbols as contiguous substrings. Let \(L(n)\) denote the minimum possible length of such a string. The problem of determining \(L(n)\) can be reformulated as a path-finding problem on a directed graph whose nodes are permutations and whose edge weights correspond to symbol overlap. In this section, we develop the key bounds on \(L(n)\) by analyzing the structure of this permutation graph and the combinatorial constraints it imposes.
+
+\noindent\textbf{Permutation Graph Model}\\[0.5em]
+Let \(S_n\) be the symmetric group on \(n\) elements, and let each vertex in the directed graph \(G_n\) correspond to a permutation \(\pi \in S_n\). For each ordered pair \((\pi, \sigma)\), define an edge \(\pi \rightarrow \sigma\) with weight \(w(\pi, \sigma) = n - \ell(\pi, \sigma)\), where \(\ell(\pi, \sigma)\) is the length of the longest suffix of \(\pi\) that matches a prefix of \(\sigma\). The weight represents the number of new symbols required to append \(\sigma\) immediately after \(\pi\) in a superpermutation.
+
+A superpermutation corresponds to a path that visits every vertex exactly once (a Hamiltonian path), with the total cost equal to the sum of edge weights plus the length of the first permutation, which contributes \(n\) symbols.
+
+\noindent\textbf{Anonymous Lower Bound}\\[0.5em]
+The anonymous 4chan user showed that for all \(n \ge 2\), the minimal length satisfies
+\[
+L(n) \ge n! + (n-1)! + (n-2)! + n - 3.
+\]
+This result is obtained by bounding the number of edges in any Hamiltonian path that must have weight greater than 1. To sketch the argument:
+
+Let \(\mathcal{P}\) be any Hamiltonian path through \(G_n\). At best, two permutations can overlap by \(n-1\) symbols, requiring only one new symbol to transition. However, it is not possible to construct such a path using only weight-1 transitions due to constraints imposed by the structure of the overlaps.
+
+The proof partitions the permutations into blocks such that:
+- One block must be traversed without overlap (initial permutation).
+- Some fraction of transitions must necessarily use edges with higher cost due to incompatible suffix-prefix structure.
+- Using known bounds on the number of minimal-overlap transitions, one can count how many higher-cost edges must occur and compute their contribution.
+
+The derived lower bound is tight for small \(n\), and remains the strongest known general lower bound for \(L(n)\) as of 2025.
+
+\noindent\textbf{Egan’s Constructive Upper Bound}\\[0.5em]
+Greg Egan constructed a general method for building superpermutations of length at most
+\[
+L(n) \le n! + (n-1)! + (n-2)! + (n-3)! + n - 3.
+\]
+This method relies on generating Hamiltonian paths through subsets of permutations with controlled overlaps. Specifically:
+- Begin with a path that efficiently traverses permutations of \(n-1\) symbols.
+- Lift the path into \(S_n\) by inserting the new symbol in controlled positions.
+- Design the insertion and merge process to preserve maximal overlaps where possible.
+
+Egan's construction is inspired by Cayley graph traversal techniques and achieves compact encoding by reusing structural symmetries. The difference between the upper and lower bounds is \((n-3)!\), a relatively small quantity for moderate \(n\), making the bounds remarkably tight:
+\[
+\Delta(n) = L_{\text{upper}}(n) - L_{\text{lower}}(n) = (n-3)!.
+\]
+This suggests that either the lower bound is close to optimal or Egan’s method is near-optimal for large \(n\).
+
+\noindent\textbf{Example: The Case \(n = 7\)}\\[0.5em]
+The number of permutations is \(7! = 5040\). Applying the bounds:
+\[
+\text{Lower bound: } 5040 + 720 + 120 + 7 - 3 = 5884,
+\]
+\[
+\text{Upper bound: } 5040 + 720 + 120 + 24 + 7 - 3 = 5908.
+\]
+The shortest known construction, found by Charlie Vane, is 5906 characters long — just 22 above the lower bound and 2 below the upper bound. This makes \(n = 7\) one of the most tightly constrained instances where the true value of \(L(n)\) is still unknown.
+
+\vspace{0.5em}
+\noindent\textbf{References:}\\
+Houston, R. (2014). \textit{Obvious Does Not Imply True: The Minimal Superpermutation Conjecture Is False}. arXiv:1408.5108.\\
+Egan, G. (2018). Personal communication via superpermutators group.\\
+Anonymous 4chan Poster (2011). Lower Bound Proof. Archived at MathSci Wikia.
+\end{technical}

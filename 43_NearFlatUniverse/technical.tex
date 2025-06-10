@@ -1,0 +1,78 @@
+\begin{technical}
+{\Large\textbf{Timeline of the Early Universe: Dynamical Regimes and Governing Equations}}\\[0.7em]
+
+\noindent\textbf{Introduction}\\[0.5em]
+The evolution of the universe from \( t \gtrsim t_P \) onward can be described as a sequence of physically distinct regimes, each governed by different dominant components and effective equations. This section presents a timeline of cosmic evolution in proper time \( t \), detailing the relevant physics, scales, and equations that govern each epoch.
+
+\noindent\textbf{1. Planck Epoch \boldmath(\( t < 10^{-43} \, \text{s} \))}\\[0.5em]
+At or before the Planck time,
+\[
+t_P = \sqrt{\frac{\hbar G}{c^5}} \approx 5.39 \times 10^{-44} \, \text{s},
+\]
+quantum gravitational effects dominate. The metric itself is expected to fluctuate, and no classical description holds. A complete treatment would require a theory of quantum gravity, e.g., loop quantum gravity or string theory.
+
+\noindent\textbf{2. Inflationary Epoch \boldmath(\(10^{-36} \, \text{s} \lesssim t \lesssim 10^{-32} \, \text{s} \))}\\[0.5em]
+Inflation is modeled by a scalar field \(\phi\) with a flat potential \(V(\phi)\), leading to exponential expansion:
+\[
+a(t) \propto e^{H t}, \quad H = \sqrt{\frac{8\pi G}{3} V(\phi)}.
+\]
+During this period, quantum fluctuations of the inflaton generate nearly scale-invariant perturbations:
+\[
+\mathcal{P}_\zeta(k) \sim \left( \frac{H^2}{\dot{\phi}} \right)^2 \sim \frac{V}{\epsilon M_{\text{Pl}}^4}.
+\]
+These seed all later structure in the universe.
+
+\noindent\textbf{3. Reheating and Preheating \boldmath(\( t \sim 10^{-32} \, \text{s} \))}\\[0.5em]
+When inflation ends, the inflaton oscillates around its minimum and decays. Reheating converts vacuum energy to particles and entropy:
+\[
+\ddot{\phi} + 3H\dot{\phi} + V'(\phi) = -\Gamma_\phi \dot{\phi},
+\]
+where \(\Gamma_\phi\) is the decay rate. The reheat temperature is estimated as:
+\[
+T_{\text{reh}} \sim \left( \frac{90}{\pi^2 g_*} \right)^{1/4} \sqrt{\Gamma_\phi M_{\text{Pl}}}.
+\]
+
+\noindent\textbf{4. Radiation-Dominated Era \boldmath(\( 10^{-32} \, \text{s} \lesssim t \lesssim 47{,}000 \, \text{years} \))}\\[0.5em]
+After reheating, the universe is dominated by relativistic species. The Friedmann equation simplifies to:
+\[
+H^2 = \frac{8\pi G}{3} \rho_r, \quad \rho_r \propto a^{-4}, \quad a(t) \propto t^{1/2}.
+\]
+This era includes several key events:
+\begin{itemize}
+\item \textbf{Baryogenesis} (\( t \sim 10^{-10} \, \text{s} \)): CP-violating processes establish matter-antimatter asymmetry.
+\item \textbf{Electroweak symmetry breaking} (\( t \sim 10^{-12} \, \text{s} \), \( T \sim 100\,\text{GeV} \)).
+\item \textbf{QCD confinement} (\( t \sim 10^{-5} \, \text{s} \)): Quarks bind into hadrons.
+\item \textbf{Big Bang Nucleosynthesis (BBN)} (\( t \sim 1 - 200 \, \text{s} \)): Nuclear reactions form light elements. Equilibrium abundance equations (e.g., Boltzmann equations) govern species evolution:
+\[
+\frac{dY_i}{dt} = - \sum_j \langle \sigma v \rangle_{ij} \left( Y_i Y_j - Y_i^{\text{eq}} Y_j^{\text{eq}} \right),
+\]
+where \( Y_i = n_i/s \) is the abundance per entropy.
+\end{itemize}
+
+\noindent\textbf{5. Matter-Dominated Era \boldmath(\( 47{,}000 \, \text{years} \lesssim t \lesssim 9\,\text{billion years} \))}\\[0.5em]
+When \(\rho_m > \rho_r\), the scale factor evolves as:
+\[
+a(t) \propto t^{2/3}, \quad \rho_m \propto a^{-3}.
+\]
+Structure formation begins as gravitational collapse overcomes expansion. Linear perturbation theory describes early growth:
+\[
+\ddot{\delta} + 2 H \dot{\delta} - 4\pi G \rho_m \delta = 0,
+\]
+with \(\delta = \delta\rho/\rho\).
+
+\noindent\textbf{6. Dark Energy Domination \boldmath(\( t \gtrsim 9\,\text{billion years} \))}\\[0.5em]
+Today’s expansion is accelerating due to a cosmological constant \(\Lambda\):
+\[
+H^2 = \frac{8\pi G}{3} (\rho_m + \rho_\Lambda), \quad \rho_\Lambda = \frac{\Lambda c^2}{8\pi G} = \text{const.}
+\]
+For \(\Lambda\)-dominated expansion:
+\[
+a(t) \propto e^{H_\Lambda t}, \quad H_\Lambda = \sqrt{\frac{\Lambda c^2}{3}}.
+\]
+The universe asymptotically approaches de Sitter space.
+
+\vspace{0.5em}
+\noindent\textbf{References:}\\
+Dodelson, S. (2003). \textit{Modern Cosmology}. Academic Press.\\
+Kolb, E. W., \& Turner, M. S. (1990). \textit{The Early Universe}. Addison-Wesley.
+\end{technical}

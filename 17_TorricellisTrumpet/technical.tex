@@ -1,0 +1,75 @@
+\begin{technical}
+{\Large\textbf{Torricelli\'s Trumpet: Mathematical Formulation}}\\[0.7em]
+
+\textbf{Geometry and Setup}\\[0.5em]
+Torricelli\'s Trumpet is the surface formed by rotating \( f(x) = \frac{1}{x} \) around the \(x\)-axis for \(x \ge 1\). This generates an infinitely long horn that narrows toward the axis but never closes. Volume and surface area are computed via standard formulas for solids of revolution.
+
+\vspace{0.5em}
+\textbf{Finite Volume}\\[0.5em]
+The volume enclosed by the horn is:
+\[
+V = \pi \int_{1}^{\infty} \left(\frac{1}{x}\right)^2 \mathrm{d}x
+= \pi \int_{1}^{\infty} \frac{1}{x^2} \mathrm{d}x = \pi.
+\]
+The integral converges due to the rapid decay of \(1/x^2\).
+
+\vspace{0.5em}
+\textbf{Divergent Surface Area}\\[0.5em]
+The surface area is:
+\begin{align*}
+S &= 2\pi \int_{1}^{\infty} \frac{1}{x} \sqrt{1 + \left(-\frac{1}{x^2}\right)^2}\,\mathrm{d}x 
+\\&= 2\pi \int_{1}^{\infty} \frac{1}{x} \sqrt{1 + \frac{1}{x^4}}\,\mathrm{d}x.
+\end{align*}
+Since \(\sqrt{1 + \frac{1}{x^4}} > 1\), we find:
+\[
+S > 2\pi \int_{1}^{\infty} \frac{1}{x} \mathrm{d}x = \infty.
+\]
+Thus, the trumpet has infinite surface area.
+
+\vspace{0.5em}
+\textbf{Power-Law Generalization}\\[0.5em]
+For \(f(x) = \frac{1}{x^p}\), the volume and surface area become:
+\begin{align*}
+V(p) &= \pi \int_1^\infty \frac{1}{x^{2p}} \mathrm{d}x,\\
+S(p) &= 2\pi \int_1^\infty \frac{1}{x^p} 
+\sqrt{1 + \left(\frac{p}{x^{p+1}}\right)^2} \mathrm{d}x.
+\end{align*}
+Then \(V(p)\) converges if \(p > \tfrac{1}{2}\), and \(S(p)\) converges if \(p > 1\). The trumpet corresponds to the critical case \(p = 1\): finite volume, infinite area.
+
+\vspace{0.5em}
+\textbf{Discrete Approximation}\\[0.5em]
+Gabriel\'s Wedding Cake approximates the horn via stacked cylinders of radius \(r_n = \frac{1}{n}\), height 1:
+\begin{align*}
+V &= \sum_{n=1}^{\infty} \pi r_n^2 
+= \pi \sum_{n=1}^{\infty} \frac{1}{n^2} = \pi \zeta(2),\\
+A &= \sum_{n=1}^{\infty} 2\pi r_n 
+= 2\pi \sum_{n=1}^{\infty} \frac{1}{n} = \infty.
+\end{align*}
+Thus, the volume converges while the surface area diverges\textemdash mirroring the continuous case.
+
+\vspace{0.5em}
+\textbf{Field-Theoretic Coating}\\[0.5em]
+Let \(\phi(x) = \frac{1}{x^q}\), \(q > 0\), be a scalar field on the surface, representing energy or paint intensity. Total coating energy is:
+\[
+E = 2\pi \int_{1}^{\infty} \frac{1}{x^{q+1}} \sqrt{1 + \frac{1}{x^4}} \,\mathrm{d}x.
+\]
+This integral converges for all \(q > 0\), so any decaying field yields finite energy. The surface can thus be coated — mathematically — despite its infinite area.
+
+\vspace{0.5em}
+\textbf{Non-Existence of a Converse}\\[0.5em]
+There exists no surface of revolution with finite surface area and infinite volume. Suppose \(f(x)\) is continuously differentiable over domain \(D \subset \mathbb{R}\), and that the surface area
+\[
+S = 2\pi \int_D f(x) \sqrt{1 + f'(x)^2} \, \mathrm{d}x < \infty
+\]
+is finite. Then \(f(x)\) must be bounded on \(D\), say \(|f(x)| < M\). The volume is bounded above by:
+\[
+V = \pi \int_D f(x)^2 \, \mathrm{d}x \le \pi M \int_D f(x) \, \mathrm{d}x \le \pi M S < \infty.
+\]
+Hence, finite surface area implies finite volume. The converse of Torricelli\'s trumpet is structurally impossible.
+
+\vspace{0.5em}
+\textbf{References:}\\
+Morris, A. O. (1971). The Paradox of Gabriel\'s Horn. \textit{Math. Gazette}, \textbf{55}, 239.\\
+Fleron, J. F. (1999). Gabriel\'s Wedding Cake. \textit{College Math. J.}, \textbf{30}(1), 35--38.\\
+van Maanen, J. A. (1998). Cissoids and Goblets. In: \textit{Mathematics in Western Culture}, Utrecht University Lecture Notes.
+\end{technical}

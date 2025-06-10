@@ -1,0 +1,67 @@
+\begin{technical}
+\section*{Poncelet’s Theorem for Two Ellipses: Invariant Measure and Topological Conjugacy}
+
+Let \( C \) and \( D \) be two smooth, nested ellipses in the plane, with \( D \subset \operatorname{int}(C) \). The \emph{Poncelet map} \( T: C \to C \) is defined as follows: for a point \( p \in C \), draw the line through \( p \) tangent to the inner ellipse \( D \); let \( T(p) \) be the second point of intersection of this line with \( C \), following a fixed orientation. This process defines an orientation-preserving homeomorphism of \( C \).
+
+We will show that this map \( T \) preserves a natural measure and is topologically conjugate to a circle rotation. This connection yields a complete classification of the dynamics of \( T \), and with it, a proof of Poncelet’s closure theorem.
+
+\subsection*{Affine Reduction and the Invariant Measure}
+
+To analyze \( T \), we apply an affine transformation to simplify the geometry. Suppose \( C \) is given by
+\[
+{x^2}/{a^2} + {y^2}/{b^2} = 1, \quad \text{with } a > b > 0.
+\]
+Let \( U(x, y) = (x, \frac{a}{b} y) \), a linear map sending \( C \) to a circle \( C' \), and \( D \) to an ellipse \( D' \). Let \( \tilde{p} = U(p) \), and let \( \tilde{s} \) denote the arc-length on \( C' \), which we use to reparametrize \( C \). Let \( m \) be the point of tangency between the line from \( p \) to \( T(p) \) and the inner ellipse \( D \). Define $\rho(p) := |p - m|$, we define the measure $d\mu(p) := {d\tilde{s}(p)}/{\rho(p)}$.
+
+This measure captures the rate of change of arc-length with respect to tangency geometry.
+
+\paragraph{Invariance of the Measure.} Consider nearby points \( p \) and \( p' \in C \), with images \( T(p) = p_1 \), \( T(p') = p_1' \). The chords \( pp_1 \) and \( p'p_1' \) intersect at a point \( n \), and the similarity of triangles \( \triangle pp'n \) and \( \triangle p_1'p_1n \) gives:
+\[
+\frac{|p_1' - p_1|}{|p' - p|} = \frac{\rho(p_1)}{\rho(p)}.
+\]
+Taking the limit as \( p' \to p \), this becomes a differential relation:
+\[
+\frac{d\tilde{s}_1}{d\tilde{s}} = \frac{\rho(T(p))}{\rho(p)}.
+\]
+Rewriting:
+\[
+\frac{d\tilde{s}}{\rho(p)} = \frac{d\tilde{s}_1}{\rho(T(p))},
+\]
+showing that \( \mu \) is preserved by \( T \).
+
+\subsection*{Topological Conjugacy to a Circle Rotation}
+A classical theorem in dynamics states: if an orientation-preserving homeomorphism of a circle admits a finite, non-atomic Borel invariant measure that gives positive weight to every arc, then it is topologically conjugate to a rigid rotation.
+
+Our measure \( \mu \) satisfies:\\
+\textbf{Finite:} \( C \) is compact and \( \rho(p) > 0 \) is continuous.\\
+\textbf{Non-atomic:} points have zero measure.\\
+\textbf{Positive on arcs:} both \( \rho \) and arc-length are positive.
+
+Thus, there exists a homeomorphism \( \varphi: C \to S^1 \) and a number \( \alpha \in [0,1) \) such that:
+\[
+\varphi \circ T \circ \varphi^{-1} = R_\alpha, \quad \text{where } R_\alpha(\theta) = \theta + \alpha \mod 1.
+\]
+
+The number \( \alpha \), called the \emph{rotation number} of \( T \), quantifies the average angular displacement per iteration. It is defined as
+\[
+\alpha := \lim_{n \to \infty} \frac{1}{n} \tilde{s}(T^n(p)) \mod 1,
+\]
+where \( \tilde{s} \) is arc-length on the circle under the conjugacy \( \varphi: C \to S^1 \). This limit exists and is independent of the choice of \( p \). (In smooth settings, it coincides with the normalized measure of the arc from \( p \) to \( T(p) \), i.e., \( \alpha = \mu([p, T(p))) \mod 1 \).)
+
+\subsection*{Implications for Poncelet’s Theorem}
+
+The rotation number classifies the dynamics:
+\begin{itemize}
+  \item If \( \alpha \in \mathbb{Q} \), say \( \alpha = \frac{m}{n} \), then all orbits are periodic with period \( n \). Every point on \( C \) traces a closed \( n \)-gon tangent to \( D \).
+  \item If \( \alpha \notin \mathbb{Q} \), then no orbit is periodic. Instead, the sequence \( p, T(p), T^2(p), \ldots \) becomes dense in \( C \), and no Poncelet polygon closes.
+\end{itemize}
+
+\subsection*{Conclusion}
+
+The dynamics of the Poncelet map are completely classified by an explicit invariant measure and the theory of topological conjugacy. When the rotation number is rational, every orbit is periodic with the same period, and a closed Poncelet polygon exists through every point. When it is irrational, no orbit closes and the iterates become dense. 
+
+\subsection*{References}
+Leopold Flatto, \textit{Poncelet’s Theorem}. Mathematical Surveys and Monographs, Vol. 56. American Mathematical Society, 2009 (beautiful book!)
+
+Interactive visualization, see \href{https://bit.ly/poporism}{\texttt{bit.ly/poporism}}.
+\end{technical}

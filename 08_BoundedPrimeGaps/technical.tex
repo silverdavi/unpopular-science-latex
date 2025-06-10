@@ -1,0 +1,58 @@
+\begin{technical}
+{\Large\textbf{Bounded Gaps Between Primes}}
+
+\textbf{1. Statement of Result and Outline of Method}\\[0.5em]
+In 2013, Yitang Zhang proved that there exists a constant \( N \) such that infinitely many prime pairs \( (p, q) \) satisfy \( q - p \leq N \). The initial bound was \( N < 7\times10^7 \). Zhang's approach refined the Goldston–Pintz–Yıldırım (GPY) method through two components:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Distribution in Arithmetic Progressions:} Zhang showed that primes are sufficiently evenly distributed across residue classes up to moduli slightly beyond the range of the Bombieri–Vinogradov theorem.
+    \item \textbf{Weighted Sieve Construction:} He employed a modified sieve to detect multiple primes within admissible tuples of the form \( n + h_i \).
+\end{itemize}
+
+\vspace{0.7em}
+\textbf{2. Sieve Setup and Admissibility}\\[0.5em]
+A tuple \( \mathcal{H} = \{h_1, \dots, h_k\} \subset \mathbb{Z} \) is called admissible if, for every prime \( p \), the set \( \mathcal{H} \mod p \) does not cover all residue classes modulo \( p \). This condition is necessary to avoid trivial congruence obstructions.
+
+The GPY strategy constructs a weighted sum:
+\[
+S(n) := \left( \sum_{i=1}^k \Lambda(n + h_i) \right) w(n),
+\]
+where \( \Lambda \) is the von Mangoldt function and \( w(n) \) is a smooth function supported on \( n \in [x, 2x] \). The weights are designed to emphasize values of \( n \) where multiple \( n + h_i \) are likely to be prime. Summing over \( n \) yields:
+\[
+\sum_{n} S(n) = \sum_{n} \left( \sum_i \Lambda(n + h_i) \right) w(n).
+\]
+If this total exceeds the average predicted by uniform randomness, then for some \( n \), at least two of the \( n + h_i \) must be prime. The difficulty lies in establishing a lower bound for this sum that is strong enough to exceed the random baseline.
+
+\vspace{0.7em}
+\textbf{3. Minimal Example of an Admissible Tuple}\\[0.5em]
+As an example, consider the admissible set \( \{0, 2, 6\} \). This avoids covering all residue classes modulo any small prime. The goal of the sieve method is to show that for infinitely many integers \( n \), at least two of \( n, n + 2, n + 6 \) are prime. One such instance is \( n = 5 \), for which \( \{5, 7, 11\} \) contains three primes. The method does not identify which \( n \) will work, but it proves that such cases occur infinitely often for some admissible configuration.
+
+\vspace{0.7em}
+\textbf{4. Zhang’s Level of Distribution}\\[0.5em]
+Zhang proved that primes remain equidistributed up to moduli \( q \le x^\theta \) for some \( \theta > 1/2 \). The classical Bombieri–Vinogradov theorem gives \( \theta = 1/2 \). Zhang’s result surpassed this barrier unconditionally.
+
+Define:
+\[
+\theta(x; q, a) = \sum_{\substack{p \le x \\ p \equiv a \,(\mathrm{mod}\,q)}} \log p.
+\]
+Zhang showed that the deviation of \( \theta(x; q, a) \) from its expected average \( x / \phi(q) \) remains small across a large range of moduli \( q \), enabling uniform control over error terms in the sieve.
+
+Prior to Zhang’s result, bounded gap results had been conditional on the Elliott–Halberstam conjecture, which asserts near-uniform distribution of primes in arithmetic progressions up to moduli \( q \le x^{1 - \varepsilon} \). Zhang's proof bypassed this conjecture by achieving a weaker but still sufficient level of distribution.
+
+\vspace{0.7em}
+\textbf{5. Maynard’s Modification and Polymath Refinements}\\[0.5em]
+James Maynard introduced a new sieve weight that enabled detection of primes in admissible tuples without requiring \( \theta > 1/2 \). This simplified the construction and eliminated the dependence on strong distributional input.
+
+The Polymath8 project refined and extended both approaches:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Polymath8a:} Improved Zhang’s error analysis and reduced the bound \( N \) to 4,680.
+    \item \textbf{Maynard’s Variant:} Lowered \( N \) further and generalized the method to detect \( m \) primes in bounded-length intervals.
+    \item \textbf{Polymath8b:} Sharpened analytic estimates and reduced the bound to below 250.
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{References:}\\[0.3em]
+Zhang, Y. (2014). Bounded gaps between primes. \textit{Annals of Mathematics}, 179(3), 1121–1174.\\
+Maynard, J. (2015). Small gaps between primes. \textit{Annals of Mathematics}, 181(1), 383–413.
+
+\end{technical}

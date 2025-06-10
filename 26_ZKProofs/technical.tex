@@ -1,0 +1,68 @@
+\begin{technical}
+{\Large\textbf{Foundations and Instantiations of Zero-Knowledge Proofs}}\\[0.7em]
+
+\noindent\textbf{Introduction}\\[0.5em]
+Zero-knowledge proofs are interactive protocols where a Prover \( P \) convinces a Verifier \( V \) that a statement \( x \in L \) is true, for some language \( L \in \text{NP} \), without revealing any information beyond the truth of the claim. The formal model involves a binary relation \( R \) such that \( (x, w) \in R \) implies \( x \in L \), where \( w \) is a valid witness. A proof must satisfy three properties: completeness, soundness, and zero-knowledge.
+
+\noindent\textbf{General Structure and Canonical Protocol}\\[0.5em]
+Let \( G = (V, E) \) be an undirected graph, and consider the language:
+\[
+L = \{ G \mid G \text{ contains a Hamiltonian cycle} \}.
+\]
+The Prover knows a cycle \( C \subseteq E \) visiting all vertices once. To prove this without revealing \( C \), the protocol proceeds as follows:
+
+\begin{enumerate}
+\item The Prover picks a random permutation \( \pi \) of the vertex labels and constructs the isomorphic graph \( G' = \pi(G) \). They commit to \( G' \) using a cryptographic commitment scheme.
+\item The Verifier sends a random bit \( b \in \{0, 1\} \).
+\begin{itemize}
+\item If \( b = 0 \), the Prover reveals \( \pi \) to prove that \( G' \cong G \).
+\item If \( b = 1 \), the Prover reveals the image \( \pi(C) \), showing a Hamiltonian cycle in \( G' \).
+\end{itemize}
+\item The Verifier checks either isomorphism or Hamiltonicity, depending on the challenge.
+\end{enumerate}
+
+A dishonest Prover cannot satisfy both challenge types consistently without knowing a valid cycle. Over multiple iterations, the probability of successful deception becomes negligible. Yet at no point is the actual cycle in \( G \) revealed, preserving zero-knowledge via indistinguishability of the committed graphs.
+
+\noindent\textbf{Cryptographic Instantiation: Schnorr Protocol}\\[0.5em]
+Consider the discrete logarithm problem in a prime-order cyclic group \( \mathbb{G} \). The Prover knows a secret \( x \) such that:
+\[
+g^x \equiv h \ (\mathrm{mod}\ p),
+\]
+where \( g \) is a generator of \( \mathbb{G} \subseteq \mathbb{Z}_p^* \) and \( h \in \mathbb{G} \).
+
+The Schnorr protocol demonstrates knowledge of \( x \) without revealing it:
+\begin{align*}
+&\bullet\ \text{Prover selects } r \in \mathbb{Z}_{p-1} \text{at random and computes }\\&\text{\hspace{2em}} R = g^r \ (\mathrm{mod}\ p).\\
+&\bullet\ \text{Prover sends } R \text{ to Verifier.}\\
+&\bullet\ \text{Verifier returns random challenge } c \in \mathbb{Z}_{p-1}.\\
+&\bullet\ \text{Prover responds with } s = r + c\,x \ (\mathrm{mod}\ p - 1).\\
+&\bullet\ \text{Verifier checks that } g^s \equiv R \cdot h^c \ (\mathrm{mod}\ p).
+\end{align*}
+
+\noindent\textbf{Zero-Knowledge via Simulation}\\[0.5em]
+To demonstrate the zero-knowledge property, construct a simulator that produces indistinguishable transcripts without access to \( x \). Given a challenge \( c \), choose \( \tilde{s} \in \mathbb{Z}_{p-1} \) at random, and compute:
+\[
+\tilde{R} = g^{\tilde{s}} \cdot h^{-c} \ (\mathrm{mod}\ p).
+\]
+The tuple \( (\tilde{R}, c, \tilde{s}) \) is computationally indistinguishable from a real protocol transcript. Since this simulation does not depend on \( x \), the Verifier learns nothing about the secret.
+
+\noindent\textbf{Soundness via Forking Lemma}\\[0.5em]
+Suppose a Prover can generate two valid transcripts:
+\[
+(R, c_1, s_1) \quad \text{and} \quad (R, c_2, s_2),
+\]
+with \( c_1 \neq c_2 \). Then:
+\[
+g^{s_1} = R \cdot h^{c_1}, \quad g^{s_2} = R \cdot h^{c_2}.
+\]
+Dividing the equations:
+\[
+g^{s_1 - s_2} = h^{c_1 - c_2} \quad \Rightarrow \quad x \equiv \frac{s_1 - s_2}{c_1 - c_2} \ (\mathrm{mod}\ p - 1).
+\]
+Thus, a cheating Prover who answers two challenges consistently must know \( x \), ensuring soundness.
+
+\vspace{0.5em}
+\noindent\textbf{References:}\\
+Goldwasser, S., Micali, S., Rackoff, C. (1985). \textit{The Knowledge Complexity of Interactive Proof Systems}. STOC.\\
+Schnorr, C. P. (1991). \textit{Efficient Identification and Signatures for Smart Cards}. CRYPTO '89.
+\end{technical}

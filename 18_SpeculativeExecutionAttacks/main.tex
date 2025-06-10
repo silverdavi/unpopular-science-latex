@@ -1,0 +1,41 @@
+Every software program ultimately reduces to a sequence of instructions. Each instruction performs a small operation: move a value, add two numbers, compare two quantities, or load data from memory. These operations act on registers — fast internal storage locations — and interact with memory, which holds persistent data.
+
+Processors do not execute instructions one at a time in program order. Instead, they break execution into stages: fetching, decoding, dispatching, executing, and writing back. These stages are pipelined, meaning multiple instructions occupy different stages simultaneously. This allows the processor to begin executing new instructions before the previous ones have completed.
+
+To further increase throughput, processors analyze instruction dependencies and reorder operations when possible. If two instructions are independent, they may be executed out of order. Even register names are virtualized through renaming so that temporary values do not conflict. The goal is to keep all execution units active at all times, minimizing idle cycles.
+
+One obstacle to this flow is control flow: instructions that make decisions. A branch such as \texttt{if (x < y)} requires evaluation before the next instruction path can be determined. Without optimization, the processor would halt until the condition is resolved. To avoid this delay, modern CPUs predict which path is more likely and speculatively begin executing it.
+
+If the prediction is correct, the speculative work becomes part of normal execution. If incorrect, the speculative instructions are discarded and the processor switches to the correct path. From the perspective of the architectural state — the committed values of memory and registers — it is as if the speculation never occurred. But internally, speculative execution modifies shared microarchitectural state: caches, branch predictors, translation buffers, and other timing-sensitive components.
+
+Even when discarded, speculative instructions may load data into the cache or alter prediction structures. These effects are not visible through standard software interfaces, but they influence timing. And timing can be measured.
+
+Imagine requesting a book from a library where some rooms are restricted. To save time, the librarian may start walking toward the room before confirming whether you have access. If you are authorized, the book is delivered. If not, the librarian returns — nothing was given. But the door was opened. Now suppose you are not told which room contains which book. Later, you notice that one door swings more easily. You did not receive the book, but you know where the librarian went. The movement left a physical trace.
+
+This analogy captures the behavior of speculative execution. A mispredicted instruction may be discarded, but its execution path can leave observable changes in the system’s microarchitecture. Cache lines may be loaded. Predictor state may be altered. Memory hierarchies may be touched. These traces can be measured through timing differences. This creates a channel — unintended but real — through which information can leak.
+
+The attacks known as Meltdown and Spectre exploit this channel. Both cause the processor to execute instructions that are architecturally forbidden, then extract information by observing the side effects those instructions leave behind.
+
+Meltdown targets privilege boundaries. User processes are not permitted to read kernel memory. This protection is enforced by page tables and memory access flags. Normally, any such attempt results in an immediate exception. However, during out-of-order execution, the processor may begin fetching data from a kernel address before verifying access permissions. The violation is eventually detected, and the speculative result is discarded. But in the meantime, the secret value may influence transient computation.
+
+For example, the secret byte can be used as an index into a secondary array — \texttt{array2[secret\_value * 4096]}. This loads a corresponding cache line. After the page fault is handled, the attacker times access to all entries of \texttt{array2}. The fastest access reveals which index was touched, and therefore which byte was read speculatively.
+
+Meltdown does not extract secrets by reading memory directly. It leaks information through transient operations that interact with microarchitectural components. The attack succeeds because permission checks are not enforced synchronously with memory fetches, and because cache state is not rolled back when speculation fails. It is most effective on architectures where kernel memory is mapped but protected — a configuration chosen for efficiency.
+
+Spectre uses a different method. It does not rely on privilege escalation or protection faults. Instead, it manipulates branch prediction. The attacker trains the predictor by repeatedly calling a function with valid inputs. If the function includes a conditional bounds check — such as \texttt{if (x < array\_length)} — the predictor learns to expect it to succeed. Then, the attacker provides an out-of-bounds value of $x$. The CPU, following the trained prediction, speculatively executes the body of the conditional, including the access \texttt{array[x]}.
+
+If the value at \texttt{array[x]} is a secret, it may be used to access a secondary array, such as \texttt{probe[secret\_byte * 4096]}. The access loads a cache line. When the misprediction is detected, the speculative results are discarded, but the cache access remains. The attacker then times reads to all 256 pages of \texttt{probe} to determine which one is fastest — and thereby learns the secret byte.
+
+Unlike Meltdown, Spectre does not violate memory protection. The victim code includes proper bounds checks, and the access is invalid only in the speculative path. From a software perspective, no bug exists. The attack works by inducing transient misbehavior in the processor’s control logic — behavior that leaves measurable artifacts in the memory subsystem.
+
+What distinguishes Spectre is its generality. Any code that includes conditional branches and secret-dependent data can be a target. Because the predictor is shared across execution contexts, one thread can train it to influence the behavior of another. This makes the attack surface broad, and its mitigation difficult.
+
+Such attacks are possible because of the complex interaction between performance optimizations and microarchitectural state. Speculative execution, out-of-order dispatch, branch prediction, caching hierarchies — each designed to increase throughput — operate together in ways that were not modeled at the software level. From physics, it is known that cache access times are tens of nanoseconds, while main memory takes hundreds. From cryptography, it is known that even partial information, if extracted consistently, can yield full secrets.
+
+These vulnerabilities do not result from broken logic or incorrect permissions. They arise from abstraction boundaries. The processor guarantees that speculative effects do not alter program-visible state. But it does not erase their physical traces. Software trusted that rollback was synonymous with invisibility. It was not.
+
+Mitigations include inserting serialization barriers (\texttt{LFENCE}), flushing branch predictors on context switch, disabling certain speculative paths, and modifying memory mappings. These measures constrain speculation — often significantly. Some reduce instruction-level parallelism. Others impose latency at security boundaries. All introduce performance costs that reverse a decade of hardware gains.
+
+Speculative execution remains essential to modern processors. Without it, pipelines would stall on every conditional, and throughput would collapse under latency. But it must now be treated as a visible layer. Once attackers gained the tools to observe side effects at nanosecond resolution, the fiction of architectural isolation broke. The vulnerability was not in computation. It was in assumption.
+
+\clearpage

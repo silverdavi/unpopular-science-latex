@@ -1,0 +1,21 @@
+\fullpagehumor[Famous Stories About Some Interesting Bugs]{%
+\textbf{1. The 500-Mile Email Limit} \\[4pt]
+A university system administrator faced a peculiar bug: emails simply wouldn’t travel more than 500 miles. Messages sent to Boston, about 420 miles away, arrived without issue. But anything farther—like Memphis at 520 miles—vanished into the void.\\
+After repeated tests, the cause emerged. A misconfigured timeout field was mistakenly set in nanoseconds rather than as a port number. Since light moves through fiber at roughly 200,000 kilometers per second, the timeout effectively cut off communication past 500 miles.\\[10pt]
+
+\textbf{2. Vanilla Ice Cream vs. Car Security} \\[4pt]
+Drivers of a particular car model reported a baffling issue: their keyless entry systems failed—\textit{but only after visiting one specific ice cream shop, and only if they bought vanilla}. Engineers were understandably skeptical.\\
+Yet data confirmed it. Vanilla buyers experienced failures, chocolate buyers did not. The difference? The vanilla line was shorter. Vanilla customers returned while the car’s engine was still warm, triggering a failure in a temperature-sensitive component that operated correctly once cooled.\\[10pt]
+
+\textbf{3. Passwords That Depend on Posture} \\[4pt]
+An IT team initially dismissed reports that a user’s password worked while standing, but failed when seated. That is, until they saw the video: standing entries succeeded, seated attempts did not.\\
+The root cause? Two keys had been swapped during keyboard maintenance. Standing users looked at the keyboard and typed what they saw. Seated users relied on muscle memory and consistently entered the wrong sequence.\\[10pt]
+
+\textbf{4. The Floor Polisher That Crashed Servers} \\[4pt]
+Night-shift staff at a data center kept reporting server crashes that never happened during the day. No changes in software, no power issues—just silence until sundown.\\
+Eventually, investigators traced the crashes to the cleaning crew’s floor polisher. It vibrated at exactly 60 hertz, unintentionally matching the resonant frequency of certain hard drives. The resulting mechanical resonance caused read/write heads to misalign—briefly but fatally.\\[10pt]
+
+\textbf{5. Sunlight, Through a Window, at 2:45 PM} \\[4pt]
+A development team noticed something odd: one server crashed at exactly 2:45 PM every day. Logs pointed to thermal throttling, but only at that time.\\
+The answer was simple, and visible. Sunlight streamed through a west-facing window, landing directly on a poorly ventilated rack. At 2:45 PM, the sun’s angle lined up just right. The temperature spike pushed the server past its safe operating limit.%
+}

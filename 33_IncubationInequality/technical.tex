@@ -1,0 +1,78 @@
+\begin{technical}
+{\Large\textbf{Monotonicity via Covariance Interpolation}}\\[0.7em]
+
+\noindent\textbf{Framing the Problem}\\[0.5em]
+Let \( X \sim \mathcal{N}(0, C) \) be an \( n \)-dimensional Gaussian vector with zero mean and covariance matrix \( C \succcurlyeq 0 \). The Gaussian Correlation Inequality asserts that for any symmetric convex sets \( A, B \subset \mathbb{R}^n \),
+\[
+\mathbb{P}(X \in A \cap B) \ge \mathbb{P}(X \in A)\,\mathbb{P}(X \in B).
+\]
+This can be reduced to the case where \( A \) and \( B \) are axis-aligned boxes centered at the origin, such as
+\begin{align}
+A &= \left\{ x \in \mathbb{R}^k : |x_i| \le 1 \right\}, \quad\\
+B &= \left\{ x \in \mathbb{R}^{n-k} : |x_j| \le 1 \right\}.
+\end{align}
+Let \( X = (X_1, \dots, X_n) \), and define
+\[
+f(t) := \mathbb{P}_t\left( \max_{1 \le i \le n} |X_i| \le 1 \right),
+\]
+where \( \mathbb{P}_t \) denotes a Gaussian measure with interpolated covariance
+\[
+C(t) = 
+\begin{pmatrix}
+C_1 & tQ \\
+tQ^\top & C_2
+\end{pmatrix}, \quad t \in [0,1].
+\]
+Here, \( C_1 \in \mathbb{R}^{k \times k} \), \( C_2 \in \mathbb{R}^{(n-k) \times (n-k)} \), and \( Q \in \mathbb{R}^{k \times (n-k)} \). The case \( t = 0 \) corresponds to \( A \) and \( B \) being independent, while \( t = 1 \) corresponds to their joint distribution under \( C \). The goal is to prove that \( f(t) \) is non-decreasing.
+
+\noindent\textbf{Transformation to Gamma Structure}\\[0.5em]
+The squared Gaussian variables \( Z_i = X_i^2 / 2 \) follow a scaled chi-squared law. Define the Laplace transform of \( Z = (Z_1, \dots, Z_n) \) under \( \mathbb{P}_t \) as:
+\begin{align}
+\mathcal{L}_t(\lambda) 
+&= \mathbb{E}_t \left[ \exp\left( -\sum_{i=1}^n \lambda_i Z_i \right) \right] \notag \\
+&= \mathbb{E}_t \left[ \exp\left( -X^\top \Lambda X / 2 \right) \right] \notag \\
+&= |I + C(t) \Lambda|^{-1/2}, \label{eq:laplace}
+\end{align}
+where \( \Lambda = \operatorname{diag}(\lambda_1, \dots, \lambda_n) \). Differentiating \eqref{eq:laplace} with respect to \( t \) gives
+\begin{align}
+\frac{d}{dt} \mathcal{L}_t(\lambda) 
+&= -\frac{1}{2} |I + C(t)\Lambda|^{-3/2} \cdot \frac{d}{dt} |I + C(t)\Lambda|. \label{eq:laplace-deriv}
+\end{align}
+Since \( C(t) \) is linear in \( t \), the derivative of the determinant is a polynomial with nonnegative coefficients, implying \( \mathcal{L}_t(\lambda) \) is non-increasing in \( t \), and hence \( f(t) \) is non-decreasing.
+
+\noindent\textbf{Smoothing and Differentiation}\\[0.5em]
+To handle the indicator function rigorously, define a smooth approximation:
+\[
+\phi_\epsilon(x) = 
+\begin{cases}
+1 & \text{if } |x| \le 1 - \epsilon, \\
+0 & \text{if } |x| \ge 1 + \epsilon, \\
+\text{smooth monotone} & \text{otherwise}.
+\end{cases}
+\]
+Let
+\[
+F_\epsilon(Z) = \prod_{i=1}^n \phi_\epsilon\left(\sqrt{2Z_i}\right),
+\]
+so that \( F_\epsilon \to 1_{\{\max |X_i| \le 1\}} \) as \( \epsilon \to 0 \). The smoothed function has bounded support and bounded derivatives, and satisfies:
+\begin{align}
+\frac{d}{dt} \mathbb{E}_t[F_\epsilon(Z)] 
+= \sum_{\emptyset \neq J \subseteq [n]} c_J(t) \cdot \mathbb{E}^{\Gamma}_t \left[ (-\partial)_J F_\epsilon(\tilde Z) \right], \label{eq:deriv-expansion}
+\end{align}
+where \( (-\partial)_J \) denotes a mixed partial derivative over the variables in \( J \), and \( c_J(t) = -\frac{1}{2} \frac{d}{dt} |C_J(t)| \ge 0 \) because principal minors of \( C(t) \) decrease with \( t \). Under the gamma-like distribution \( \mathbb{E}^\Gamma_t \), and since \( F_\epsilon \) is non-increasing in each variable, all terms in \eqref{eq:deriv-expansion} are nonnegative. Hence,
+\[
+\frac{d}{dt} \mathbb{E}_t[F_\epsilon(Z)] \ge 0.
+\]
+
+\noindent\textbf{Conclusion and Generalization}\\[0.5em]
+Taking the limit \( \epsilon \to 0 \), we recover:
+\begin{align} 
+f(t) = \mathbb{P}_t\left( |X_1| \le 1, \dots, |X_n| \le 1 \right) \quad \\\text{is non-decreasing in } t.
+\end{align}
+This establishes the Gaussian Correlation Inequality for axis-aligned boxes, which by approximation extends to all symmetric convex sets. Royen's insight was to apply a known Laplace transform identity in a context that revealed hidden monotonicity—without new tools, but with a decisive shift in perspective.
+
+\vspace{0.5em}
+\noindent\textbf{References:}\\
+Royen, T. (2014). \textit{A simple proof of the Gaussian correlation conjecture extended to multivariate gamma distributions}. Far East J. Theor. Stat.\\
+Latała, R., Matlak, D. (2017). \textit{Royen’s Proof of the Gaussian Correlation Inequality}. In: Israel Seminar (GAFA) 2014–2016. Springer.
+\end{technical}

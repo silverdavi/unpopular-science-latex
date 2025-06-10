@@ -1,0 +1,44 @@
+\begin{technical}
+{\Large\textbf{Rotational Stability and Return Geometry in Boomerang Dynamics}}\\[0.7em]
+
+\textbf{Introduction}\\[0.5em]
+This section examines the return trajectory of a spinning boomerang as the result of coupled rotational and aerodynamic dynamics. The analysis focuses on how asymmetric lift induces torque, how that torque yields precession under conservation of angular momentum, and how the resulting tilt generates a horizontal force component sufficient to sustain a curved path. The goal is to characterize the return as a structurally stable outcome of the system's geometry, inertia, and flow conditions.
+
+\textbf{Lift-Induced Torque and Angular Reorientation}\\[0.5em]
+Let a planar boomerang with characteristic arm length $R$ rotate at angular velocity $\omega$ and translate at velocity $V$. Each arm acts as an airfoil. Due to rotation, the forward-moving arm experiences airspeed $V + \omega R$, while the retreating arm experiences $V - \omega R$. Assuming constant lift coefficient $C_L$ and arm planform area $S$, the lift difference between the arms is:
+\begin{align}
+\Delta L &= \tfrac{1}{2} \rho S C_L \left[ (V + \omega R)^2 - (V - \omega R)^2 \right]\\ &= 2 \rho S C_L V \omega R.
+\end{align}
+This differential lift produces a torque of magnitude
+\begin{align}
+\tau = \Delta L \cdot R = 2 \rho S C_L V \omega R^2.
+\end{align}
+This torque acts perpendicular to the spin axis.
+
+\textbf{Gyroscopic Precession}\\[0.5em]
+Let the boomerang's moment of inertia about the spin axis be $I$, yielding angular momentum $\mathbf{H} = I \boldsymbol{\omega}$. A torque $\boldsymbol{\tau} \perp \mathbf{H}$ results in gyroscopic precession:
+\begin{align}
+\boldsymbol{\Omega}_\text{prec} = \frac{\boldsymbol{\tau}}{|\mathbf{H}|} \quad \Rightarrow \quad \Omega_\text{prec} = \frac{\tau}{I \omega} = \frac{2 \rho S C_L V R^2}{I}.
+\end{align}
+The precession rate depends on translational speed $V$, geometry $(R)$, and mass distribution $(I)$, but not on spin rate $\omega$. For a launch with near-horizontal angular momentum $\mathbf{H}$, the precession rotates the spin axis about a vertical direction, gradually tilting the lift vector away from vertical.
+
+\textbf{Lift Vector Tilt and Centripetal Force}\\[0.5em]
+Let $L_T$ denote the total aerodynamic lift magnitude. The vertical lift vector tilts over time by angle $\theta(t)$, satisfying
+\begin{align}
+\theta(t) = \int_0^t \Omega_\text{prec}(t')\,dt'.
+\end{align}
+The resulting horizontal component $L_T \sin\theta$ provides a centripetal force for curved flight. To maintain circular motion of radius $R_c$, Newton’s second law yields:
+\begin{align}
+L_T \sin\theta = \frac{m V^2}{R_c} \quad \Rightarrow \quad R_c = \frac{m V^2}{L_T \sin\theta}.
+\end{align}
+This expresses the curvature radius as a function of inertial mass $m$, forward speed $V$, total lift $L_T$, and tilt $\theta$—the latter determined by precession. As long as $V$ and $\omega$ decrease gradually, the system maintains a stable trajectory.
+
+\textbf{Return Path Stability}\\[0.5em]
+The system resists divergence due to high angular momentum $|\mathbf{H}| = I \omega$, which limits rapid changes in orientation. The torque $\tau$ arises from velocity asymmetry, and its effect on trajectory depends only on average parameters. Local aerodynamic disturbances alter the torque only transiently, and their influence is attenuated over multiple revolutions. Precession evolves slowly relative to spin and translation. This separation of timescales ensures that the trajectory remains continuous, bounded, and planar throughout most of the flight.
+
+\textbf{References}\\
+Hess, F. (1975). The aerodynamics of boomerangs. \textit{Scientific American}, \textbf{219}(5), 124–136.\\
+Thomas, G. (1973). The physics of boomerang flight. \textit{American Journal of Physics}, \textbf{41}(5), 638–650.\\
+Walker, J. (1979). Boomerangs: How to make them and how they fly. \textit{Scientific American}, \textbf{240}(3), 162–172.
+
+\end{technical}
