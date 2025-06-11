@@ -1,0 +1,21 @@
+\documentclass{article}
+\begin{document}
+
+% Test the readfirstline command in isolation
+\newread\file
+\newcommand{\readfirstline}[2]{%
+  \openin\file=#2
+  \read\file to \temp
+  \closein\file
+  \xdef#1{\temp}%
+}
+
+% Test variables
+\def\ch01showBanachTarskiParadox{}
+\def\ch02showTopologicalInsulators{}
+
+\readfirstline{\testtitle}{01_BanachTarskiParadox/title.tex}
+
+Title is: \testtitle
+
+\end{document} 

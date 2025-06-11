@@ -256,7 +256,8 @@
   \openin\file=#2
   \read\file to \temp
   \closein\file
-  \xdef#1{\temp}
+  \xdef#1{\temp}%
+  % Ensure temp is not accidentally output
 }
 \newcommand{\chapterwithsummaryfromfile}[2][]{%
   \refstepcounter{chapter}
@@ -270,6 +271,13 @@
   }{
     \def\chaptersummary{No summary available.}
   }
+  
+  % TOC entry with summary (multi-line)
+  \addcontentsline{toc}{chapter}{%
+    \protect\numberline{\thechapter}\chaptertitle\\
+    {\normalfont\small\textit{\textcolor{summarycolor}{\chaptersummary}}}%
+  }
+  
   \chaptermark{\chaptertitle}
   \ifx\\#1\\\else\label{#1}\fi
   \phantomsection
@@ -592,16 +600,22 @@
 
 
 \newcommand{\inputstory}[1]{%
-    \startchapter
+    % Start chapter on new page - chapter numbering handled by \chapterwithsummaryfromfile
+    \clearpage
+    \checkoddpage
+    \ifoddpage
+        % already odd — do nothing
+    \else
+        \hbox{}
+        \thispagestyle{empty}
+        \clearpage
+    \fi
 
     % --- PAGE 1: Intro ---
     \phantomsection
     \readfirstline{\chaptertitle}{#1/title.tex}
     \readfirstline{\chaptersummary}{#1/summary.tex}
-    \addcontentsline{toc}{chapter}{%
-      \protect\numberline{\thechapter}\chaptertitle\\
-      {\normalfont\small\textit{\textcolor{summarycolor}{\chaptersummary}}}%
-    }
+    % TOC entry removed - handled by \chapterwithsummaryfromfile
 
     \thispagestyle{empty}
     \begin{center}
