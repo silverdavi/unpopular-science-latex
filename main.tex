@@ -6,9 +6,7 @@
 % Enable only specific chapters
 \begin{comment}
 
-\def\showBodySwappingPuzzle{}
-
-\end{comment}
+%\end{comment}
 
 
 % Second Set
@@ -17,69 +15,6 @@
 \begin{comment}
 
 \end{comment}
-\def\showBanachTarskiParadox{}
-%\def\showTopologicalInsulators{}
-%\def\showGoldRelativity{}
-%\def\showEMFieldsEnergyFlow{}
-%\def\showCircleWheel{}
-%\def\showGravityTimeDilation{}
-\def\showBilliardsConicsPorism{}
-
-%\def\showBoundedPrimeGaps{}
-%\def\showArrowTheoremTopology{}
-%\def\showSolarFusionQuantumTunneling{}
-%\def\showAcceleratingUniverse{}
-%\def\showGSMEncryptionOrder{}
-%\def\showPoissonsSpot{}
-
-
-
-
-%\def\showCompactTwinParadox{}
-
-
-
-\begin{comment}
-\def\showEnvelopeParadox{}
-\def\showShoelaceKnotMechanics{}
-\def\showTorricellisTrumpet{}
-\def\showSpeculativeExecutionAttacks{}
-\def\showCosmicRayMuons{}
-\def\showChineseRoomArgument{}
-\def\showExponentialMapsLieTheory{}
-\def\showCreepers{}
-\def\showBlackHoleTimeDilationRedshift{}
-\def\showFourDSpacetime{}
-\def\showFireflyBioluminescence{}
-\def\showZKProofs{}
-\def\showPlanetarySkyColors{}
-\def\showNegativeTemp{}
-\def\showHatMonotile{}
-\def\showSimpsonsParadox{}
-\def\showOsmosisDebye{}
-\def\showAtomicClocks{}
-\def\showIncubationInequality{}
-\def\showBoltzmannBrain{}
-\def\showTreesFromAir{}
-\def\showQFTvGR{}
-\def\showDarkMatterEvidence{}
-\def\showChristmasTruce{}
-\def\showSuperpermutationsBreakthrough{}
-
-\def\showBoomerangFlight{}
-\def\showHoughTransfrom{}
-\def\showIceSlipperiness{}
-\def\showNearFlatUniverse{}
-\def\showIronMask{}
-\def\showMaxwellDemon{}
-\def\showWoodwardHoffmannRules{}
-\def\showObserverDependentVacuum{}
-\def\showThreeBody{}
-\def\showLangtonsAnt{}
-\def\showIVFmtDNA{}
-\end{comment}
-
-
 % Title and author
 \title{Unpopular Science}
 \author{David H. Silver}
@@ -131,363 +66,166 @@
 \chapter*{Prologue}
 \addcontentsline{toc}{chapter}{Prologue}
 \input{prologue}
-
+\newpage
 \begin{comment}
-    \ifdefined\showIronMask
-    \chapter[]{}
+        \chapter[]{}
     \label{ch:}
     \inputstory{44_IronMask}
     \fi
 \end{comment}
 
-\ifdefined\showBanachTarskiParadox
-\chapterwithsummaryfromfile[ch:banach]{BanachTarskiParadox}
+\chapterwithsummaryfromfile[ch:banach]{01_BanachTarskiParadox}
 \inputstory{01_BanachTarskiParadox} %Approved
-\fi
 
-\ifdefined\showTopologicalInsulators
-\chapterwithsummaryfromfile[ch:topologicalinsulators]{TopologicalInsulators}
+\chapterwithsummaryfromfile[ch:topologicalinsulators]{02_TopologicalInsulators}
 \inputstory{02_TopologicalInsulators} %Approved
-\fi
 
-\ifdefined\showGoldRelativity
-\chapterwithsummaryfromfile[ch:goldrelativity]{GoldRelativity}
+\chapterwithsummaryfromfile[ch:goldrelativity]{03_GoldRelativity}
 \inputstory{03_GoldRelativity} %Approved
-\fi
 
-\ifdefined\showEMFieldsEnergyFlow
-\chapterwithsummaryfromfile[ch:energytransmission]{EMFieldsEnergyFlow}
+\chapterwithsummaryfromfile[ch:energytransmission]{04_EMFieldsEnergyFlow}
 \inputstory{04_EMFieldsEnergyFlow} %Approved
-\fi
 
-\ifdefined\showCircleWheel
-\chapterwithsummaryfromfile[ch:circlewheel]{CircleWheel}
+\chapterwithsummaryfromfile[ch:circlewheel]{05_CircleWheel}
 \inputstory{05_CircleWheel}
-\fi
 
-\ifdefined\showGravityTimeDilation
-\chapterwithsummaryfromfile[ch:gravitytimedilation]{GravityTimeDilation}
+\chapterwithsummaryfromfile[ch:gravitytimedilation]{06_GravityTimeDilation}
 \inputstory{06_GravityTimeDilation} %Approved
-\fi
 
-\ifdefined\showBilliardsConicsPorism
-\chapterwithsummaryfromfile[ch:billiardsconicsporism]{BilliardsConicsPorism} 
+\chapterwithsummaryfromfile[ch:billiardsconicsporism]{07_BilliardsConicsPorism} 
 \inputstory{07_BilliardsConicsPorism} %Approved
-\fi
 
-\ifdefined\showBoundedPrimeGaps
-\chapterwithsummaryfromfile[ch:boundedprimegaps]{BoundedPrimeGaps} 
+\chapterwithsummaryfromfile[ch:boundedprimegaps]{08_BoundedPrimeGaps} 
 \inputstory{08_BoundedPrimeGaps} 
-\fi
 
-\ifdefined\showArrowTheoremTopology
-\chapterwithsummaryfromfile[ch:arrowtheoremtopology]{ArrowTheoremTopology} %Approved
+\chapterwithsummaryfromfile[ch:arrowtheoremtopology]{09_ArrowTheoremTopology} %Approved
 \inputstory{09_ArrowTheoremTopology}
-\fi
 
-\ifdefined\showSolarFusionQuantumTunneling
-\chapterwithsummaryfromfile[ch:solarfusionquantumtunneling]{SolarFusionQuantumTunneling}
+\chapterwithsummaryfromfile[ch:solarfusionquantumtunneling]{10_SolarFusionQuantumTunneling}
 \inputstory{10_SolarFusionQuantumTunneling} %Approved
-\fi
 
-\ifdefined\showAcceleratingUniverse
-\chapterwithsummaryfromfile[ch:acceleratinguniverse]{AcceleratingUniverse}
+\chapterwithsummaryfromfile[ch:acceleratinguniverse]{11_AcceleratingUniverse}
 \inputstory{11_AcceleratingUniverse} %Approved
-\fi
 
-\ifdefined\showGSMEncryptionOrder
-\chapterwithsummaryfromfile[ch:gsmencryptionorder]{GSMEncryptionOrder}
+\chapterwithsummaryfromfile[ch:gsmencryptionorder]{12_GSMEncryptionOrder}
 \inputstory{12_GSMEncryptionOrder} %Approved
-\fi
 
-\ifdefined\showPoissonsSpot
-\chapterwithsummaryfromfile[ch:poissonsspot]{PoissonsSpot}
+\chapterwithsummaryfromfile[ch:poissonsspot]{13_PoissonsSpot}
 \inputstory{13_PoissonsSpot} %Approved
-\fi
     
-\ifdefined\showCompactTwinParadox
-\chapterwithsummaryfromfile[ch:compacttwinparadox]{CompactTwinParadox}
+\chapterwithsummaryfromfile[ch:compacttwinparadox]{14_CompactTwinParadox}
 \inputstory{14_CompactTwinParadox} %Approved
-\fi
 
-\ifdefined\showEnvelopeParadox
-\chapterwithsummaryfromfile[ch:envelopeparadox]{EnvelopeParadox}
+\chapterwithsummaryfromfile[ch:envelopeparadox]{15_EnvelopeParadox}
 \inputstory{15_EnvelopeParadox} %Approved
-\fi
 
-\ifdefined\showShoelaceKnotMechanics
-\chapterwithsummaryfromfile[ch:shoelaceknotmechanics]{ShoelaceKnotMechanics}
+\chapterwithsummaryfromfile[ch:shoelaceknotmechanics]{16_ShoelaceKnotMechanics}
 \inputstory{16_ShoelaceKnotMechanics} %Approved
-\fi
 
-\ifdefined\showTorricellisTrumpet
-\chapterwithsummaryfromfile[ch:torricellistrumpet]{TorricellisTrumpet}
+\chapterwithsummaryfromfile[ch:torricellistrumpet]{17_TorricellisTrumpet}
 \inputstory{17_TorricellisTrumpet} %Approved
-\fi
 
-\ifdefined\showSpeculativeExecutionAttacks
-\chapterwithsummaryfromfile[ch:speculativeexecutionattacks]{SpeculativeExecutionAttacks}
+\chapterwithsummaryfromfile[ch:speculativeexecutionattacks]{18_SpeculativeExecutionAttacks}
 \inputstory{18_SpeculativeExecutionAttacks}%Approved
-\fi
 
-\ifdefined\showCosmicRayMuons
-\chapterwithsummaryfromfile[ch:cosmicraymuons]{CosmicRayMuons}
+\chapterwithsummaryfromfile[ch:cosmicraymuons]{19_CosmicRayMuons}
 \inputstory{19_CosmicRayMuons} %Approved
-\fi
 
-\ifdefined\showChineseRoomArgument
-\chapterwithsummaryfromfile[ch:chineseroomargument]{ChineseRoomArgument}
+\chapterwithsummaryfromfile[ch:chineseroomargument]{20_ChineseRoomArgument}
 \inputstory{20_ChineseRoomArgument}  %Approved
-\fi
 
-\ifdefined\showExponentialMapsLieTheory
-\chapterwithsummaryfromfile[ch:exponentialmapslietheory]{ExponentialMapsLieTheory}
+\chapterwithsummaryfromfile[ch:exponentialmapslietheory]{21_ExponentialMapsLieTheory}
 \inputstory{21_ExponentialMapsLieTheory} %Approved
-\fi
 
-\ifdefined\showCreepers
-\chapterwithsummaryfromfile[ch:minecraftcreeper]{MinecraftCreeper}
+\chapterwithsummaryfromfile[ch:minecraftcreeper]{22_MinecraftCreeper}
 \inputstory{22_MinecraftCreeper} %Approved
-\fi
 
-\ifdefined\showBlackHoleTimeDilationRedshift
-\chapterwithsummaryfromfile[ch:blackholetimedilationredshift]{BlackHoleTimeDilationRedshift}
+\chapterwithsummaryfromfile[ch:blackholetimedilationredshift]{23_BlackHoleTimeDilationRedshift}
 \inputstory{23_BlackHoleTimeDilationRedshift} %Approved
-\fi
 
-\ifdefined\showFourDSpacetime
-\chapterwithsummaryfromfile[ch:4dspacetime]{FourDSpacetime}
+\chapterwithsummaryfromfile[ch:4dspacetime]{24_FourDSpacetime}
 \inputstory{24_FourDSpacetime}  %Approved
-\fi
 
-\ifdefined\showFireflyBioluminescence
-\chapterwithsummaryfromfile[ch:fireflybioluminescence]{FireflyBioluminescence}
+\chapterwithsummaryfromfile[ch:fireflybioluminescence]{25_FireflyBioluminescence}
 \inputstory{25_FireflyBioluminescence}
-\fi
 
-\ifdefined\showZKProofs
-\chapterwithsummaryfromfile[ch:zkproofs]{ZKProofs} %Approved
+\chapterwithsummaryfromfile[ch:zkproofs]{26_ZKProofs} %Approved
 \inputstory{26_ZKProofs}
-\fi
 
-\ifdefined\showPlanetarySkyColors
-\chapterwithsummaryfromfile[ch:planetaryskycolors]{PlanetarySkyColors}  %Approved
+\chapterwithsummaryfromfile[ch:planetaryskycolors]{27_PlanetarySkyColors}  %Approved
 \inputstory{27_PlanetarySkyColors}
-\fi
 
-\ifdefined\showNegativeTemp
-\chapterwithsummaryfromfile[ch:negativetemperature]{NegativeTemp}
+\chapterwithsummaryfromfile[ch:negativetemperature]{28_NegativeTemp}
 \inputstory{28_NegativeTemp} %Approved
-\fi
 
-\ifdefined\showHatMonotile
-\chapterwithsummaryfromfile[ch:hatmonotile]{HatMonotile}
+\chapterwithsummaryfromfile[ch:hatmonotile]{29_HatMonotile}
 \inputstory{29_HatMonotile} %Approved
-\fi
 
-\ifdefined\showSimpsonsParadox
-\chapterwithsummaryfromfile[ch:simpsonsparadox]{SimpsonsParadox}
+\chapterwithsummaryfromfile[ch:simpsonsparadox]{30_SimpsonsParadox}
 \inputstory{30_SimpsonsParadox}  %Approved
-\fi
 
-\ifdefined\showOsmosisDebye
-\chapterwithsummaryfromfile[ch:osmosisdebye]{osmosis_Debye}
+\chapterwithsummaryfromfile[ch:osmosisdebye]{31_osmosis_Debye}
 \inputstory{31_osmosis_Debye} %Approved
-\fi
 
-\ifdefined\showAtomicClocks
-\chapterwithsummaryfromfile[ch:atomic]{AtomicClocks}
+\chapterwithsummaryfromfile[ch:atomic]{32_AtomicClocks}
 \inputstory{32_AtomicClocks} %Approved
-\fi
 
-\ifdefined\showIncubationInequality
-\chapterwithsummaryfromfile[ch:incubationinequality]{IncubationInequality}
+\chapterwithsummaryfromfile[ch:incubationinequality]{33_IncubationInequality}
 \inputstory{33_IncubationInequality} %Approved
-\fi
 
-\ifdefined\showBoltzmannBrain
-\chapterwithsummaryfromfile[ch:boltzmannbrain]{BoltzmannBrain}
+\chapterwithsummaryfromfile[ch:boltzmannbrain]{34_BoltzmannBrain}
 \inputstory{34_BoltzmannBrain} %Approved
-\fi
 
-\ifdefined\showTreesFromAir
-\chapterwithsummaryfromfile[ch:treesfromair]{TreesFromAir}
+\chapterwithsummaryfromfile[ch:treesfromair]{35_TreesFromAir}
 \inputstory{35_TreesFromAir} %Approved
-\fi
 
-\ifdefined\showQFTvGR
-\chapterwithsummaryfromfile[ch:qftvsgr]{qft_vs_gr}
+\chapterwithsummaryfromfile[ch:qftvsgr]{36_qft_vs_gr}
 \inputstory{36_qft_vs_gr} %Approved
-\fi
     
 
-\ifdefined\showDarkMatterEvidence
-\chapterwithsummaryfromfile[ch:darkmatterevidence]{DarkMatterEvidence}
+\chapterwithsummaryfromfile[ch:darkmatterevidence]{37_DarkMatterEvidence}
 \inputstory{37_DarkMatterEvidence} %Approved
-\fi
 
-\ifdefined\showChristmasTruce
-\chapterwithsummaryfromfile[ch:christmastruce1914]{ChristmasTruce1914.}
+\chapterwithsummaryfromfile[ch:christmastruce1914]{38_ChristmasTruce1914}
 \inputstory{38_ChristmasTruce1914} %Approved
-\fi
 
-\ifdefined\showSuperpermutationsBreakthrough
-\chapterwithsummaryfromfile[ch:superpermutationsbreakthrough]{SuperpermutationsBreakthrough}
+\chapterwithsummaryfromfile[ch:superpermutationsbreakthrough]{39_SuperpermutationsBreakthrough}
 \inputstory{39_SuperpermutationsBreakthrough} %Approved
-\fi
 
 
-\ifdefined\showBoomerangFlight
-\chapterwithsummaryfromfile[ch:boomerang]{BoomerangFlight}
+\chapterwithsummaryfromfile[ch:boomerang]{40_BoomerangFlight}
 \inputstory{40_BoomerangFlight} 
-\fi
 
-\ifdefined\showHoughTransfrom
-\chapterwithsummaryfromfile[ch:hough]{HoughTransfrom}
+\chapterwithsummaryfromfile[ch:hough]{41_HoughTransfrom}
 \inputstory{41_HoughTransfrom} 
-\fi
 
-\ifdefined\showIceSlipperiness
-\chapterwithsummaryfromfile[ch:iceslipperiness]{IceSlipperiness}
+\chapterwithsummaryfromfile[ch:iceslipperiness]{42_IceSlipperiness}
 \inputstory{42_IceSlipperiness} %Approved
-\fi
 
-\ifdefined\showNearFlatUniverse
-\chapterwithsummaryfromfile[ch:nearflatuniverse]{NearFlatUniverse}
+\chapterwithsummaryfromfile[ch:nearflatuniverse]{43_NearFlatUniverse}
 \inputstory{43_NearFlatUniverse} %Approved
-\fi
 
-\ifdefined\showIronMask
-\chapterwithsummaryfromfile[ch:ironmask]{IronMask}
+\chapterwithsummaryfromfile[ch:ironmask]{44_IronMask}
 \inputstory{44_IronMask} %Approved
-\fi
 
-\ifdefined\showMaxwellDemon
-\chapterwithsummaryfromfile[ch:maxwelldemon]{MaxwellDemon}
+\chapterwithsummaryfromfile[ch:maxwelldemon]{45_MaxwellDemon}
 \inputstory{45_MaxwellDemon} %Approved
-\fi
 
-\ifdefined\showWoodwardHoffmannRules
-\chapterwithsummaryfromfile[ch:woodwardhoffmannrules]{WoodwardHoffmannRules}
+\chapterwithsummaryfromfile[ch:woodwardhoffmannrules]{47_ObserverDependentVacuum}
 \inputstory{46_WoodwardHoffmannRules} %Approved
-\fi
 
-\ifdefined\showObserverDependentVacuum
-\chapterwithsummaryfromfile[ch:observervac]{WoodwardHoffmannRules}
+\chapterwithsummaryfromfile[ch:observervac]{47_ObserverDependentVacuum}
 \inputstory{47_ObserverDependentVacuum} %Approved
-\fi
 
-\ifdefined\showThreeBody
-\chapterwithsummaryfromfile[ch:threebody]{three_body}
+\chapterwithsummaryfromfile[ch:threebody]{48_three_body}
 \inputstory{48_three_body}  %Approved
-\fi
 
-\ifdefined\showIVFmtDNA
-\chapterwithsummaryfromfile[ch:ivfmtdna]{IVFmtDNA}
+\chapterwithsummaryfromfile[ch:ivfmtdna]{49_IVFmtDNA}
 \inputstory{49_IVFmtDNA} 
-\fi
 
-\ifdefined\showLangtonsAnt
-\chapterwithsummaryfromfile[ch:langtons]{LangtonsAnt}
+\chapterwithsummaryfromfile[ch:langtons]{50_LangtonsAnt}
 \inputstory{50_LangtonsAnt} 
-\fi
 
-
-
-
-% Chapter 51 disabled - directory does not exist
-% \ifdefined\showPhotosynthesisQuantumEfficiency
-% \chapter[Illuminating Life: The Science of Photosynthesis]{Illuminating Life: The Science of Photosynthesis}
-% \label{ch:photosynthesis-quantumefficiency}
-% \inputstory{51_Photosynthesis_QuantumEfficiency}
-% \fi
-
-
-
-\ifdefined\showQuantumSubspaceAngles
-\chapter[Angles of Connection: Geometry in Quantum Subspaces]{Angles of Connection: Geometry in Quantum Subspaces}
-\label{ch:quantumsubspaceangles}
-\inputstory{52_QuantumSubspaceAngles}
-\fi
-
-\ifdefined\showBodySwappingPuzzle
-\chapterwithsummary[ch:bodyswappingpuzzle]{The Futurama Theorem}{The body swapping puzzle explores a mathematical problem that gained prominence through the animated series Futurama: when multiple individuals swap minds, can everyone return to their original bodies if no pair can swap directly more than once? This question connects to permutation group theory, where mind swaps represent cycles in permutation notation. The Futurama Theorem, formally known as Keeler's Theorem after writer Ken Keeler, proves that regardless of how complex the initial swapping arrangement, adding two fresh bodies allows any permutation to be sorted with only pairwise swaps.}
-\inputstory{53_BodySwappingPuzzle} %Approved
-\fi
-
-
-
-\begin{comment}
-    \ifdefined\showTheMissingMiddle
-\chapter[Lost in the Gap: The Disappearing Middle Class]{Lost in the Gap: The Disappearing Middle Class}
-\label{ch:themissingmiddle}
-\inputstory{TheMissingMiddle}
-\fi
-
-
-
-\ifdefined\showPhysicalConstraintsComputing
-\chapter[Physics of Computing: Beyond the Code]{Physics of Computing: Beyond the Code}
-\label{ch:physicalconstraintscomputing}
-\inputstory{PhysicalConstraintsComputing}
-\fi
-
-
-\ifdefined\showSexContinuum
-\chapter[Beyond the Binary: The Spectrum of Biological Sex]{Beyond the Binary: The Spectrum of Biological Sex}
-\label{ch:sexcontinuum}
-\inputstory{SexContinuum}
-\fi
-
-
-\ifdefined\showCliffYoungShuffle
-\chapter[Endurance Unleashed: The Power of a Steady Shuffle]{Endurance Unleashed: The Power of a Steady Shuffle}
-\label{ch:cliffyoungshuffle}
-\inputstory{CliffYoungShuffle}
-\fi
-\ifdefined\showMatterAntimatterAsymmetry
-\chapter[Why Matter Matters: The Mystery of Antimatter Asymmetry]{Why Matter Matters: The Mystery of Antimatter Asymmetry}
-\label{ch:matterantimatterasymmetry}
-\inputstory{MatterAntimatterAsymmetry}
-\fi
-
-
-\ifdefined\showSolarNeutrinos
-\chapter[Neutrinos: The Invisible Messengers of Solar Fusion]{Neutrinos: The Invisible Messengers of Solar Fusion}
-\label{ch:solarneutrinos}
-\inputstory{SolarNeutrinos}
-\fi
-
-\ifdefined\showExpanderGraphsPSL2q
-\chapter[Expander Graphs: Sparse Connections, Strong Bonds]{Expander Graphs: Sparse Connections, Strong Bonds}
-\label{ch:expandergraphspsl2q}
-\inputstory{ExpanderGraphsPSL2q}
-\fi
-
-\ifdefined\showGreatDivergenceDebate
-\chapter[Unraveling the Great Divergence: Europe's Economic Ascent]{Unraveling the Great Divergence: Europe's Economic Ascent}
-\label{ch:greatdivergencedebate}
-\inputstory{GreatDivergenceDebate}
-\fi
-
-\ifdefined\showGameTheoryCooperation
-\chapter[The Power of Cooperation: Evolution's Collaborative Advantage]{The Power of Cooperation: Evolution's Collaborative Advantage}
-\label{ch:gametheorycooperation}
-\inputstory{GameTheoryCooperation}
-\fi
-
-\ifdefined\showEigenvectorCentralityInPolitics
-\chapter[Unveiling Influence: The Power of Eigenvector Centrality in Networks]{Unveiling Influence: The Power of Eigenvector Centrality in Networks}
-\label{ch:eigenvectorcentralityinpolitics}
-\inputstory{EigenvectorCentralityInPolitics}
-\fi
-
-
-\end{comment}
-\begin{comment}
-    (?<! )—(?! )
- — 
-\end{comment}
 
 \end{document}
 
