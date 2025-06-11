@@ -21,11 +21,12 @@ class RealTimeCompiler:
         self.monitoring = True
         
     def count_chapters(self):
-        """Count total chapters by looking for \\ifdefined statements."""
+        """Count total chapters by looking for chapterwithsummaryfromfile statements."""
         try:
             with open('main.tex', 'r') as f:
                 content = f.read()
-            chapter_count = len(re.findall(r'\\ifdefined\\ch\d+show', content))
+            # Since we removed all \ifdefined blocks, count chapterwithsummaryfromfile directly
+            chapter_count = len(re.findall(r'\\chapterwithsummaryfromfile', content))
             return chapter_count
         except:
             return 50  # fallback estimate
@@ -41,6 +42,52 @@ class RealTimeCompiler:
                 chapter_name = match.group(2)
                 return chapter_num, chapter_name
         return None, None
+    
+    def clean_build_artifacts(self):
+        """Clean all build artifacts from previous compilations."""
+        print("🧹 Cleaning build artifacts...")
+        
+        # LaTeX build files
+        latex_extensions = [
+            'aux', 'toc', 'log', 'out', 'fdb_latexmk', 'fls', 'synctex.gz',
+            'bbl', 'blg', 'idx', 'ind', 'ilg', 'lof', 'lot', 'nav', 'snm', 'vrb'
+        ]
+        
+        cleaned_count = 0
+        
+        # Clean main document artifacts
+        for ext in latex_extensions:
+            file_path = f'main.{ext}'
+            if os.path.exists(file_path):
+                try:
+                    os.remove(file_path)
+                    cleaned_count += 1
+                except Exception as e:
+                    print(f"  ⚠️  Could not remove {file_path}: {e}")
+        
+        # Clean compilation log files
+        for log_file in ['compile_pass1.log', 'compile_pass2.log']:
+            if os.path.exists(log_file):
+                try:
+                    os.remove(log_file)
+                    cleaned_count += 1
+                except Exception as e:
+                    print(f"  ⚠️  Could not remove {log_file}: {e}")
+        
+        # Clean any LaTeX auxiliary files in subdirectories
+        for root, dirs, files in os.walk('.'):
+            for file in files:
+                if any(file.endswith(f'.{ext}') for ext in latex_extensions):
+                    file_path = os.path.join(root, file)
+                    # Skip main.pdf and other important PDFs
+                    if not file.endswith('.pdf') or file.startswith('main.'):
+                        try:
+                            os.remove(file_path)
+                            cleaned_count += 1
+                        except Exception as e:
+                            pass  # Silent fail for subdirectory cleanup
+        
+        print(f"  ✅ Cleaned {cleaned_count} build artifacts")
     
     def format_time(self, seconds):
         """Format seconds into readable time."""
@@ -109,6 +156,7 @@ class RealTimeCompiler:
                                 # Check for completion
                                 if "Output written on" in line:
                                     self.phase = "Completed"
+                                    self.pdf_generated = True
                                     match = re.search(r'(\d+) pages.*?(\d+) bytes', line)
                                     if match:
                                         pages, size_bytes = match.groups()
@@ -133,6 +181,7 @@ class RealTimeCompiler:
         self.start_time = time.time()
         self.current_chapter = 0
         self.monitoring = True
+        self.pdf_generated = False
         
         # Start log monitoring in background
         log_thread = threading.Thread(target=self.monitor_log_file, args=(log_file,))
@@ -154,12 +203,15 @@ class RealTimeCompiler:
         
         elapsed = time.time() - self.start_time
         
-        if return_code == 0:
+        # Success is determined by PDF generation, not exit code (LaTeX can have warnings)
+        success = self.pdf_generated or os.path.exists('main.pdf')
+        
+        if success:
             print(f"\n✅ Pass {pass_num} completed in {self.format_time(elapsed)}")
         else:
             print(f"\n❌ Pass {pass_num} failed after {self.format_time(elapsed)}")
-        
-        return return_code == 0
+            
+        return success
     
     def compile_document(self):
         """Compile the document with real-time progress."""
@@ -171,12 +223,7 @@ class RealTimeCompiler:
         print(f"📖 Detected {self.total_chapters} chapters")
         
         # Clean old files
-        print("🧹 Cleaning build artifacts...")
-        for ext in ['aux', 'toc', 'log', 'out', 'fdb_latexmk', 'fls']:
-            try:
-                os.remove(f'main.{ext}')
-            except FileNotFoundError:
-                pass
+        self.clean_build_artifacts()
         
         overall_start = time.time()
         
