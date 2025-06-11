@@ -163,9 +163,14 @@ class RealTimeCompiler:
                                         size_mb = int(size_bytes) / (1024*1024)
                                         print(f"\n✅ PDF generated: {pages} pages, {size_mb:.1f}MB")
                                 
-                                # Check for errors
+                                # Check for errors (but ignore normal LaTeX loading messages)
                                 if any(err in line.lower() for err in ['error', 'emergency stop', '! ']):
-                                    if 'warning' not in line.lower():
+                                    # Ignore false positives: file paths, loading messages, and warnings
+                                    if ('warning' not in line.lower() and 
+                                        not line.strip().startswith('(') and  # File loading paths
+                                        '.code.tex' not in line and           # LaTeX code files
+                                        '.sty' not in line and                # Style files
+                                        'errorbars.cod' not in line):          # Specific pgfplots false positive
                                         print(f"\n❌ Error detected: {line}")
                 
                 time.sleep(0.1)  # Check every 100ms
