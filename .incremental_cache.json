@@ -1,0 +1,1908 @@
+{
+  "chapters": {
+    "01_BanachTarskiParadox": {
+      "01_BanachTarskiParadox/BANACH.png": {
+        "mtime": 1749582950.0,
+        "size": 1650503
+      },
+      "01_BanachTarskiParadox/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1875
+      },
+      "01_BanachTarskiParadox/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 24
+      },
+      "01_BanachTarskiParadox/main.tex": {
+        "mtime": 1749755897.9097,
+        "size": 16560
+      },
+      "01_BanachTarskiParadox/graphics.png": {
+        "mtime": 1749582950.0,
+        "size": 216700
+      },
+      "01_BanachTarskiParadox/UNPOP SCI - INFINITE - v1 (1).pdf": {
+        "mtime": 1749582950.0,
+        "size": 415784
+      },
+      "01_BanachTarskiParadox/technical.tex": {
+        "mtime": 1749573381.8861494,
+        "size": 3752
+      },
+      "01_BanachTarskiParadox/F2_Cayley_Graph.png": {
+        "mtime": 1749582950.0,
+        "size": 18156
+      },
+      "01_BanachTarskiParadox/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 503
+      },
+      "01_BanachTarskiParadox/UNPOP SCI - INFINITE - v2.pdf": {
+        "mtime": 1749582950.0,
+        "size": 414724
+      },
+      "01_BanachTarskiParadox/cartoon.tex": {
+        "mtime": 1749573381.8864956,
+        "size": 159
+      },
+      "01_BanachTarskiParadox/F2_Cayley_Graph_tp.png": {
+        "mtime": 1749582950.0,
+        "size": 20440
+      },
+      "01_BanachTarskiParadox/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 336
+      },
+      "01_BanachTarskiParadox/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 345
+      }
+    },
+    "02_TopologicalInsulators": {
+      "02_TopologicalInsulators/topological.png": {
+        "mtime": 1749582954.0,
+        "size": 370317
+      },
+      "02_TopologicalInsulators/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2708
+      },
+      "02_TopologicalInsulators/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 18
+      },
+      "02_TopologicalInsulators/main.tex": {
+        "mtime": 1749573381.9370818,
+        "size": 18667
+      },
+      "02_TopologicalInsulators/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 5026
+      },
+      "02_TopologicalInsulators/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 701
+      },
+      "02_TopologicalInsulators/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 517
+      },
+      "02_TopologicalInsulators/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 200
+      }
+    },
+    "03_GoldRelativity": {
+      "03_GoldRelativity/metals-energy-diagram (1).png": {
+        "mtime": 1749582952.0,
+        "size": 394364
+      },
+      "03_GoldRelativity/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1604
+      },
+      "03_GoldRelativity/gold_illus.png": {
+        "mtime": 1749582952.0,
+        "size": 332629
+      },
+      "03_GoldRelativity/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 23
+      },
+      "03_GoldRelativity/main.tex": {
+        "mtime": 1749573381.873484,
+        "size": 21534
+      },
+      "03_GoldRelativity/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 5040
+      },
+      "03_GoldRelativity/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 489
+      },
+      "03_GoldRelativity/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 412
+      },
+      "03_GoldRelativity/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 395
+      }
+    },
+    "04_EMFieldsEnergyFlow": {
+      "04_EMFieldsEnergyFlow/em_illus.png": {
+        "mtime": 1749582952.0,
+        "size": 373807
+      },
+      "04_EMFieldsEnergyFlow/old_joke.tex": {
+        "mtime": 1749582950.0,
+        "size": 2379
+      },
+      "04_EMFieldsEnergyFlow/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2064
+      },
+      "04_EMFieldsEnergyFlow/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 23
+      },
+      "04_EMFieldsEnergyFlow/main.tex": {
+        "mtime": 1749573381.943612,
+        "size": 20720
+      },
+      "04_EMFieldsEnergyFlow/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4584
+      },
+      "04_EMFieldsEnergyFlow/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 721
+      },
+      "04_EMFieldsEnergyFlow/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 390
+      },
+      "04_EMFieldsEnergyFlow/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 215
+      }
+    },
+    "05_CircleWheel": {
+      "05_CircleWheel/etymology_graph_portrait_v105.pdf": {
+        "mtime": 1749582952.0,
+        "size": 42507
+      },
+      "05_CircleWheel/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3608
+      },
+      "05_CircleWheel/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 20
+      },
+      "05_CircleWheel/main.tex": {
+        "mtime": 1749573381.851358,
+        "size": 12832
+      },
+      "05_CircleWheel/imagefigure.tex": {
+        "mtime": 1749573381.8534846,
+        "size": 90
+      },
+      "05_CircleWheel/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4644
+      },
+      "05_CircleWheel/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 520
+      },
+      "05_CircleWheel/tree_of_pie.png": {
+        "mtime": 1749582952.0,
+        "size": 170663
+      },
+      "05_CircleWheel/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 733
+      },
+      "05_CircleWheel/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 169
+      }
+    },
+    "06_GravityTimeDilation": {
+      "06_GravityTimeDilation/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2451
+      },
+      "06_GravityTimeDilation/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 48
+      },
+      "06_GravityTimeDilation/main.tex": {
+        "mtime": 1749573381.8941705,
+        "size": 13655
+      },
+      "06_GravityTimeDilation/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4770
+      },
+      "06_GravityTimeDilation/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 3001
+      },
+      "06_GravityTimeDilation/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 571
+      },
+      "06_GravityTimeDilation/equiv_illus.png": {
+        "mtime": 1749582952.0,
+        "size": 579023
+      },
+      "06_GravityTimeDilation/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 224
+      },
+      "06_GravityTimeDilation/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 312
+      }
+    },
+    "07_BilliardsConicsPorism": {
+      "07_BilliardsConicsPorism/UNPOP SCI - BILLIARDS - v1 (1).pdf": {
+        "mtime": 1749582950.0,
+        "size": 104015
+      },
+      "07_BilliardsConicsPorism/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1679
+      },
+      "07_BilliardsConicsPorism/poncel_illus.png": {
+        "mtime": 1749582950.0,
+        "size": 165832
+      },
+      "07_BilliardsConicsPorism/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 37
+      },
+      "07_BilliardsConicsPorism/main.tex": {
+        "mtime": 1749573381.8596907,
+        "size": 16534
+      },
+      "07_BilliardsConicsPorism/UNPOP SCI - BILLIARDS - v11.pdf": {
+        "mtime": 1749582952.0,
+        "size": 86905
+      },
+      "07_BilliardsConicsPorism/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4668
+      },
+      "07_BilliardsConicsPorism/BILLIARDS.png": {
+        "mtime": 1749582950.0,
+        "size": 971835
+      },
+      "07_BilliardsConicsPorism/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 590
+      },
+      "07_BilliardsConicsPorism/cartoon.tex": {
+        "mtime": 1749573381.8608425,
+        "size": 201
+      },
+      "07_BilliardsConicsPorism/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 220
+      },
+      "07_BilliardsConicsPorism/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 483
+      }
+    },
+    "08_BoundedPrimeGaps": {
+      "08_BoundedPrimeGaps/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2882
+      },
+      "08_BoundedPrimeGaps/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 62
+      },
+      "08_BoundedPrimeGaps/main.tex": {
+        "mtime": 1749573381.9499338,
+        "size": 13346
+      },
+      "08_BoundedPrimeGaps/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4422
+      },
+      "08_BoundedPrimeGaps/sacks_illu.png": {
+        "mtime": 1749582952.0,
+        "size": 672085
+      },
+      "08_BoundedPrimeGaps/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 2718
+      },
+      "08_BoundedPrimeGaps/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 641
+      },
+      "08_BoundedPrimeGaps/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 315
+      },
+      "08_BoundedPrimeGaps/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 209
+      }
+    },
+    "09_ArrowTheoremTopology": {
+      "09_ArrowTheoremTopology/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1376
+      },
+      "09_ArrowTheoremTopology/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 35
+      },
+      "09_ArrowTheoremTopology/arrow_illus.png": {
+        "mtime": 1749582950.0,
+        "size": 222708
+      },
+      "09_ArrowTheoremTopology/main.tex": {
+        "mtime": 1749573381.9028223,
+        "size": 14064
+      },
+      "09_ArrowTheoremTopology/joke.tex": {
+        "mtime": 1749725113.835325,
+        "size": 2911
+      },
+      "09_ArrowTheoremTopology/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3434
+      },
+      "09_ArrowTheoremTopology/UNPOPSCI-DEMOCRACY-V3.pdf": {
+        "mtime": 1749582950.0,
+        "size": 84951
+      },
+      "09_ArrowTheoremTopology/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 373
+      },
+      "09_ArrowTheoremTopology/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 329
+      },
+      "09_ArrowTheoremTopology/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 353
+      }
+    },
+    "10_SolarFusionQuantumTunneling": {
+      "10_SolarFusionQuantumTunneling/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1341
+      },
+      "10_SolarFusionQuantumTunneling/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 37
+      },
+      "10_SolarFusionQuantumTunneling/main.tex": {
+        "mtime": 1749573381.9296732,
+        "size": 16375
+      },
+      "10_SolarFusionQuantumTunneling/imagefigure.tex": {
+        "mtime": 1749573381.930269,
+        "size": 907
+      },
+      "10_SolarFusionQuantumTunneling/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3873
+      },
+      "10_SolarFusionQuantumTunneling/Solar_Orbiter_EUI_PHI_mosaic_FullSun_2k.jpg": {
+        "mtime": 1749582954.0,
+        "size": 726147
+      },
+      "10_SolarFusionQuantumTunneling/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 761
+      },
+      "10_SolarFusionQuantumTunneling/solar_illu.png": {
+        "mtime": 1749582954.0,
+        "size": 800700
+      },
+      "10_SolarFusionQuantumTunneling/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 318
+      },
+      "10_SolarFusionQuantumTunneling/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 129
+      }
+    },
+    "11_AcceleratingUniverse": {
+      "11_AcceleratingUniverse/accel_illu.png": {
+        "mtime": 1749582950.0,
+        "size": 611874
+      },
+      "11_AcceleratingUniverse/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1417
+      },
+      "11_AcceleratingUniverse/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 35
+      },
+      "11_AcceleratingUniverse/main.tex": {
+        "mtime": 1750191843.6846201,
+        "size": 21337
+      },
+      "11_AcceleratingUniverse/hubble_graph_portrait.pdf": {
+        "mtime": 1749582950.0,
+        "size": 41858
+      },
+      "11_AcceleratingUniverse/technical.tex": {
+        "mtime": 1750177668.838824,
+        "size": 3582
+      },
+      "11_AcceleratingUniverse/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 450
+      },
+      "11_AcceleratingUniverse/cartoon.tex": {
+        "mtime": 1749573381.9277112,
+        "size": 105
+      },
+      "11_AcceleratingUniverse/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 304
+      },
+      "11_AcceleratingUniverse/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 542
+      }
+    },
+    "12_GSMEncryptionOrder": {
+      "12_GSMEncryptionOrder/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1456
+      },
+      "12_GSMEncryptionOrder/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 30
+      },
+      "12_GSMEncryptionOrder/main.tex": {
+        "mtime": 1749573381.9168797,
+        "size": 14623
+      },
+      "12_GSMEncryptionOrder/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3401
+      },
+      "12_GSMEncryptionOrder/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 2418
+      },
+      "12_GSMEncryptionOrder/27290598.pdf": {
+        "mtime": 1750175771.6021128,
+        "size": 168441
+      },
+      "12_GSMEncryptionOrder/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 541
+      },
+      "12_GSMEncryptionOrder/DMA_illu.png": {
+        "mtime": 1749582952.0,
+        "size": 317496
+      },
+      "12_GSMEncryptionOrder/a52hacktool (1).pdf": {
+        "mtime": 1750174132.9606977,
+        "size": 820261
+      },
+      "12_GSMEncryptionOrder/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 356
+      },
+      "12_GSMEncryptionOrder/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 129
+      }
+    },
+    "13_PoissonsSpot": {
+      "13_PoissonsSpot/UnpopSci - DoubleSlit - v2.pdf": {
+        "mtime": 1749582954.0,
+        "size": 226793
+      },
+      "13_PoissonsSpot/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2652
+      },
+      "13_PoissonsSpot/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 14
+      },
+      "13_PoissonsSpot/main.tex": {
+        "mtime": 1749573381.8782072,
+        "size": 16497
+      },
+      "13_PoissonsSpot/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4200
+      },
+      "13_PoissonsSpot/photon_illu.png": {
+        "mtime": 1749582954.0,
+        "size": 345460
+      },
+      "13_PoissonsSpot/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 2594
+      },
+      "13_PoissonsSpot/6135-.pdf": {
+        "mtime": 1749582954.0,
+        "size": 221713
+      },
+      "13_PoissonsSpot/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 764
+      },
+      "13_PoissonsSpot/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 328
+      },
+      "13_PoissonsSpot/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 410
+      }
+    },
+    "14_CompactTwinParadox": {
+      "14_CompactTwinParadox/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1482
+      },
+      "14_CompactTwinParadox/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 17
+      },
+      "14_CompactTwinParadox/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 12105
+      },
+      "14_CompactTwinParadox/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3392
+      },
+      "14_CompactTwinParadox/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 587
+      },
+      "14_CompactTwinParadox/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 354
+      },
+      "14_CompactTwinParadox/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 279
+      }
+    },
+    "15_EnvelopeParadox": {
+      "15_EnvelopeParadox/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1393
+      },
+      "15_EnvelopeParadox/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 20
+      },
+      "15_EnvelopeParadox/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 7691
+      },
+      "15_EnvelopeParadox/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3981
+      },
+      "15_EnvelopeParadox/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 2819
+      },
+      "15_EnvelopeParadox/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 810
+      },
+      "15_EnvelopeParadox/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 333
+      },
+      "15_EnvelopeParadox/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 158
+      }
+    },
+    "16_ShoelaceKnotMechanics": {
+      "16_ShoelaceKnotMechanics/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2083
+      },
+      "16_ShoelaceKnotMechanics/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 27
+      },
+      "16_ShoelaceKnotMechanics/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 4229
+      },
+      "16_ShoelaceKnotMechanics/imagefigure.tex": {
+        "mtime": 1749573381.9341118,
+        "size": 98
+      },
+      "16_ShoelaceKnotMechanics/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3909
+      },
+      "16_ShoelaceKnotMechanics/Artboard 1.png": {
+        "mtime": 1749582954.0,
+        "size": 30574
+      },
+      "16_ShoelaceKnotMechanics/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 2347
+      },
+      "16_ShoelaceKnotMechanics/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 725
+      },
+      "16_ShoelaceKnotMechanics/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 329
+      },
+      "16_ShoelaceKnotMechanics/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 194
+      }
+    },
+    "17_TorricellisTrumpet": {
+      "17_TorricellisTrumpet/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1050
+      },
+      "17_TorricellisTrumpet/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 41
+      },
+      "17_TorricellisTrumpet/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 6266
+      },
+      "17_TorricellisTrumpet/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3580
+      },
+      "17_TorricellisTrumpet/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 0
+      },
+      "17_TorricellisTrumpet/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 579
+      },
+      "17_TorricellisTrumpet/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 390
+      },
+      "17_TorricellisTrumpet/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 471
+      }
+    },
+    "18_SpeculativeExecutionAttacks": {
+      "18_SpeculativeExecutionAttacks/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1138
+      },
+      "18_SpeculativeExecutionAttacks/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 21
+      },
+      "18_SpeculativeExecutionAttacks/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 8065
+      },
+      "18_SpeculativeExecutionAttacks/joke.tex": {
+        "mtime": 1749725113.8517764,
+        "size": 2719
+      },
+      "18_SpeculativeExecutionAttacks/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3132
+      },
+      "18_SpeculativeExecutionAttacks/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 612
+      },
+      "18_SpeculativeExecutionAttacks/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 431
+      },
+      "18_SpeculativeExecutionAttacks/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 146
+      }
+    },
+    "19_CosmicRayMuons": {
+      "19_CosmicRayMuons/Standard_Model_of_Elementary_Particles.pdf": {
+        "mtime": 1749582952.0,
+        "size": 331976
+      },
+      "19_CosmicRayMuons/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 964
+      },
+      "19_CosmicRayMuons/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 24
+      },
+      "19_CosmicRayMuons/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 9748
+      },
+      "19_CosmicRayMuons/imagefigure.tex": {
+        "mtime": 1749573381.9456892,
+        "size": 118
+      },
+      "19_CosmicRayMuons/no_customization_frame.pdf": {
+        "mtime": 1749582952.0,
+        "size": 1375562
+      },
+      "19_CosmicRayMuons/technical.tex": {
+        "mtime": 1749573381.9461706,
+        "size": 3443
+      },
+      "19_CosmicRayMuons/no_customization_frame.eps": {
+        "mtime": 1749582952.0,
+        "size": 3956
+      },
+      "19_CosmicRayMuons/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 663
+      },
+      "19_CosmicRayMuons/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 439
+      },
+      "19_CosmicRayMuons/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 86
+      }
+    },
+    "20_ChineseRoomArgument": {
+      "20_ChineseRoomArgument/historical.tex": {
+        "mtime": 1749725113.855566,
+        "size": 2106
+      },
+      "20_ChineseRoomArgument/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 32
+      },
+      "20_ChineseRoomArgument/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 7223
+      },
+      "20_ChineseRoomArgument/technical.tex": {
+        "mtime": 1749725113.8571055,
+        "size": 4486
+      },
+      "20_ChineseRoomArgument/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 3708
+      },
+      "20_ChineseRoomArgument/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 824
+      },
+      "20_ChineseRoomArgument/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 406
+      },
+      "20_ChineseRoomArgument/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 169
+      }
+    },
+    "21_ExponentialMapsLieTheory": {
+      "21_ExponentialMapsLieTheory/historical.tex": {
+        "mtime": 1749725113.8580909,
+        "size": 1339
+      },
+      "21_ExponentialMapsLieTheory/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 28
+      },
+      "21_ExponentialMapsLieTheory/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 10076
+      },
+      "21_ExponentialMapsLieTheory/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4340
+      },
+      "21_ExponentialMapsLieTheory/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 3467
+      },
+      "21_ExponentialMapsLieTheory/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 757
+      },
+      "21_ExponentialMapsLieTheory/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 458
+      },
+      "21_ExponentialMapsLieTheory/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 396
+      }
+    },
+    "22_MinecraftCreeper": {
+      "22_MinecraftCreeper/historical.tex": {
+        "mtime": 1749725113.8599,
+        "size": 2413
+      },
+      "22_MinecraftCreeper/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 13
+      },
+      "22_MinecraftCreeper/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 7417
+      },
+      "22_MinecraftCreeper/imagefigure.tex": {
+        "mtime": 1749573381.881632,
+        "size": 217
+      },
+      "22_MinecraftCreeper/technical.tex": {
+        "mtime": 1749725113.86148,
+        "size": 4299
+      },
+      "22_MinecraftCreeper/ChatGPT Image Apr 21, 2025, 08_04_30 PM.png": {
+        "mtime": 1749582952.0,
+        "size": 2618475
+      },
+      "22_MinecraftCreeper/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 725
+      },
+      "22_MinecraftCreeper/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 361
+      },
+      "22_MinecraftCreeper/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 430
+      }
+    },
+    "23_BlackHoleTimeDilationRedshift": {
+      "23_BlackHoleTimeDilationRedshift/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1916
+      },
+      "23_BlackHoleTimeDilationRedshift/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 26
+      },
+      "23_BlackHoleTimeDilationRedshift/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 11093
+      },
+      "23_BlackHoleTimeDilationRedshift/joke.tex": {
+        "mtime": 1749582950.0,
+        "size": 1647
+      },
+      "23_BlackHoleTimeDilationRedshift/technical.tex": {
+        "mtime": 1749725113.8633933,
+        "size": 3997
+      },
+      "23_BlackHoleTimeDilationRedshift/penrose_diagram_small.tex": {
+        "mtime": 1749739749.6282663,
+        "size": 9423
+      },
+      "23_BlackHoleTimeDilationRedshift/penrose_diagram.tex": {
+        "mtime": 1749738941.779501,
+        "size": 28242
+      },
+      "23_BlackHoleTimeDilationRedshift/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 686
+      },
+      "23_BlackHoleTimeDilationRedshift/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 483
+      },
+      "23_BlackHoleTimeDilationRedshift/penrose_diagram.pdf": {
+        "mtime": 1749739002.111114,
+        "size": 185153
+      },
+      "23_BlackHoleTimeDilationRedshift/penrose_diagram_small.pdf": {
+        "mtime": 1749739759.9250283,
+        "size": 111173
+      },
+      "23_BlackHoleTimeDilationRedshift/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 111
+      }
+    },
+    "24_FourDSpacetime": {
+      "24_FourDSpacetime/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3344
+      },
+      "24_FourDSpacetime/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 23
+      },
+      "24_FourDSpacetime/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 8649
+      },
+      "24_FourDSpacetime/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4147
+      },
+      "24_FourDSpacetime/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 3812
+      },
+      "24_FourDSpacetime/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 660
+      },
+      "24_FourDSpacetime/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 495
+      },
+      "24_FourDSpacetime/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 241
+      }
+    },
+    "25_FireflyBioluminescence": {
+      "25_FireflyBioluminescence/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1328
+      },
+      "25_FireflyBioluminescence/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 29
+      },
+      "25_FireflyBioluminescence/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 14141
+      },
+      "25_FireflyBioluminescence/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4142
+      },
+      "25_FireflyBioluminescence/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 922
+      },
+      "25_FireflyBioluminescence/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 550
+      },
+      "25_FireflyBioluminescence/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 113
+      }
+    },
+    "26_ZKProofs": {
+      "26_ZKProofs/65675748e05656b142834170_65524e78496e0c94f8a1ffa1_zero-knowledge-proof-2048x1544.png": {
+        "mtime": 1749582954.0,
+        "size": 322760
+      },
+      "26_ZKProofs/historical.tex": {
+        "mtime": 1749725113.8674862,
+        "size": 1117
+      },
+      "26_ZKProofs/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 54
+      },
+      "26_ZKProofs/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 8959
+      },
+      "26_ZKProofs/imagefigure.tex": {
+        "mtime": 1749573381.8964946,
+        "size": 168
+      },
+      "26_ZKProofs/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4133
+      },
+      "26_ZKProofs/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 701
+      },
+      "26_ZKProofs/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 431
+      },
+      "26_ZKProofs/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 286
+      }
+    },
+    "27_PlanetarySkyColors": {
+      "27_PlanetarySkyColors/SKIES.png": {
+        "mtime": 1749582954.0,
+        "size": 912162
+      },
+      "27_PlanetarySkyColors/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2236
+      },
+      "27_PlanetarySkyColors/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 19
+      },
+      "27_PlanetarySkyColors/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 7833
+      },
+      "27_PlanetarySkyColors/imagefigure.tex": {
+        "mtime": 1749573381.9390404,
+        "size": 536
+      },
+      "27_PlanetarySkyColors/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4071
+      },
+      "27_PlanetarySkyColors/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 742
+      },
+      "27_PlanetarySkyColors/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 424
+      }
+    },
+    "28_NegativeTemp": {
+      "28_NegativeTemp/historical.tex": {
+        "mtime": 1749725113.871347,
+        "size": 2599
+      },
+      "28_NegativeTemp/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 20
+      },
+      "28_NegativeTemp/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 8777
+      },
+      "28_NegativeTemp/imagefigure.tex": {
+        "mtime": 1749573381.8921216,
+        "size": 536
+      },
+      "28_NegativeTemp/hubble_graph_portrait.pdf": {
+        "mtime": 1749582954.0,
+        "size": 41858
+      },
+      "28_NegativeTemp/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4143
+      },
+      "28_NegativeTemp/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 964
+      },
+      "28_NegativeTemp/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 652
+      },
+      "28_NegativeTemp/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 313
+      }
+    },
+    "29_HatMonotile": {
+      "29_HatMonotile/historical.tex": {
+        "mtime": 1749725113.8732765,
+        "size": 2127
+      },
+      "29_HatMonotile/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 26
+      },
+      "29_HatMonotile/main.tex": {
+        "mtime": 1749573381.9085844,
+        "size": 7490
+      },
+      "29_HatMonotile/technical.tex": {
+        "mtime": 1749725113.87489,
+        "size": 4982
+      },
+      "29_HatMonotile/Aperiodic tile - puzzle.png": {
+        "mtime": 1749582952.0,
+        "size": 1718088
+      },
+      "29_HatMonotile/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 519
+      },
+      "29_HatMonotile/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 398
+      },
+      "29_HatMonotile/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 782
+      }
+    },
+    "30_SimpsonsParadox": {
+      "30_SimpsonsParadox/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1831
+      },
+      "30_SimpsonsParadox/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 19
+      },
+      "30_SimpsonsParadox/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 11815
+      },
+      "30_SimpsonsParadox/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3600
+      },
+      "30_SimpsonsParadox/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 709
+      },
+      "30_SimpsonsParadox/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 487
+      },
+      "30_SimpsonsParadox/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 131
+      }
+    },
+    "31_osmosis_Debye": {
+      "31_osmosis_Debye/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1438
+      },
+      "31_osmosis_Debye/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 23
+      },
+      "31_osmosis_Debye/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 12477
+      },
+      "31_osmosis_Debye/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4183
+      },
+      "31_osmosis_Debye/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 844
+      },
+      "31_osmosis_Debye/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 448
+      },
+      "31_osmosis_Debye/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 112
+      }
+    },
+    "32_AtomicClocks": {
+      "32_AtomicClocks/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1530
+      },
+      "32_AtomicClocks/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 20
+      },
+      "32_AtomicClocks/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 10812
+      },
+      "32_AtomicClocks/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3517
+      },
+      "32_AtomicClocks/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 3121
+      },
+      "32_AtomicClocks/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 829
+      },
+      "32_AtomicClocks/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 330
+      },
+      "32_AtomicClocks/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 157
+      }
+    },
+    "33_IncubationInequality": {
+      "33_IncubationInequality/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2015
+      },
+      "33_IncubationInequality/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 32
+      },
+      "33_IncubationInequality/move_exercises.tex": {
+        "mtime": 1749725113.8817122,
+        "size": 3541
+      },
+      "33_IncubationInequality/main.tex": {
+        "mtime": 1749573381.9111395,
+        "size": 11543
+      },
+      "33_IncubationInequality/technical.tex": {
+        "mtime": 1749725113.8830593,
+        "size": 4541
+      },
+      "33_IncubationInequality/svgviewer-png-output.png": {
+        "mtime": 1749582952.0,
+        "size": 138388
+      },
+      "33_IncubationInequality/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 611
+      },
+      "33_IncubationInequality/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 529
+      },
+      "33_IncubationInequality/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 223
+      }
+    },
+    "34_BoltzmannBrain": {
+      "34_BoltzmannBrain/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1736
+      },
+      "34_BoltzmannBrain/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 24
+      },
+      "34_BoltzmannBrain/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 8581
+      },
+      "34_BoltzmannBrain/imagefigure.tex": {
+        "mtime": 1749572984.3890212,
+        "size": 262
+      },
+      "34_BoltzmannBrain/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4138
+      },
+      "34_BoltzmannBrain/ChatGPT Image Apr 23, 2025, 01_08_49 PM.png": {
+        "mtime": 1749582952.0,
+        "size": 3563798
+      },
+      "34_BoltzmannBrain/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 765
+      },
+      "34_BoltzmannBrain/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 579
+      },
+      "34_BoltzmannBrain/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 445
+      }
+    },
+    "35_TreesFromAir": {
+      "35_TreesFromAir/oxygen_plants.png": {
+        "mtime": 1749582954.0,
+        "size": 350185
+      },
+      "35_TreesFromAir/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2657
+      },
+      "35_TreesFromAir/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 18
+      },
+      "35_TreesFromAir/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 7612
+      },
+      "35_TreesFromAir/imagefigure.tex": {
+        "mtime": 1749573381.8899887,
+        "size": 105
+      },
+      "35_TreesFromAir/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3799
+      },
+      "35_TreesFromAir/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 600
+      },
+      "35_TreesFromAir/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 541
+      },
+      "35_TreesFromAir/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 165
+      }
+    },
+    "36_qft_vs_gr": {
+      "36_qft_vs_gr/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1182
+      },
+      "36_qft_vs_gr/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 22
+      },
+      "36_qft_vs_gr/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 16529
+      },
+      "36_qft_vs_gr/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4544
+      },
+      "36_qft_vs_gr/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 817
+      },
+      "36_qft_vs_gr/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 519
+      },
+      "36_qft_vs_gr/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 361
+      }
+    },
+    "37_DarkMatterEvidence": {
+      "37_DarkMatterEvidence/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2195
+      },
+      "37_DarkMatterEvidence/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 23
+      },
+      "37_DarkMatterEvidence/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 10795
+      },
+      "37_DarkMatterEvidence/imagefigure.tex": {
+        "mtime": 1749573381.8988283,
+        "size": 1149
+      },
+      "37_DarkMatterEvidence/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3937
+      },
+      "37_DarkMatterEvidence/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 946
+      },
+      "37_DarkMatterEvidence/m33_rotation_curve.png": {
+        "mtime": 1749582952.0,
+        "size": 457289
+      },
+      "37_DarkMatterEvidence/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 556
+      },
+      "37_DarkMatterEvidence/quote.tex": {
+        "mtime": 1749725113.890583,
+        "size": 165
+      }
+    },
+    "38_ChristmasTruce1914": {
+      "38_ChristmasTruce1914/historical.tex": {
+        "mtime": 1749725113.89165,
+        "size": 2920
+      },
+      "38_ChristmasTruce1914/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 23
+      },
+      "38_ChristmasTruce1914/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 9085
+      },
+      "38_ChristmasTruce1914/imagefigure.tex": {
+        "mtime": 1749573381.9477983,
+        "size": 262
+      },
+      "38_ChristmasTruce1914/technical.tex": {
+        "mtime": 1749725113.8932478,
+        "size": 4600
+      },
+      "38_ChristmasTruce1914/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 584
+      },
+      "38_ChristmasTruce1914/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 510
+      },
+      "38_ChristmasTruce1914/quote.tex": {
+        "mtime": 1749725113.8925753,
+        "size": 783
+      }
+    },
+    "39_SuperpermutationsBreakthrough": {
+      "39_SuperpermutationsBreakthrough/permutation_graph_n3_spring.png": {
+        "mtime": 1749582954.0,
+        "size": 217934
+      },
+      "39_SuperpermutationsBreakthrough/historical.tex": {
+        "mtime": 1749725113.8937035,
+        "size": 1924
+      },
+      "39_SuperpermutationsBreakthrough/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 15
+      },
+      "39_SuperpermutationsBreakthrough/main.tex": {
+        "mtime": 1749725113.8946757,
+        "size": 11436
+      },
+      "39_SuperpermutationsBreakthrough/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4522
+      },
+      "39_SuperpermutationsBreakthrough/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 845
+      },
+      "39_SuperpermutationsBreakthrough/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 506
+      },
+      "39_SuperpermutationsBreakthrough/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 176
+      }
+    },
+    "40_BoomerangFlight": {
+      "40_BoomerangFlight/historical.tex": {
+        "mtime": 1749725113.8960116,
+        "size": 2291
+      },
+      "40_BoomerangFlight/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 16
+      },
+      "40_BoomerangFlight/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 8477
+      },
+      "40_BoomerangFlight/technical.tex": {
+        "mtime": 1749725113.8971083,
+        "size": 3992
+      },
+      "40_BoomerangFlight/exercises.tex": {
+        "mtime": 1749582950.0,
+        "size": 3468
+      },
+      "40_BoomerangFlight/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 755
+      },
+      "40_BoomerangFlight/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 452
+      },
+      "40_BoomerangFlight/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 223
+      }
+    },
+    "41_HoughTransfrom": {
+      "41_HoughTransfrom/hough_transform_visualization.pdf": {
+        "mtime": 1749582954.0,
+        "size": 1197069
+      },
+      "41_HoughTransfrom/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1853
+      },
+      "41_HoughTransfrom/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 19
+      },
+      "41_HoughTransfrom/main.tex": {
+        "mtime": 1749573381.8878205,
+        "size": 12039
+      },
+      "41_HoughTransfrom/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4335
+      },
+      "41_HoughTransfrom/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 761
+      },
+      "41_HoughTransfrom/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 500
+      },
+      "41_HoughTransfrom/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 1052
+      }
+    },
+    "42_IceSlipperiness": {
+      "42_IceSlipperiness/historical.tex": {
+        "mtime": 1749725113.8999805,
+        "size": 1926
+      },
+      "42_IceSlipperiness/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 26
+      },
+      "42_IceSlipperiness/main.tex": {
+        "mtime": 1749725113.9010377,
+        "size": 7832
+      },
+      "42_IceSlipperiness/imagefigure.tex": {
+        "mtime": 1749573381.8755598,
+        "size": 262
+      },
+      "42_IceSlipperiness/technical.tex": {
+        "mtime": 1749725113.901882,
+        "size": 4406
+      },
+      "42_IceSlipperiness/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 726
+      },
+      "42_IceSlipperiness/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 463
+      },
+      "42_IceSlipperiness/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 250
+      }
+    },
+    "43_NearFlatUniverse": {
+      "43_NearFlatUniverse/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2754
+      },
+      "43_NearFlatUniverse/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 18
+      },
+      "43_NearFlatUniverse/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 10208
+      },
+      "43_NearFlatUniverse/imagefigure.tex": {
+        "mtime": 1749573381.9323125,
+        "size": 262
+      },
+      "43_NearFlatUniverse/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4298
+      },
+      "43_NearFlatUniverse/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 585
+      },
+      "43_NearFlatUniverse/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 442
+      },
+      "43_NearFlatUniverse/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 157
+      }
+    },
+    "44_IronMask": {
+      "44_IronMask/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2056
+      },
+      "44_IronMask/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 35
+      },
+      "44_IronMask/main.tex": {
+        "mtime": 1749725113.9055102,
+        "size": 11220
+      },
+      "44_IronMask/imagefigure.tex": {
+        "mtime": 1749573381.9247692,
+        "size": 262
+      },
+      "44_IronMask/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4219
+      },
+      "44_IronMask/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 941
+      },
+      "44_IronMask/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 469
+      },
+      "44_IronMask/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 186
+      }
+    },
+    "45_MaxwellDemon": {
+      "45_MaxwellDemon/historical.tex": {
+        "mtime": 1749725113.9068978,
+        "size": 1994
+      },
+      "45_MaxwellDemon/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 21
+      },
+      "45_MaxwellDemon/main.tex": {
+        "mtime": 1749725113.9077408,
+        "size": 11032
+      },
+      "45_MaxwellDemon/technical.tex": {
+        "mtime": 1749725113.9084177,
+        "size": 3713
+      },
+      "45_MaxwellDemon/exercises.tex": {
+        "mtime": 1749725113.9065983,
+        "size": 2662
+      },
+      "45_MaxwellDemon/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 885
+      },
+      "45_MaxwellDemon/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 564
+      },
+      "45_MaxwellDemon/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 1491
+      }
+    },
+    "46_WoodwardHoffmannRules": {
+      "46_WoodwardHoffmannRules/CNX_Chem_08_04_pMOsigma1.jpg": {
+        "mtime": 1749582954.0,
+        "size": 25604
+      },
+      "46_WoodwardHoffmannRules/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2231
+      },
+      "46_WoodwardHoffmannRules/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 26
+      },
+      "46_WoodwardHoffmannRules/main.tex": {
+        "mtime": 1749573381.9049957,
+        "size": 10820
+      },
+      "46_WoodwardHoffmannRules/technical.tex": {
+        "mtime": 1749725113.909727,
+        "size": 3986
+      },
+      "46_WoodwardHoffmannRules/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 707
+      },
+      "46_WoodwardHoffmannRules/CNX_Chem_08_04_pMOpi1.jpg": {
+        "mtime": 1749582956.0,
+        "size": 35095
+      },
+      "46_WoodwardHoffmannRules/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 590
+      },
+      "46_WoodwardHoffmannRules/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 171
+      }
+    },
+    "47_ObserverDependentVacuum": {
+      "47_ObserverDependentVacuum/historical.tex": {
+        "mtime": 1749725113.9100559,
+        "size": 1355
+      },
+      "47_ObserverDependentVacuum/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 30
+      },
+      "47_ObserverDependentVacuum/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 10140
+      },
+      "47_ObserverDependentVacuum/imagefigure.tex": {
+        "mtime": 1749573381.956222,
+        "size": 262
+      },
+      "47_ObserverDependentVacuum/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3559
+      },
+      "47_ObserverDependentVacuum/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 830
+      },
+      "47_ObserverDependentVacuum/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 565
+      },
+      "47_ObserverDependentVacuum/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 365
+      }
+    },
+    "48_three_body": {
+      "48_three_body/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1546
+      },
+      "48_three_body/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 19
+      },
+      "48_three_body/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 9376
+      },
+      "48_three_body/imagefigure.tex": {
+        "mtime": 1749573381.8701982,
+        "size": 262
+      },
+      "48_three_body/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4695
+      },
+      "48_three_body/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 597
+      },
+      "48_three_body/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 620
+      },
+      "48_three_body/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 297
+      }
+    },
+    "49_IVFmtDNA": {
+      "49_IVFmtDNA/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3270
+      },
+      "49_IVFmtDNA/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 29
+      },
+      "49_IVFmtDNA/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 12223
+      },
+      "49_IVFmtDNA/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 4985
+      },
+      "49_IVFmtDNA/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 1125
+      },
+      "49_IVFmtDNA/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 618
+      },
+      "49_IVFmtDNA/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 125
+      }
+    },
+    "50_LangtonsAnt": {
+      "50_LangtonsAnt/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 2078
+      },
+      "50_LangtonsAnt/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 19
+      },
+      "50_LangtonsAnt/main.tex": {
+        "mtime": 1749582950.0,
+        "size": 9261
+      },
+      "50_LangtonsAnt/imagefigure.tex": {
+        "mtime": 1749573381.9661086,
+        "size": 262
+      },
+      "50_LangtonsAnt/technical.tex": {
+        "mtime": 1749725113.9173598,
+        "size": 3551
+      },
+      "50_LangtonsAnt/summary.tex": {
+        "mtime": 1749725113.9169607,
+        "size": 804
+      },
+      "50_LangtonsAnt/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 595
+      },
+      "50_LangtonsAnt/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 373
+      }
+    },
+    "52_QuantumSubspaceAngles": {
+      "52_QuantumSubspaceAngles/historical.tex": {
+        "mtime": 1749582950.0,
+        "size": 1676
+      },
+      "52_QuantumSubspaceAngles/main.tex": {
+        "mtime": 1749725113.9185402,
+        "size": 5254
+      },
+      "52_QuantumSubspaceAngles/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3439
+      },
+      "52_QuantumSubspaceAngles/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 228
+      }
+    },
+    "53_BodySwappingPuzzle": {
+      "53_BodySwappingPuzzle/historical.tex": {
+        "mtime": 1749725113.9193347,
+        "size": 1885
+      },
+      "53_BodySwappingPuzzle/title.tex": {
+        "mtime": 1749582950.0,
+        "size": 21
+      },
+      "53_BodySwappingPuzzle/main.tex": {
+        "mtime": 1749725113.9201274,
+        "size": 6289
+      },
+      "53_BodySwappingPuzzle/technical.tex": {
+        "mtime": 1749582950.0,
+        "size": 3550
+      },
+      "53_BodySwappingPuzzle/summary.tex": {
+        "mtime": 1749582950.0,
+        "size": 597
+      },
+      "53_BodySwappingPuzzle/topicmap.tex": {
+        "mtime": 1749582950.0,
+        "size": 0
+      },
+      "53_BodySwappingPuzzle/quote.tex": {
+        "mtime": 1749582950.0,
+        "size": 432
+      }
+    }
+  }
+}
