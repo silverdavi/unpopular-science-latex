@@ -1,0 +1,51 @@
+chapter_num,chapter_title,folder_name,full_folder,start_page,end_page,page_length
+1,An Axiom of Your Choice,BanachTarskiParadox,01_BanachTarskiParadox,13,20,8
+2,Edges of Tomorrow,TopologicalInsulators,02_TopologicalInsulators,21,28,8
+3,All That Gold Glitters,GoldRelativity,03_GoldRelativity,29,36,8
+4,Think Outside the Wire,EMFieldsEnergyFlow,04_EMFieldsEnergyFlow,37,44,8
+5,A Full Circle of PIE,CircleWheel,05_CircleWheel,45,52,8
+6,The Apple Falls the Shortest Path from the Tree,GravityTimeDilation,06_GravityTimeDilation,53,60,8
+7,A Complex (Projective) Billiard Game,BilliardsConicsPorism,07_BilliardsConicsPorism,61,68,8
+8,"70-Million Steps for Primes, One Giant Leap for Number Theory",BoundedPrimeGaps,08_BoundedPrimeGaps,69,77,9
+9,Real Democracy Has Never Been Tried,ArrowTheoremTopology,09_ArrowTheoremTopology,78,86,9
+10,The Tunnel at the Beginning of Light,SolarFusionQuantumTunneling,10_SolarFusionQuantumTunneling,87,94,8
+11,Dark Energies Are Pushing Us Apart,AcceleratingUniverse,11_AcceleratingUniverse,95,103,9
+12,You Would Like to Order First,GSMEncryptionOrder,12_GSMEncryptionOrder,104,112,9
+13,Right on Spot,PoissonsSpot,13_PoissonsSpot,113,122,10
+14,A Circle of Time,CompactTwinParadox,14_CompactTwinParadox,123,128,6
+15,The Better Envelope,EnvelopeParadox,15_EnvelopeParadox,129,135,7
+16,Knot Your Average Shoelace,ShoelaceKnotMechanics,16_ShoelaceKnotMechanics,136,140,5
+17,"Hey Mr. Trumpet Man, Paint a Horn for Me",TorricellisTrumpet,17_TorricellisTrumpet,141,148,8
+18,A Leaky Crystal Ball,SpeculativeExecutionAttacks,18_SpeculativeExecutionAttacks,149,155,7
+19,Consider the Muon's PoV,CosmicRayMuons,19_CosmicRayMuons,156,161,6
+20,"Capish, Comprehendes, Computes?",ChineseRoomArgument,20_ChineseRoomArgument,162,167,6
+21,Exponentially Generalizable,ExponentialMapsLieTheory,21_ExponentialMapsLieTheory,168,173,6
+22,Creeping Bug,MinecraftCreeper,22_MinecraftCreeper,174,179,6
+23,A Place at the End of Time,BlackHoleTimeDilationRedshift,23_BlackHoleTimeDilationRedshift,180,186,7
+24,Put on Your 4D Glasses,FourDSpacetime,24_FourDSpacetime,187,193,7
+25,Let There Be Bioluminescence,FireflyBioluminescence,25_FireflyBioluminescence,194,201,8
+26,"The Proof, The Whole Proof, and Nothing But The Proof",ZKProofs,26_ZKProofs,202,208,7
+27,A Spectrum of Skies,PlanetarySkyColors,27_PlanetarySkyColors,209,214,6
+28,Too Hot Or Too Cold,NegativeTemp,28_NegativeTemp,215,221,7
+29,The Plane Hat of Einstein,HatMonotile,29_HatMonotile,222,229,8
+30,Divide and Conquer,SimpsonsParadox,30_SimpsonsParadox,230,235,6
+31,Concentrate on Osmosis,osmosis_Debye,31_osmosis_Debye,236,242,7
+32,Timing Is Everything,AtomicClocks,32_AtomicClocks,243,249,7
+33,Gaussian Correlation Inequality,IncubationInequality,33_IncubationInequality,250,255,6
+34,A Thought About Nothing,BoltzmannBrain,34_BoltzmannBrain,256,263,8
+35,From Air to Arbor,TreesFromAir,35_TreesFromAir,264,270,7
+36,When Theories Collide,qft_vs_gr,36_qft_vs_gr,271,276,6
+37,The Invisible Scaffold,DarkMatterEvidence,37_DarkMatterEvidence,277,282,6
+38,A Pause in the Pattern,ChristmasTruce1914,38_ChristmasTruce1914,283,289,7
+39,Superanonymous,SuperpermutationsBreakthrough,39_SuperpermutationsBreakthrough,290,296,7
+40,Return to Sender,BoomerangFlight,40_BoomerangFlight,297,302,6
+41,It Is Just a Phase,HoughTransfrom,41_HoughTransfrom,303,310,8
+42,"Wet, Cold, Slippery Slope",IceSlipperiness,42_IceSlipperiness,311,317,7
+43,Infinite Yet Born,NearFlatUniverse,43_NearFlatUniverse,318,324,7
+44,The Mask of Administrative Silence,IronMask,44_IronMask,325,332,8
+45,Entropy's Gatekeeper,MaxwellDemon,45_MaxwellDemon,333,341,9
+46,Symmetry's Chemical Logic,WoodwardHoffmannRules,46_WoodwardHoffmannRules,342,347,6
+47,An Optimist’s Take on Vacuum,ObserverDependentVacuum,47_ObserverDependentVacuum,348,354,7
+48,Chaotic Neutrality,three_body,48_three_body,355,360,6
+49,Genetically Modified Organism,IVFmtDNA,49_IVFmtDNA,361,368,8
+50,Cellular AutomAnta,LangtonsAnt,50_LangtonsAnt,369,376,8
