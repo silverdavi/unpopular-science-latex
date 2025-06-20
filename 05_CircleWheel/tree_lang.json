@@ -1,0 +1,242 @@
+[
+  {
+    "id": "Proto-Indo-European",
+    "parent": null
+  },
+  {
+    "id": "Anatolian",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Hittite",
+    "parent": "Anatolian"
+  },
+  {
+    "id": "Luwian",
+    "parent": "Anatolian"
+  },
+  {
+    "id": "Tocharian",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Tocharian A",
+    "parent": "Tocharian"
+  },
+  {
+    "id": "Tocharian B",
+    "parent": "Tocharian"
+  },
+  {
+    "id": "Italic",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Latin",
+    "parent": "Italic"
+  },
+  {
+    "id": "French",
+    "parent": "Latin"
+  },
+  {
+    "id": "Spanish",
+    "parent": "Latin"
+  },
+  {
+    "id": "Italian",
+    "parent": "Latin"
+  },
+  {
+    "id": "Portuguese",
+    "parent": "Latin"
+  },
+  {
+    "id": "Romanian",
+    "parent": "Latin"
+  },
+  {
+    "id": "Celtic",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Goidelic",
+    "parent": "Celtic"
+  },
+  {
+    "id": "Irish",
+    "parent": "Goidelic"
+  },
+  {
+    "id": "Scottish Gaelic",
+    "parent": "Goidelic"
+  },
+  {
+    "id": "Brittonic",
+    "parent": "Celtic"
+  },
+  {
+    "id": "Welsh",
+    "parent": "Brittonic"
+  },
+  {
+    "id": "Breton",
+    "parent": "Brittonic"
+  },
+  {
+    "id": "Germanic",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "West Germanic",
+    "parent": "Germanic"
+  },
+  {
+    "id": "English",
+    "parent": "West Germanic"
+  },
+  {
+    "id": "German",
+    "parent": "West Germanic"
+  },
+  {
+    "id": "Dutch",
+    "parent": "West Germanic"
+  },
+  {
+    "id": "North Germanic",
+    "parent": "Germanic"
+  },
+  {
+    "id": "Swedish",
+    "parent": "North Germanic"
+  },
+  {
+    "id": "Danish",
+    "parent": "North Germanic"
+  },
+  {
+    "id": "Norwegian",
+    "parent": "North Germanic"
+  },
+  {
+    "id": "Icelandic",
+    "parent": "North Germanic"
+  },
+  {
+    "id": "Balto-Slavic",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Baltic",
+    "parent": "Balto-Slavic"
+  },
+  {
+    "id": "Latvian",
+    "parent": "Baltic"
+  },
+  {
+    "id": "Lithuanian",
+    "parent": "Baltic"
+  },
+  {
+    "id": "Slavic",
+    "parent": "Balto-Slavic"
+  },
+  {
+    "id": "East Slavic",
+    "parent": "Slavic"
+  },
+  {
+    "id": "Russian",
+    "parent": "East Slavic"
+  },
+  {
+    "id": "Ukrainian",
+    "parent": "East Slavic"
+  },
+  {
+    "id": "West Slavic",
+    "parent": "Slavic"
+  },
+  {
+    "id": "Polish",
+    "parent": "West Slavic"
+  },
+  {
+    "id": "Czech",
+    "parent": "West Slavic"
+  },
+  {
+    "id": "South Slavic",
+    "parent": "Slavic"
+  },
+  {
+    "id": "Serbo-Croatian",
+    "parent": "South Slavic"
+  },
+  {
+    "id": "Bulgarian",
+    "parent": "South Slavic"
+  },
+  {
+    "id": "Indo-Iranian",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Indo-Aryan",
+    "parent": "Indo-Iranian"
+  },
+  {
+    "id": "Hindi-Urdu",
+    "parent": "Indo-Aryan"
+  },
+  {
+    "id": "Bengali",
+    "parent": "Indo-Aryan"
+  },
+  {
+    "id": "Punjabi",
+    "parent": "Indo-Aryan"
+  },
+  {
+    "id": "Iranian",
+    "parent": "Indo-Iranian"
+  },
+  {
+    "id": "Persian",
+    "parent": "Iranian"
+  },
+  {
+    "id": "Kurdish",
+    "parent": "Iranian"
+  },
+  {
+    "id": "Pashto",
+    "parent": "Iranian"
+  },
+  {
+    "id": "Nuristani",
+    "parent": "Indo-Iranian"
+  },
+  {
+    "id": "Armenian",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Greek",
+    "parent": "Proto-Indo-European"
+  },
+  {
+    "id": "Ancient Greek",
+    "parent": "Greek"
+  },
+  {
+    "id": "Modern Greek",
+    "parent": "Greek"
+  },
+  {
+    "id": "Albanian",
+    "parent": "Proto-Indo-European"
+  }
+]

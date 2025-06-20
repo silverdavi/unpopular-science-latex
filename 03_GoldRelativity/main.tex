@@ -57,17 +57,19 @@ E = \frac{hc}{\lambda},
 \]
 where \( h \) is Planck’s constant and \( c \) is the speed of light. Shorter wavelengths (such as blue or violet) correspond to higher photon energies, while longer wavelengths (such as red or infrared) correspond to lower energies. If the energy gap between two orbitals aligns with the energy of a visible photon, that wavelength may be absorbed. The pattern of these absorptions defines the material’s optical spectrum and determines its visual appearance.
 
-Now let's talk relativity. Special relativity describes the behavior of physical systems at speeds approaching the speed of light \( c \). Its core insight is that measurements of time, length, and mass depend on the observer’s inertial frame. For a particle with rest mass \( m_0 \), the effective mass increases with velocity according to the expression:
+Now let's talk relativity. Special relativity describes the behavior of physical systems at speeds approaching the speed of light \( c \). Its core insight is that measurements of time, length, and mass depend on the observer’s inertial frame. For a particle with rest mass \( m_0 \), the total energy increases with velocity according to the expression:
 \[
-m_\text{eff} = \frac{m_0}{\sqrt{1 - v^2/c^2}}.
+E = \frac{m_0 c^2}{\sqrt{1 - v^2/c^2}}.
 \]
-This formula implies that as \( v \to c \), the ratio \( v^2/c^2 \) approaches 1, causing the denominator \( \sqrt{1 - v^2/c^2} \) to shrink toward zero. Thus, the effective mass \( m_\text{eff} \) increases without bound. Physically, this means that accelerating a particle closer to the speed of light requires more and more energy, and reaching \( v = c \) would require infinite energy. As a result, no object with nonzero rest mass can be accelerated to the speed of light.
+This formula implies that as \( v \to c \), the ratio \( v^2/c^2 \) approaches 1, causing the denominator \( \sqrt{1 - v^2/c^2} \) to shrink toward zero. Thus, the total energy \( E \) increases without bound. Physically, this means that accelerating a particle closer to the speed of light requires more and more energy, and reaching \( v = c \) would require infinite energy. As a result, no object with nonzero rest mass can be accelerated to the speed of light.
 
-In practice, even modest fractions of \( c \) can result in measurable mass increase and energy shifts. For example, at \( v/c = 0.6 \), the denominator becomes \( \sqrt{1 - 0.36} = 0.8 \), so the effective mass is increased by a factor of \( 1/0.8 = 1.25 \). These corrections are small for everyday objects but become significant for subatomic particles, especially in high-energy regimes such as atomic orbitals in heavy atoms.
+In practice, even modest fractions of \( c \) can result in measurable relativistic energy corrections. For example, at \( v/c = 0.6 \), the denominator becomes \( \sqrt{1 - 0.36} = 0.8 \), so the total energy is increased by a factor of \( 1/0.8 = 1.25 \) above the rest energy. These corrections are small for everyday objects but become significant for subatomic particles, especially in high-energy regimes such as atomic orbitals in heavy atoms.
 
-When considering electrons in atoms, however, the notion of velocity must be interpreted within quantum mechanics. Electrons in bound states do not follow classical trajectories. Their behavior is described by wavefunctions, and dynamical quantities — such as momentum or velocity — are represented by operators acting on those wavefunctions. In non-relativistic quantum mechanics, the velocity operator is given by:
+When considering electrons in atoms, however, the notion of velocity must be interpreted within quantum mechanics. Electrons in bound states do not follow classical trajectories. Their behavior is described by wavefunctions, and dynamical quantities — such as momentum or velocity — are represented by operators acting on those wavefunctions.
+
+The key insight comes from the uncertainty principle: electrons forced to localize near the nucleus (by strong nuclear attraction) must have high momentum components. In the atomic Schrödinger equation, the kinetic energy term penalizes sharp wavefunction changes (localization), while the potential energy term favors proximity to the nucleus. The balance between these competing effects determines orbital structure. Although electrons in bound states lack classical trajectories, the uncertainty principle implies that tightly localized wavefunctions (as in inner orbitals of high-$Z$ atoms) must involve high-momentum components. These high momenta correspond to kinetic energies where relativistic corrections become important. In non-relativistic quantum mechanics, the momentum operator is given by:
 \[
-\hat{v} = \frac{\hat{p}}{m_0}, \quad \text{where} \quad \hat{p} = -i\hbar \nabla.
+\hat{p} = -i\hbar \nabla.
 \]
 The expectation value \( \langle \hat{v} \rangle \) offers a statistical measure of the electron’s effective motion within the orbital. While it does not describe a definite speed or path, it provides a meaningful average scale for kinetic behavior.
 
@@ -75,7 +77,7 @@ For hydrogen-like atoms — idealized atoms with a single electron and full nucl
 \[
 \langle v \rangle \sim Z\alpha c,
 \]
-where \( Z \) is the atomic number — the number of protons in the nucleus — and \( \alpha \approx \tfrac{1}{137} \) is the fine-structure constant. This relation captures the intuition that electrons are drawn more tightly and accelerated more strongly in atoms with higher nuclear charge. As \( Z \) increases, the electron’s velocity increases proportionally, and the resulting relativistic mass correction becomes non-negligible.
+where \( Z \) is the atomic number — the number of protons in the nucleus — and \( \alpha \approx \tfrac{1}{137} \) is the fine-structure constant. This relation captures the intuition that electrons are drawn more tightly and accelerated more strongly in atoms with higher nuclear charge. As \( Z \) increases, the electron’s velocity increases proportionally, and the resulting relativistic energy corrections become non-negligible.
 
 These relativistic effects modify the quantum mechanical equations that describe bound states. In particular, the Schrödinger equation must be replaced or augmented by relativistic formulations such as the Dirac equation. These corrections shift the energies and shapes of orbitals, even in the absence of external fields. The resulting deviations from non-relativistic predictions grow systematically with atomic number and are especially significant for the inner (core) electrons in heavy elements.
 
@@ -85,7 +87,7 @@ In most metals, optical behavior is dominated by conduction electrons. These ele
 
 However, when deeper (non-conduction) bands lie close to the Fermi level (the highest occupied energy level at absolute zero) interband transitions become possible. In this case, photons can excite electrons from filled lower bands (such as d-bands) into the conduction band, but only if their energy matches the band gap. If this gap lies within the visible range, the metal absorbs specific wavelengths and reflects the rest, producing color.
 
-In gold and other heavy elements, relativistic effects shift the energies of these bands. s-orbitals contract due to high nuclear charge, while d-orbitals remain more diffuse. This reduces the energy difference between them and brings the d-to-s gap into the visible spectrum.
+In gold and other heavy elements, relativistic effects shift the energies of these bands. s-orbitals contract more dramatically because they have zero angular momentum and can penetrate directly through the nuclear center, experiencing the full relativistic effects. In contrast, d-orbitals have angular momentum that keeps them away from the nucleus via a centrifugal barrier, reducing relativistic corrections. This differential contraction reduces the energy difference between d and s bands and brings the d-to-s gap into the visible spectrum.
 
 In silver ($Z = 47$), relativistic effects are minor. The 4d band lies well below the Fermi level, and interband transitions require photon energies above the visible range. As a result, silver reflects nearly all visible light uniformly and appears bright white.
 

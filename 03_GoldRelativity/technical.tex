@@ -1,64 +1,63 @@
 \begin{technical}
-% Add at the beginning of the file
-\sloppy
-{\Large\textbf{Relativistic Quantum Chemistry and the Color of Gold}}\\[0.7em]
-\noindent\textbf{Definition of Electron Velocity}  
-
-In quantum mechanics, velocity is represented as an operator. In the non-relativistic Schrödinger framework, it is given by:
-\[
-\hat{v} = \frac{\hat{p}}{m}, \quad \text{with} \quad \hat{p} = -i\hbar \nabla.
-\]
-While electrons do not have definite trajectories, the expectation value \(\langle \hat{v} \rangle\) describes their average motion within an orbital.
-
-For a hydrogen-like atom, the typical electron velocity can be estimated from the expectation value of \(\hat{v}\), yielding:
-\[
-\langle v \rangle \approx Z\alpha c,
-\]
-where \(Z\) is the atomic number and \(\alpha = \frac{e^2}{\hbar c} \approx \frac{1}{137}\) is the fine-structure constant. For gold (\(Z = 79\)), this gives \(\langle v \rangle \approx 0.58c\), indicating that inner electrons move at relativistic speeds.
-
-This relativistic motion increases the electron's effective mass, altering the balance between kinetic and potential energy in the quantum mechanical equations and leading to orbital contraction.
-
-\noindent\textbf{Relativistic Orbital Contraction}  
-
-As electron velocity increases, its relativistic mass grows as:
-\[
-m_\text{eff} = \frac{m}{\sqrt{1 - v^2/c^2}}.
-\]
-For \(v/c \approx 0.58\), this results in a 23\% mass increase. The increased mass affects the kinetic energy operator in the Dirac equation, resulting in a modified radial probability distribution that contracts the 6s orbital:
-\[
-r_\text{rel} = r_\text{non-rel} \sqrt{1 - v^2/c^2}.
-\]
-This contraction leads to: lower energy of the 6s orbital, decreased energy gap between 5d and 6s orbitals, and a shift in optical transitions affecting reflectance properties.
-
-
-\noindent\textbf{Electronic Transitions and Optical Properties}  
-
-Gold’s electronic configuration is [Xe]4f\(^{14}\)5d\(^{10}\)6s\(^{1}\), where [Xe] denotes the closed-shell configuration of xenon (atomic number 54). Due to relativistic contraction, the energy separation between the highest filled 5d orbitals and the 6sp conduction band is approximately:
-\[
-E_{\text{5d} \to \text{6sp}} \approx 2.4\, \text{eV}.
-\]
-This corresponds to the energy of photons with wavelength:
-\[
-\lambda \approx \frac{1240\,\text{eV}\cdot\text{nm}}{2.4\,\text{eV}} \approx 520\,\text{nm},
-\]
-which lies in the blue region of the visible spectrum.
-
-However, this absorption is not confined to a narrow line as in isolated atoms. In solids, the relevant transitions occur between broad energy bands, not discrete levels. The 5d and 6sp bands in gold are both extended across a range of energies and crystal momenta (E–k space), allowing interband transitions between many different initial and final states. This leads to a broad absorption feature centered around 2.4 eV.
-
-The breadth of the absorption is further enhanced by the joint density of states between the bands and by finite lifetimes of the electronic states, which cause energy uncertainty via the time–energy uncertainty principle. As a result, gold absorbs not just at 520 nm, but across a range, selectively suppressing blue light while reflecting longer wavelengths. This frequency-selective reflectance is what gives gold its characteristic yellow appearance.
-
-
-\noindent\textbf{Other Relativistic Effects in Heavy Elements}  
-
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Platinum (Bright White)}: Platinum (\(Z=78\)) experiences strong relativistic 6s contraction, similar to gold. However, unlike gold, its 5d shell is only partially filled (5d\(^9\)), which broadens and redistributes interband transitions into the ultraviolet. This results in minimal absorption in the visible range and a characteristically bright white reflectance.
+    \sloppy
+    {\Large\textbf{Relativistic Quantum Chemistry and the Color of Gold}}\\[0.7em]
     
-    \item \textbf{Mercury (Liquid at Room Temperature)}: Mercury (\(Z=80\)) undergoes extreme relativistic 6s contraction, reducing orbital overlap and weakening metallic bonding. The low bonding energy suppresses the melting point:$T_m \propto \text{bonding energy}\\{k_B}$
-    making mercury a liquid at room temperature.
-
-    \item \textbf{Silver (White Metallic)}: Silver (\(Z=47\)) exhibits weaker relativistic effects compared to gold and platinum. While it does undergo some 5s contraction and 4d stabilization, the resulting 4d-to-5s transition lies in the ultraviolet (~3.7eV), outside the visible spectrum. 
-\end{itemize}
-
+    \noindent\textbf{Quantum Mechanical Origin of High Electron Velocities}
+    
+    Electrons in atoms are described by wavefunctions obeying the Schrödinger equation:
+    \[
+    \left[ -\frac{\hbar^2}{2m} \nabla^2 - \frac{Ze^2}{r} \right] \psi = E \psi.
+    \]
+    The kinetic term penalizes localization, while the Coulomb term favors proximity to the nucleus. Their balance is constrained by the uncertainty principle:
+    \[
+    \Delta x \cdot \Delta p \gtrsim \frac{\hbar}{2}.
+    \]
+    Strong nuclear attraction forces wavefunction localization near $r = 0$, requiring large momentum components and thus high typical velocities.
+    
+    In quantum mechanics, velocity is an operator:
+    \[
+    \hat{v} = \frac{\hat{p}}{m}, \quad \hat{p} = -i\hbar \nabla.
+    \]
+    For hydrogen-like atoms, the expectation value scales as:
+    \[
+    \langle v \rangle \sim Z\alpha c,
+    \]
+    where \( \alpha \approx 1/137 \). For gold (\(Z = 79\)), this yields \(\langle v \rangle \approx 0.58c\), indicating that inner electrons reach relativistic speeds.
+    
+    \noindent\textbf{Relativistic Orbital Contraction}
+    
+    At relativistic velocities, the relationship between energy and momentum shifts:
+    \[
+    E^2 = (m c^2)^2 + (pc)^2.
+    \]
+    This modifies the balance in the Schrödinger equation, effectively reducing the kinetic energy penalty for localization. The result is a contraction of low-$\ell$ orbitals.
+    
+    s-orbitals (\(\ell = 0\)) penetrate the nucleus and experience the full nuclear charge, making them especially sensitive. Their contraction is roughly:
+    \[
+    r_\text{rel} \sim r_\text{non-rel} \cdot \sqrt{1 - v^2/c^2}.
+    \]
+    In contrast, d-orbitals (\(\ell = 2\)) are kept away from the nucleus by angular momentum barriers, making them less affected.
+    
+    The outcome is a lowered energy of the contracted 6s orbital, a reduced 5d–6s energy gap, and modified interband transition thresholds.
+    
+    \noindent\textbf{Electronic Transitions and Optical Properties}
+    
+    Gold’s configuration is [Xe]4f$^{14}$5d$^{10}$6s$^1$. Due to relativistic 6s contraction, the 5d–6sp gap narrows to:
+    \[
+    \Delta E \approx 2.4\,\text{eV} \quad \Rightarrow \quad \lambda \approx 520\,\text{nm},
+    \]
+    in the blue region of the visible spectrum.
+    
+    In solids, these transitions span energy bands rather than discrete levels. Finite band widths and electron lifetimes broaden the absorption, leading to selective attenuation of blue light and reflection of red/green — the physical basis for gold’s color.
+    
+    \noindent\textbf{Other Relativistic Effects in Heavy Elements}
+    
+    \begin{itemize}[leftmargin=*]
+    \item \textbf{Platinum (White)}: Strong 6s contraction occurs, but 5d$^9$ configuration shifts interband transitions to UV, yielding silvery reflectance.
+    
+    \item \textbf{Mercury (Liquid)}: Extreme 6s contraction lowers bonding orbital overlap, weakening cohesion. The result is a melting point below room temperature.
+    \end{itemize}
+    
 
 \vspace{0.5em}
 \noindent\textbf{References}  \\

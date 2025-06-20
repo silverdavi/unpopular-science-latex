@@ -20,6 +20,7 @@ At this point, the data must be encrypted — but without affecting its size or 
 
 GSM fixes the processing order as: compression $\rightarrow$ error correction $\rightarrow$ interleaving $\rightarrow$ encryption. This sequencing reflects a deliberate engineering decision. By placing encryption at the end of the stack, the system isolates cryptographic logic from earlier processing stages. Each module performs a self-contained transformation. This design simplifies implementation but introduces a structural vulnerability.
 
+
 By the time the bitstream reaches the cipher, it is no longer raw data. It has been processed into a rigid format defined by protocol constraints. This includes:
 
 \begin{itemize}
@@ -51,9 +52,16 @@ The weakest points in deployed cryptographic systems are rarely in the mathemati
 I first encountered this issue in a lecture by Eli Biham around 2003. He outlined the GSM vulnerability using nothing but XOR equations, known plaintext segments, and short recurrence relations. For once, the attack did not require knowing the full formalism of block cipher construction or number theory. It showed that security could collapse under structural exposure — and that the analysis of “where” in a system encryption occurs mattered as much as “how.”
 \end{commentary}
 
-\thispagestyle{empty}
-\begin{figure}[p]
-\centering
-\fbox{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{12_GSMEncryptionOrder/DMA_illu.png}}
-\end{figure}
+\begin{SideNotePage}{
+  \textbf{Top Path — Multiplex → Encrypt:} \par The same message (ACBB) is first combined with different color-coded templates through multiplexing. Each variant is then independently encrypted using a shared key. This leads to distinct ciphertexts, but if the templates are known or public, attackers can reverse the multiplexing process and end up with multiple ciphertexts of the same underlying message, enabling powerful algebraic attacks that exploit the known relationships between the variants.
 
+  \vspace{1em}
+  \textbf{Bottom Path — Encrypt → Multiplex:} \par The message is first encrypted (producing, for example, CBAB from the original message), and the resulting ciphertext is then duplicated and wrapped in different color-coded templates. Because all copies are cryptographically identical before templating, multiplexing adds no structural diversity to the encrypted content. This offers attackers fewer opportunities for correlation-based attacks but exposes the repetition pattern inherent in the duplication process.
+
+  \vspace{1em}
+  \textbf{Signal Flow Diagram:} \par The bottom illustration shows the complete communication path: microphone input → multiplexing → encryption → transmission → decryption → demultiplexing → speaker output. This end-to-end view demonstrates how the order of cryptographic operations affects the entire signal processing pipeline and the attack surface available to adversaries at different points in the communication chain.
+
+  \vspace{1em}
+  \textbf{Security Implications:} \par The choice of operation order fundamentally determines what information leaks through the encrypted channel. GSM's decision to encrypt after structural processing (similar to the top path) exposes protocol patterns and enables the algebraic attacks described in the main text. Alternative orderings trade different types of vulnerability — a core principle in secure protocol design.
+}{12_GSMEncryptionOrder/UNPOP SCI - Cryptography.pdf}
+\end{SideNotePage}

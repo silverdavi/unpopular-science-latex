@@ -1,0 +1,131 @@
+\begin{titlepage}
+    % Snow background using TikZ and Lindenmayer systems
+    \begin{tikzpicture}[remember picture,overlay]
+        % Define Lindenmayer systems for different snowflake types
+        \pgfdeclarelindenmayersystem{SnowA}{
+            \rule{F -> FF[+F][-F]}
+        }
+        \pgfdeclarelindenmayersystem{SnowB}{
+            \rule{F -> ffF[++FF][--FF]}
+        }
+        \pgfdeclarelindenmayersystem{SnowC}{
+            \symbol{G}{\pgflsystemdrawforward}
+            \rule{F -> F[+F][-F]FG[+F][-F]FG}
+        }
+        \pgfdeclarelindenmayersystem{SnowD}{
+            \symbol{G}{\pgflsystemdrawforward}
+            \symbol{H}{\pgflsystemdrawforward}
+            \rule{F -> H[+HG][-HG]G}
+            \rule{G -> HF}
+        }
+        
+        % Snowflake drawing command
+        \tikzset{
+            snowflake/.style={
+                blue!40!gray, opacity=0.3, line width=0.3mm, line cap=round
+            },
+        }
+        
+        % Much larger snowflakes scattered randomly across the entire page (28 total)
+        % SnowA type snowflakes
+        \foreach \x/\y/\s in {
+            1.8/27.3/0.8, 13.2/27.8/0.75, 5.9/24.8/0.7, 9.1/20.1/0.6, 1.5/18.2/0.85,
+            10.3/14.6/0.7, 5.3/11.7/0.65, 14.2/9.6/0.7, 6.4/6.8/0.75, 2.5/3.2/0.7,
+            14.8/3.1/0.75, 10.2/0.5/0.7
+        } {
+            \node at (\x cm, \y cm) {
+                \begin{tikzpicture}[scale=\s]
+                    \foreach \a in {0,60,...,300} {
+                        \draw[rotate=\a, snowflake] 
+                            [l-system={SnowA, axiom=F, order=3, step=4pt, angle=60}] 
+                            l-system;
+                    }
+                \end{tikzpicture}
+            };
+        }
+        
+        % SnowB type snowflakes  
+        \foreach \x/\y/\s in {
+            4.2/26.1/0.6, 15.8/26.4/0.65, 8.4/23.5/0.6, 0.3/21.2/0.65, 4.7/17.5/0.6,
+            0.9/15.7/0.8, 13.6/15.3/0.85, 4.1/8.5/0.85, 16.7/8.1/0.65, 9.6/5.4/0.85,
+            5.7/2.8/0.65, 0.4/1.5/0.85, 13.4/1.2/0.65
+        } {
+            \node at (\x cm, \y cm) {
+                \begin{tikzpicture}[scale=\s]
+                    \foreach \a in {0,60,...,300} {
+                        \draw[rotate=\a, snowflake] 
+                            [l-system={SnowB, axiom=F, order=2, step=5pt, angle=45}] 
+                            l-system;
+                    }
+                \end{tikzpicture}
+            };
+        }
+        
+        % SnowC type snowflakes
+        \foreach \x/\y/\s in {
+            7.8/28.2/0.9, 0.7/24.5/0.5, 11.7/24.1/0.8, 2.8/20.5/0.9, 15.1/20.8/0.55,
+            8.2/18.8/0.7, 3.4/14.2/0.55, 16.2/14.8/0.6, 12.1/11.3/0.7, 7.5/9.2/0.6,
+            1.3/6.3/0.8, 12.8/6.1/0.6, 8.3/3.6/0.8, 3.9/0.8/0.6, 16.1/0.9/0.8
+        } {
+            \node at (\x cm, \y cm) {
+                \begin{tikzpicture}[scale=\s]
+                    \foreach \a in {0,60,...,300} {
+                        \draw[rotate=\a, snowflake] 
+                            [l-system={SnowC, axiom=F, order=2, step=4pt, angle=60}] 
+                            l-system;
+                    }
+                \end{tikzpicture}
+            };
+        }
+    \end{tikzpicture}
+    
+    \centering
+    \vspace*{1.5in}
+    
+    % Main title
+    {\Huge\bfseries
+    Unpopular Science
+    \par}
+    
+    \vspace{0.8in}
+    
+    % Subtitle
+    {\Large
+    Exploring Curious Phenomena
+    \par}
+    
+    \vspace{1.2in}
+    
+    % Author
+    {\large
+    David H. Silver
+    \par}
+    
+    \vspace{0.8in}
+    
+    % Illustrator credits
+    {\normalsize
+    With illustrations by\\
+    \textit{Jessica Hayes}
+    \par}
+    
+    \vspace{0.4in}
+    
+    \vfill
+    
+    % Publisher/Institution section
+    {\normalsize
+    \textit{Publisher/Institution Name}
+    \par}
+    
+    \vspace{0.3in}
+    
+    % Edition and year
+    {\normalsize
+    First Edition\\
+    2025
+    \par}
+    
+    \vspace{0.5in}
+    
+\end{titlepage} 
